@@ -1,0 +1,111 @@
+[
+  {
+    "title": {
+      "uz": "Server infratuzilmalari",
+      "ru": "Серверные инфраструктуры",
+      "en": "Server infrastructures"
+    },
+    "summary": {
+      "uz": "Windows va Linux serverlari, AD, DNS, DHCP va WEB xizmatlari joriy qilindi. Tizimlar hujjatlashtirildi va ishlash tartibi yo‘lga qo‘yildi.",
+      "ru": "Внедрены Windows и Linux серверы, AD, DNS, DHCP и WEB сервисы. Системы документированы и приведены к рабочему порядку.",
+      "en": "Windows and Linux servers, AD, DNS, DHCP, and WEB services were deployed, documented, and brought into an operational support model."
+    },
+    "stack": [
+      "Windows Server",
+      "Linux",
+      "AD",
+      "DNS/DHCP",
+      "WEB"
+    ]
+  },
+  {
+    "title": {
+      "uz": "Video kuzatuv tizimlari",
+      "ru": "Системы видеонаблюдения",
+      "en": "Video surveillance systems"
+    },
+    "summary": {
+      "uz": "Kameralar, Face ID, turniket va kirish nazorati tizimlari o‘rnatildi va sozlandi. Obyekt xavfsizligi va kirish nazorati kuchaytirildi.",
+      "ru": "Установлены и настроены камеры, Face ID, турникеты и системы контроля доступа. Усилена безопасность объекта и управление доступом.",
+      "en": "Cameras, Face ID, turnstiles, and access control systems were installed and configured to strengthen site security and access management."
+    },
+    "stack": [
+      "CCTV",
+      "Face ID",
+      "Turnstile",
+      "Access Control"
+    ]
+  },
+  {
+    "title": {
+      "uz": "Backup va ma’lumotlarni himoyalash",
+      "ru": "Backup и защита данных",
+      "en": "Backup and data protection"
+    },
+    "summary": {
+      "uz": "NAS va avtomatik backup yordamida ma’lumotlar xavfsizligi ta’minlandi, tiklash ssenariylari ishlab chiqildi.",
+      "ru": "Обеспечена сохранность данных с помощью NAS и автоматических backup, подготовлены сценарии восстановления.",
+      "en": "Data protection was strengthened with NAS and automated backups, along with clear recovery scenarios."
+    },
+    "stack": [
+      "NAS",
+      "Backup",
+      "Restore",
+      "DR"
+    ]
+  },
+  {
+    "title": {
+      "uz": "Tarmoq va xavfsizlik",
+      "ru": "Сеть и безопасность",
+      "en": "Network and security"
+    },
+    "summary": {
+      "uz": "Firewall, pfSense, MikroTik va Fortinet orqali himoya sozlandi. Tarmoq segmentatsiyasi va tashqi kirishlar nazoratga olindi.",
+      "ru": "Настроена защита на базе Firewall, pfSense, MikroTik и Fortinet. Сегментация сети и внешний доступ взяты под контроль.",
+      "en": "Protection was configured with firewall, pfSense, MikroTik, and Fortinet, with network segmentation and external access under control."
+    },
+    "stack": [
+      "Firewall",
+      "pfSense",
+      "MikroTik",
+      "Fortinet"
+    ]
+  },
+  {
+    "title": {
+      "uz": "Korporativ telefoniya infratuzilmasi",
+      "ru": "Инфраструктура корпоративной телефонии",
+      "en": "Corporate telephony infrastructure"
+    },
+    "summary": {
+      "uz": "IP-telefoniya va ichki aloqa konturi joriy qilindi. Filiallar va bo‘limlar uchun boshqariladigan aloqa tizimi shakllantirildi.",
+      "ru": "Внедрена IP-телефония и внутренняя связь. Построен управляемый контур коммуникации для филиалов и отделов.",
+      "en": "IP telephony and internal communication were deployed as a managed voice layer for branches and teams."
+    },
+    "stack": [
+      "FreePBX",
+      "IP-PBX",
+      "VoIP",
+      "Gateway"
+    ]
+  },
+  {
+    "title": {
+      "uz": "Obyektga kirishni boshqarish",
+      "ru": "Контроль доступа на объект",
+      "en": "Site access control"
+    },
+    "summary": {
+      "uz": "Xodim va tashrif buyuruvchilar oqimi uchun kirishni boshqarish sxemasi joriy qilindi, xavfsizlik jarayonlari kuchaytirildi.",
+      "ru": "Внедрена схема контроля доступа для сотрудников и посетителей, усилены процессы физической безопасности.",
+      "en": "A controlled access model was introduced for staff and visitors, strengthening physical security operations."
+    },
+    "stack": [
+      "Access Control",
+      "Turnstile",
+      "Face ID",
+      "Policies"
+    ]
+  }
+]

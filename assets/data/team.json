@@ -1,0 +1,80 @@
+[
+  {
+    "name": "Nurmurod Razzoqov",
+    "role": {
+      "uz": "Mijozlar bilan ishlovchi menejer",
+      "ru": "Менеджер по работе с клиентами",
+      "en": "Client relations manager"
+    },
+    "bio": {
+      "uz": "Birlamchi aloqa, ehtiyojni aniqlash va loyiha doirasini shakllantirish bilan ishlaydi.",
+      "ru": "Работает с первичным контактом, выявлением потребностей и формированием объёма проекта.",
+      "en": "Handles first contact, requirement capture, and project scope framing."
+    }
+  },
+  {
+    "name": "Sobitxon Xamidxonov",
+    "role": {
+      "uz": "Network Administrator",
+      "ru": "Сетевой администратор",
+      "en": "Network Administrator"
+    },
+    "bio": {
+      "uz": "Tarmoq topologiyasi, marshrutlash, VPN va ichki/internet konturlarini sozlash bo‘yicha ishlaydi.",
+      "ru": "Отвечает за топологию сети, маршрутизацию, VPN и настройку внутренних/внешних контуров.",
+      "en": "Works on network topology, routing, VPN, and internal/external network layers."
+    }
+  },
+  {
+    "name": "Dilshod Odilov",
+    "role": {
+      "uz": "Loyiha menejeri",
+      "ru": "Менеджер проекта",
+      "en": "Project Manager"
+    },
+    "bio": {
+      "uz": "Muddat, ish rejasi va joriy etish ketma-ketligini nazorat qiladi.",
+      "ru": "Контролирует сроки, план работ и последовательность внедрения.",
+      "en": "Controls delivery timing, work plans, and implementation order."
+    }
+  },
+  {
+    "name": "Bahrom Farmonov",
+    "role": {
+      "uz": "Raqamli marketing mutaxassisi",
+      "ru": "Специалист по цифровому маркетингу",
+      "en": "Digital marketing specialist"
+    },
+    "bio": {
+      "uz": "Tashqi kommunikatsiya va kompaniya taqdimot materiallari bilan ishlaydi.",
+      "ru": "Занимается внешними коммуникациями и презентационными материалами компании.",
+      "en": "Works on external communications and company presentation materials."
+    }
+  },
+  {
+    "name": "Farrux Abdurazzoqov",
+    "role": {
+      "uz": "Tarmoq va xavfsizlik mutaxassisi",
+      "ru": "Специалист по сетям и безопасности",
+      "en": "Network and security specialist"
+    },
+    "bio": {
+      "uz": "Firewall, segmentatsiya, kirish nazorati va xavfsizlik konturlarini yig‘adi.",
+      "ru": "Собирает firewall, сегментацию, контроль доступа и контуры безопасности.",
+      "en": "Builds firewall, segmentation, access control, and security layers."
+    }
+  },
+  {
+    "name": "Abdulaziz Ochilov",
+    "role": {
+      "uz": "System Administrator",
+      "ru": "Системный администратор",
+      "en": "System Administrator"
+    },
+    "bio": {
+      "uz": "Serverlar, foydalanuvchi muhitlari, backup va kundalik support vazifalarini yuritadi.",
+      "ru": "Ведёт серверы, пользовательские среды, backup и повседневную поддержку.",
+      "en": "Maintains servers, user environments, backup, and day-to-day support."
+    }
+  }
+]

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="240" viewBox="0 0 320 240" fill="none">
+<rect width="320" height="240" rx="10" fill="#F6F9FC"/>
+<rect x="36" y="42" width="248" height="156" rx="8" fill="#0B2E59"/>
+<rect x="58" y="66" width="204" height="16" rx="3" fill="#D9E3F0" fill-opacity=".85"/>
+<rect x="58" y="94" width="170" height="16" rx="3" fill="#D9E3F0" fill-opacity=".6"/>
+<rect x="58" y="122" width="204" height="16" rx="3" fill="#D9E3F0" fill-opacity=".6"/>
+<rect x="58" y="150" width="142" height="16" rx="3" fill="#C8A45B"/>
+<text x="160" y="218" text-anchor="middle" font-family="Arial" font-size="24" font-weight="700" fill="#0B2E59">OPS</text>
+</svg>

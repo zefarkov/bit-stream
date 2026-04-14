@@ -1,0 +1,58 @@
+[
+  {
+    "value": "2018",
+    "suffix": "",
+    "label": {
+      "uz": "yildan beri IT yechimlar",
+      "ru": "с 2018 года в IT-решениях",
+      "en": "delivering IT solutions since 2018"
+    },
+    "note": {
+      "uz": "eski sayt asosidagi kompaniya tarixi",
+      "ru": "период работы по материалам старого сайта",
+      "en": "company timeline based on the legacy site"
+    }
+  },
+  {
+    "value": "6",
+    "suffix": "+",
+    "label": {
+      "uz": "asosiy xizmat yo‘nalishi",
+      "ru": "ключевых направлений услуг",
+      "en": "core service directions"
+    },
+    "note": {
+      "uz": "server, network, security, monitoring va boshqalar",
+      "ru": "серверы, сети, безопасность, monitoring и другое",
+      "en": "servers, networks, security, monitoring, and more"
+    }
+  },
+  {
+    "value": "15",
+    "suffix": " min",
+    "label": {
+      "uz": "tezkor reaksiya modeli",
+      "ru": "модель быстрого старта реакции",
+      "en": "fast response model"
+    },
+    "note": {
+      "uz": "kelishilgan SLA va masofaviy yordam formati",
+      "ru": "по согласованному SLA и удалённой помощи",
+      "en": "under agreed SLA and remote support format"
+    }
+  },
+  {
+    "value": "24/7",
+    "suffix": "",
+    "label": {
+      "uz": "monitoring va kritik nazorat",
+      "ru": "мониторинг и контроль критичных зон",
+      "en": "monitoring and critical control"
+    },
+    "note": {
+      "uz": "kuzatuv, ogohlantirish va profilaktika",
+      "ru": "наблюдение, оповещения и профилактика",
+      "en": "observability, alerting, and preventive control"
+    }
+  }
+]

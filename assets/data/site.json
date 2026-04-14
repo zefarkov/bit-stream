@@ -1,0 +1,22 @@
+{
+  "company": {
+    "name": "BITSTREAM",
+    "full_name": "BITSTREAM IT INFRASTRUCTURE",
+    "tagline": {
+      "uz": "Server, tarmoq, xavfsizlik, virtualizatsiya va IT autsorsing xizmatlari",
+      "ru": "Серверы, сети, безопасность, виртуализация и IT-аутсорсинг",
+      "en": "Servers, networking, security, virtualization, and IT outsourcing"
+    },
+    "domain": "bit-stream.uz",
+    "email": "info@bit-stream.uz",
+    "phone": "+998 91 004 66 51",
+    "phone2": "+998 93 311 31 99",
+    "telegram": "https://t.me/bitstreamuz",
+    "instagram": "https://instagram.com/bitstreamuz",
+    "address": {
+      "uz": "Toshkent, O‘zbekiston",
+      "ru": "Ташкент, Узбекистан",
+      "en": "Tashkent, Uzbekistan"
+    }
+  }
+}
