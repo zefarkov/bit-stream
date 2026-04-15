@@ -1,57 +1,82 @@
 <!doctype html>
 <html lang="uz">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>BITSTREAM | Havolalar</title>
-  <style>
-    *{box-sizing:border-box}
-    body{margin:0;font-family:Arial,sans-serif;background:#dfe7ef;color:#10233e}
-    .wrap{max-width:760px;margin:32px auto;padding:28px;background:#eef3f7;border-radius:28px}
-    .brand{display:flex;flex-direction:column;align-items:center;gap:12px;margin-bottom:12px}
-    .brand img{width:min(200px,42vw);height:auto;display:block}
-    .sub{margin:0 0 22px;text-align:center;color:#5b6b80}
-    a{display:flex;justify-content:space-between;align-items:center;gap:16px;background:#fff;padding:18px 20px;margin:14px 0;border-radius:18px;text-decoration:none;color:#10233e;border:1px solid #d7e0ea}
-    .arrow{font-size:22px;line-height:1}
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BITSTREAM | Havolalar</title>
+<link rel="icon" href="../assets/icons/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+<link rel="stylesheet" href="../assets/css/style.css">
 </head>
-<body>
-  <div class="wrap">
-    <div class="brand">
-      <img src="../assets/img/brand/logo-bitstream.png" alt="BITSTREAM logo">
-    </div>
-    <p class="sub">Rasmiy havolalar</p>
+<body class="links-body">
+<div class="links-wrap">
 
-    <a href="index.html"><span>Rasmiy sayt</span><span class="arrow">→</span></a>
-    <a href="https://instagram.com/bitstreamuz"><span>Instagram</span><span class="arrow">→</span></a>
-    <a href="https://t.me/bitstreamuz"><span>Telegram kanal</span><span class="arrow">→</span></a>
-    <a href="#"><span>YouTube</span><span class="arrow">→</span></a>
-    <a href="#"><span>Lokatsiya (Yandex)</span><span class="arrow">→</span></a>
-    <a href="#"><span>Lokatsiya (Google)</span><span class="arrow">→</span></a>
-    <a href="#"><span>Lokatsiya (2GIS)</span><span class="arrow">→</span></a>
-  </div>
+<div class="links-brand">
+<img class="logo" src="../assets/img/brand/logo-bitstream.png" alt="BITSTREAM">
+</div>
+
+<p class="links-sub">Rasmiy havolalar</p>
+
+<div class="section-line"></div>
+
+<a class="links-item" href="https://bit-stream.uz">
+  <span class="left"><img src="../assets/icons/website.svg" alt=""><span>Rasmiy sayt</span></span>
+  <span class="links-arrow">→</span>
+</a>
+
+<a class="links-item" href="https://instagram.com/bitstreamuz" target="_blank" rel="noopener">
+  <span class="left"><img src="../assets/icons/instagram.svg" alt=""><span>Instagram</span></span>
+  <span class="links-arrow">→</span>
+</a>
+
+<a class="links-item" href="https://t.me/bitstreamuz" target="_blank" rel="noopener">
+  <span class="left"><img src="../assets/icons/telegram.svg" alt=""><span>Telegram kanal</span></span>
+  <span class="links-arrow">→</span>
+</a>
+
+<div class="section-line"></div>
+
+<a class="links-item" href="https://t.me/bitstreamuz_bot?start=start" target="_blank" rel="noopener">
+  <span class="left"><img src="../assets/icons/telegram.svg" alt=""><span>Telegram bot</span></span>
+  <span class="links-arrow">→</span>
+</a>
+
+<a class="links-item" href="tel:+998933113199">
+  <span class="left"><img src="../assets/icons/phone.svg" alt=""><span>Telefon</span></span>
+  <span class="links-arrow">→</span>
+</a>
+
+<div class="section-line"></div>
+
+<a class="links-item" href="#">
+  <span class="left"><img src="../assets/icons/map.svg" alt=""><span>Lokatsiya (Yandex)</span></span>
+  <span class="links-arrow">→</span>
+</a>
+
+<a class="links-item" href="#">
+  <span class="left"><img src="../assets/icons/map.svg" alt=""><span>Lokatsiya (Google)</span></span>
+  <span class="links-arrow">→</span>
+</a>
+
+<a class="links-item" href="#">
+  <span class="left"><img src="../assets/icons/map.svg" alt=""><span>Lokatsiya (2GIS)</span></span>
+  <span class="links-arrow">→</span>
+</a>
+
+<div class="links-footer">© 2026 BITSTREAM</div>
+
+</div>
+
 <script>
 (function(){
- const saved=localStorage.getItem('theme');
- if(saved==='dark'){document.documentElement.setAttribute('data-theme','dark');}
+  var saved = localStorage.getItem('theme');
+  if(saved === 'dark'){
+    document.documentElement.setAttribute('data-theme','dark');
+  }else if(!saved){
+    var h = new Date().getHours();
+    if(h >= 21 || h < 6) document.documentElement.setAttribute('data-theme','dark');
+  }
 })();
-function toggleTheme(){
- const el=document.documentElement;
- const dark=el.getAttribute('data-theme')==='dark';
- if(dark){el.removeAttribute('data-theme');localStorage.setItem('theme','light');}
- else{el.setAttribute('data-theme','dark');localStorage.setItem('theme','dark');}
- const b=document.getElementById('themeBtn');
- if(b){b.innerHTML=el.getAttribute('data-theme')==='dark'?'☀':'☾';}
-}
-document.addEventListener('DOMContentLoaded',function(){
- const lang=document.querySelector('[data-lang-select]');
- if(lang && !document.getElementById('themeBtn')){
-   const b=document.createElement('button');
-   b.id='themeBtn'; b.className='theme-btn';
-   b.innerHTML=document.documentElement.getAttribute('data-theme')==='dark'?'☀':'☾';
-   b.onclick=toggleTheme;
-   lang.parentNode.insertBefore(b,lang);
- }
-});
-</script></body>
+</script>
+</body>
 </html>
