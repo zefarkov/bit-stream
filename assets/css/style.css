@@ -590,3 +590,63 @@ html[data-theme="dark"] .links-arrow{
 
 
 .main-nav{position:sticky;top:0;z-index:900}.theme-btn{min-width:42px;height:42px}
+/* === Stable Elegant Dark Mode === */
+:root{
+--dm-bg:#0f1724;
+--dm-surface:#162133;
+--dm-surface2:#1b2840;
+--dm-text:#eef4ff;
+--dm-muted:#b4c0d4;
+--dm-line:#2a3a52;
+}
+html[data-theme="dark"] body{background:var(--dm-bg)!important;color:var(--dm-text)!important}
+html[data-theme="dark"] header,
+html[data-theme="dark"] .site-header,
+html[data-theme="dark"] .utility-bar,
+html[data-theme="dark"] .main-nav,
+html[data-theme="dark"] section,
+html[data-theme="dark"] main,
+html[data-theme="dark"] footer,
+html[data-theme="dark"] .panel,
+html[data-theme="dark"] .card,
+html[data-theme="dark"] .service-card,
+html[data-theme="dark"] .case-card,
+html[data-theme="dark"] .team-card,
+html[data-theme="dark"] .stat-card,
+html[data-theme="dark"] .partner-card,
+html[data-theme="dark"] .wrap,
+html[data-theme="dark"] .site-footer,
+html[data-theme="dark"] .footer-bottom{
+background:var(--dm-surface)!important;
+color:var(--dm-text)!important;
+border-color:var(--dm-line)!important;
+}
+html[data-theme="dark"] .hero,
+html[data-theme="dark"] .cta-strip{background:var(--dm-surface2)!important}
+html[data-theme="dark"] p,
+html[data-theme="dark"] li,
+html[data-theme="dark"] span,
+html[data-theme="dark"] small{color:var(--dm-muted)!important}
+html[data-theme="dark"] h1,
+html[data-theme="dark"] h2,
+html[data-theme="dark"] h3,
+html[data-theme="dark"] h4,
+html[data-theme="dark"] a,
+html[data-theme="dark"] strong{color:var(--dm-text)!important}
+html[data-theme="dark"] .btn,
+html[data-theme="dark"] button,
+html[data-theme="dark"] select,
+html[data-theme="dark"] .lang-switch,
+html[data-theme="dark"] .theme-btn{
+background:#1d2b42!important;
+color:var(--dm-text)!important;
+border:1px solid var(--dm-line)!important;
+}
+html[data-theme="dark"] .btn-primary{background:#274061!important}
+.theme-btn{
+width:42px;height:42px;min-width:42px;
+display:inline-flex;align-items:center;justify-content:center;
+padding:0;margin-right:8px;border-radius:8px;
+background:#fff;border:1px solid #d7e0ea;cursor:pointer;
+}
+.theme-btn img{width:18px;height:18px;display:block}
