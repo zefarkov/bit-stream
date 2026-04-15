@@ -100,9 +100,34 @@
 </footer>
 <script src="../assets/js/app.js"></script>
 
+
+
 <script>
-(function(){const t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);})();
-function toggleTheme(){const e=document.documentElement;const n=e.getAttribute('data-theme')==='dark'?'light':'dark';e.setAttribute('data-theme',n);localStorage.setItem('theme',n);}
+(function(){
+ const saved=localStorage.getItem('theme');
+ if(saved){document.documentElement.setAttribute('data-theme',saved);}
+ else if(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches){
+   document.documentElement.setAttribute('data-theme','dark');
+ }
+})();
+function toggleTheme(){
+ const el=document.documentElement;
+ const dark=el.getAttribute('data-theme')==='dark';
+ const next=dark?'light':'dark';
+ el.setAttribute('data-theme',next);
+ localStorage.setItem('theme',next);
+ const b=document.getElementById('themeFab'); if(b){b.innerHTML=next==='dark'?'☀':'☾';}
+}
+document.addEventListener('DOMContentLoaded',function(){
+ if(!document.getElementById('themeFab')){
+   const b=document.createElement('button');
+   b.id='themeFab'; b.className='theme-fab';
+   const dark=document.documentElement.getAttribute('data-theme')==='dark';
+   b.innerHTML=dark?'☀':'☾';
+   b.onclick=toggleTheme;
+   document.body.appendChild(b);
+ }
+});
 </script>
 </body>
 </html>

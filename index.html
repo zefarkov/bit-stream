@@ -13,28 +13,34 @@
     p{color:#5b6b80;line-height:1.55}
     a{display:inline-block;margin:8px 10px 0 0;color:#0b2e59;text-decoration:none;font-weight:700}
   </style>
-  <script>
-    (function(){
-      var l=(navigator.language||navigator.userLanguage||'uz').toLowerCase();
-      var target='uz/index.html';
-      if(l.startsWith('ru')) target='ru/index.html';
-      else if(l.startsWith('en')) target='en/index.html';
-      location.replace(target);
-    })();
-  </script>
-</head>
-<body>
-  <div class="card">
-    <h1>BITSTREAM</h1>
-    <p>Redirecting to the best language version. Default: Uzbek.</p>
-    <a href="uz/index.html">O‘zbekcha</a>
-    <a href="ru/index.html">Русский</a>
-    <a href="en/index.html">English</a>
-  </div>
+  
 
 <script>
-(function(){const t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);})();
-function toggleTheme(){const e=document.documentElement;const n=e.getAttribute('data-theme')==='dark'?'light':'dark';e.setAttribute('data-theme',n);localStorage.setItem('theme',n);}
+(function(){
+ const saved=localStorage.getItem('theme');
+ if(saved){document.documentElement.setAttribute('data-theme',saved);}
+ else if(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches){
+   document.documentElement.setAttribute('data-theme','dark');
+ }
+})();
+function toggleTheme(){
+ const el=document.documentElement;
+ const dark=el.getAttribute('data-theme')==='dark';
+ const next=dark?'light':'dark';
+ el.setAttribute('data-theme',next);
+ localStorage.setItem('theme',next);
+ const b=document.getElementById('themeFab'); if(b){b.innerHTML=next==='dark'?'☀':'☾';}
+}
+document.addEventListener('DOMContentLoaded',function(){
+ if(!document.getElementById('themeFab')){
+   const b=document.createElement('button');
+   b.id='themeFab'; b.className='theme-fab';
+   const dark=document.documentElement.getAttribute('data-theme')==='dark';
+   b.innerHTML=dark?'☀':'☾';
+   b.onclick=toggleTheme;
+   document.body.appendChild(b);
+ }
+});
 </script>
 </body>
 </html>
