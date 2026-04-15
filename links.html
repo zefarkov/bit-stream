@@ -33,5 +33,10 @@
       <a href="en/links.html"><span>English</span><span>→</span></a>
     </div>
   </div>
+
+<script>
+(function(){const t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);})();
+function toggleTheme(){const e=document.documentElement;const n=e.getAttribute('data-theme')==='dark'?'light':'dark';e.setAttribute('data-theme',n);localStorage.setItem('theme',n);}
+</script>
 </body>
 </html>

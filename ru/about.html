@@ -45,7 +45,7 @@
   <nav class="main-nav">
     <div class="container nav-wrap" data-nav></div>
   </nav>
-</header>
+<button class="theme-toggle" onclick="toggleTheme()">☾</button></header>
 <main>
 
 <section class="section">
@@ -103,5 +103,10 @@
   <div class="container footer-bottom">© 2026 BITSTREAM</div>
 </footer>
 <script src="../assets/js/app.js"></script>
+
+<script>
+(function(){const t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);})();
+function toggleTheme(){const e=document.documentElement;const n=e.getAttribute('data-theme')==='dark'?'light':'dark';e.setAttribute('data-theme',n);localStorage.setItem('theme',n);}
+</script>
 </body>
 </html>

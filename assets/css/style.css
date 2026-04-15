@@ -307,3 +307,14 @@ p{margin:0 0 12px;color:var(--muted)}
 .team-grid{grid-template-columns:repeat(3,1fr)}
 @media (max-width: 1100px){.service-grid,.cases-grid,.team-grid,.partner-grid{grid-template-columns:repeat(2,1fr)}}
 @media (max-width: 720px){.service-grid,.cases-grid,.team-grid,.partner-grid,.stats-grid,.facts-grid,.hero-grid,.two-col,.contact-grid,.about-grid{grid-template-columns:1fr}.brand img{width:180px}.header-wrap{min-height:82px}.hero-copy{padding:22px}h1{font-size:34px}.utility-wrap{min-height:unset;padding:8px 0}.nav-wrap{min-height:52px}}
+
+
+:root{
+ --bg:#eef2f7; --text:#10233e; --panel:#ffffff; --border:#d8e1eb;
+}
+html[data-theme="dark"]{
+ --bg:#0b1220; --text:#e8eef8; --panel:#111a2b; --border:#22324d;
+}
+body{background:var(--bg)!important;color:var(--text)!important;transition:.25s;}
+.panel,.card,.service-card,.case-card,.team-card,.stat-card,.partner-card,.wrap{background:var(--panel)!important;color:var(--text)!important;border-color:var(--border)!important;}
+.theme-toggle{cursor:pointer;border:1px solid var(--border);background:var(--panel);color:var(--text);padding:8px 12px;border-radius:10px;font-weight:700}

@@ -30,5 +30,10 @@
     <a href="#"><span>Локация (Google)</span><span class="arrow">→</span></a>
     <a href="#"><span>Локация (2GIS)</span><span class="arrow">→</span></a>
   </div>
+
+<script>
+(function(){const t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);})();
+function toggleTheme(){const e=document.documentElement;const n=e.getAttribute('data-theme')==='dark'?'light':'dark';e.setAttribute('data-theme',n);localStorage.setItem('theme',n);}
+</script>
 </body>
 </html>
