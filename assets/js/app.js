@@ -1,9 +1,11 @@
 async function readJSON(path){ const r = await fetch(path); return await r.json(); }
+
 function initLang(){
   const sel = document.querySelector('[data-lang-select]');
   if(!sel) return;
   sel.addEventListener('change', ()=> location.href = sel.value);
 }
+
 function pageLabels(lang){
   const m = {
     uz:{
@@ -126,26 +128,33 @@ function pageLabels(lang){
   };
   return m[lang] || m.en;
 }
+
 function navHTML(lang, page){
   const L = pageLabels(lang);
   const links = [
-    ['index.html',L.home,'index'],['services.html',L.services,'services'],
-    ['projects.html',L.projects,'projects'],['about.html',L.about,'about'],['contacts.html',L.contacts,'contacts']
+    ['index.html',L.home,'index'],
+    ['services.html',L.services,'services'],
+    ['projects.html',L.projects,'projects'],
+    ['about.html',L.about,'about'],
+    ['contacts.html',L.contacts,'contacts']
   ];
   return links.map(([href,label,key])=>`<a class="${page===key?'active':''}" href="${href}">${label}</a>`).join('');
 }
+
 function langOptions(page, lang){
-  const map = {
-    index:['../uz/index.html','../ru/index.html','../en/index.html'],
-    services:['../uz/services.html','../ru/services.html','../en/services.html'],
-    projects:['../uz/projects.html','../ru/projects.html','../en/projects.html'],
-    about:['../uz/about.html','../ru/about.html','../en/about.html'],
-    contacts:['../uz/contacts.html','../ru/contacts.html','../en/contacts.html']
+  const pages = {
+    index: ['../uz/index.html','../ru/index.html','../en/index.html'],
+    services: ['../uz/services.html','../ru/services.html','../en/services.html'],
+    projects: ['../uz/projects.html','../ru/projects.html','../en/projects.html'],
+    about: ['../uz/about.html','../ru/about.html','../en/about.html'],
+    contacts: ['../uz/contacts.html','../ru/contacts.html','../en/contacts.html']
   };
-  const vals = map[page];
-  const langs = ['UZ','RU','EN'];
-  return vals.map((v,i)=>`<option value="${v}" ${['uz','ru','en'][i]===lang?'selected':''}>${langs[i]}</option>`).join('');
+  const values = pages[page] || pages.index;
+  const labels = ['UZ','RU','EN'];
+  const ids = ['uz','ru','en'];
+  return values.map((value,i)=>`<option value="${value}" ${ids[i]===lang?'selected':''}>${labels[i]}</option>`).join('');
 }
+
 function renderHero(lang){
   const L = pageLabels(lang);
   const node = document.querySelector('[data-home-hero]');
@@ -167,28 +176,39 @@ function renderHero(lang){
         </div>
       </div>
       <div class="panel hero-visual">
-        <img src="../assets/img/brand/hero-infra.svg" alt="IT infrastructure illustration">
+        <img src="../assets/img/brand/hero-infra.webp" alt="IT infrastructure illustration">
       </div>
     </div>`;
 }
+
 async function renderStats(lang){
   const data = await readJSON('../assets/data/stats.json');
   const node = document.querySelector('[data-stats]');
   if(!node) return;
   node.innerHTML = data.map(x=>`<article class="stat-card"><strong>${x.value}${x.suffix||''}</strong><span>${x.label[lang]||x.label.en}</span><div class="mini">${x.note[lang]||x.note.en}</div></article>`).join('');
 }
+
 async function renderServices(lang){
   const data = await readJSON('../assets/data/services.json');
   const node = document.querySelector('[data-services]');
   if(!node) return;
   node.innerHTML = data.map(x=>`<article class="service-card"><div class="inner"><h3>${x.title[lang]||x.title.en}</h3><p>${x.text[lang]||x.text.en}</p></div></article>`).join('');
 }
+
 async function renderCases(lang){
   const data = await readJSON('../assets/data/cases.json');
   const node = document.querySelector('[data-cases]');
   if(!node) return;
+  const imgs = [
+    '../assets/img/cases/projects_server.webp',
+    '../assets/img/cases/projects_cctv.webp',
+    '../assets/img/cases/projects_backup.webp',
+    '../assets/img/cases/projects_net_sec.webp',
+    '../assets/img/cases/projects_voip.webp',
+    '../assets/img/cases/projects_faceid.webp'
+  ];
   node.innerHTML = data.map((x,idx)=>`<article class="case-card panel">
-      <div class="case-media"><img src="../assets/img/cases/c${(idx%3)+1}.svg" alt="Project case"></div>
+      <div class="case-media"><img src="${imgs[idx % imgs.length]}" alt="${x.title[lang]||x.title.en}"></div>
       <div class="inner">
         <h3>${x.title[lang]||x.title.en}</h3>
         <p>${x.summary[lang]||x.summary.en}</p>
@@ -196,22 +216,32 @@ async function renderCases(lang){
       </div>
     </article>`).join('');
 }
+
 async function renderTeam(lang){
   const data = await readJSON('../assets/data/team.json');
   const node = document.querySelector('[data-team]');
   if(!node) return;
-  const imgs = ['../assets/img/team/t1.svg','../assets/img/team/t2.svg','../assets/img/team/t3.svg'];
+  const imgs = [
+    '../assets/img/team/nurmurod.webp',
+    '../assets/img/team/sobitxon.webp',
+    '../assets/img/team/dilshod.webp',
+    '../assets/img/team/bahrom.webp',
+    '../assets/img/team/farrux.webp',
+    '../assets/img/team/abdulaziz.webp'
+  ];
   node.innerHTML = data.map((x,idx)=>`<article class="team-card panel">
-      <div class="case-media"><img src="${imgs[idx%3]}" alt="Team member"></div>
+      <div class="case-media"><img src="${imgs[idx % imgs.length]}" alt="${x.name}"></div>
       <div class="inner"><h3>${x.name}</h3><p><strong>${x.role[lang]||x.role.en}</strong></p><p>${x.bio[lang]||x.bio.en}</p></div>
     </article>`).join('');
 }
+
 async function renderPartners(){
   const data = await readJSON('../assets/data/partners.json');
   const node = document.querySelector('[data-partners]');
   if(!node) return;
   node.innerHTML = data.map(x=>`<article class="partner-card">${x}</article>`).join('');
 }
+
 async function renderSite(lang){
   const site = await readJSON('../assets/data/site.json');
   const c = site.company;
@@ -225,24 +255,49 @@ async function renderSite(lang){
   document.querySelectorAll('[data-company-telegram]').forEach(el=>{el.textContent='t.me/bitstreamuz'; el.href=c.telegram;});
   document.querySelectorAll('[data-company-address]').forEach(el=>el.textContent=c.address[lang]||c.address.en);
 }
+
 function renderStatic(lang,page){
   const L = pageLabels(lang);
   const nav = document.querySelector('[data-nav]');
   if(nav) nav.innerHTML = navHTML(lang,page);
+
   const sel = document.querySelector('[data-lang-select]');
   if(sel) sel.innerHTML = langOptions(page,lang);
+
   const fill = (selector, value) => { document.querySelectorAll(selector).forEach(el=>el.innerHTML = value); };
-  fill('[data-home-title]', L.sectionStats); fill('[data-home-subtitle]', L.sectionStatsP); fill('[data-services-title]', L.sectionServices);
-  fill('[data-services-subtitle]', L.sectionServicesP); fill('[data-projects-title]', L.sectionProjects); fill('[data-projects-subtitle]', L.sectionProjectsP);
-  fill('[data-about-title]', L.sectionAbout); fill('[data-about-subtitle]', L.sectionAboutP); fill('[data-partners-title]', L.sectionPartners);
-  fill('[data-partners-subtitle]', L.sectionPartnersP); fill('[data-contact-title]', L.sectionContact); fill('[data-contact-subtitle]', L.sectionContactP);
-  fill('[data-about1t]', L.about1t); fill('[data-about1p]', L.about1p); fill('[data-about2t]', L.about2t); fill('[data-about2p]', L.about2p);
-  fill('[data-fact1]', L.facts1); fill('[data-fact2]', L.facts2); fill('[data-fact3]', L.facts3); fill('[data-fact4]', L.facts4);
-  fill('[data-contact-card1]', L.contactCard1); fill('[data-contact-card2]', L.contactCard2); fill('[data-contact-hint]', L.contactHint);
-  fill('[data-footer-note]', L.footerNote); fill('[data-utility]', L.utility); fill('[data-section-link]', L.sectionLink);
-  fill('[data-strict-note]', L.strictNote); fill('[data-service-notice]', L.serviceNotice); fill('[data-contact-notice]', L.contactNotice); fill('[data-cta-text]', L.ctaText);
+  fill('[data-home-title]', L.sectionStats);
+  fill('[data-home-subtitle]', L.sectionStatsP);
+  fill('[data-services-title]', L.sectionServices);
+  fill('[data-services-subtitle]', L.sectionServicesP);
+  fill('[data-projects-title]', L.sectionProjects);
+  fill('[data-projects-subtitle]', L.sectionProjectsP);
+  fill('[data-about-title]', L.sectionAbout);
+  fill('[data-about-subtitle]', L.sectionAboutP);
+  fill('[data-partners-title]', L.sectionPartners);
+  fill('[data-partners-subtitle]', L.sectionPartnersP);
+  fill('[data-contact-title]', L.sectionContact);
+  fill('[data-contact-subtitle]', L.sectionContactP);
+  fill('[data-about1t]', L.about1t);
+  fill('[data-about1p]', L.about1p);
+  fill('[data-about2t]', L.about2t);
+  fill('[data-about2p]', L.about2p);
+  fill('[data-fact1]', L.facts1);
+  fill('[data-fact2]', L.facts2);
+  fill('[data-fact3]', L.facts3);
+  fill('[data-fact4]', L.facts4);
+  fill('[data-contact-card1]', L.contactCard1);
+  fill('[data-contact-card2]', L.contactCard2);
+  fill('[data-contact-hint]', L.contactHint);
+  fill('[data-footer-note]', L.footerNote);
+  fill('[data-utility]', L.utility);
+  fill('[data-section-link]', L.sectionLink);
+  fill('[data-strict-note]', L.strictNote);
+  fill('[data-service-notice]', L.serviceNotice);
+  fill('[data-contact-notice]', L.contactNotice);
+  fill('[data-cta-text]', L.ctaText);
   document.querySelectorAll('[data-contact-btn]').forEach(el=>el.textContent=L.contacts);
 }
+
 document.addEventListener('DOMContentLoaded', async ()=>{
   initLang();
   const lang = document.body.dataset.lang || 'uz';
@@ -250,5 +305,11 @@ document.addEventListener('DOMContentLoaded', async ()=>{
   renderStatic(lang,page);
   await renderSite(lang);
   renderHero(lang);
-  await Promise.all([renderStats(lang), renderServices(lang), renderCases(lang), renderTeam(lang), renderPartners()]);
+  await Promise.all([
+    renderStats(lang),
+    renderServices(lang),
+    renderCases(lang),
+    renderTeam(lang),
+    renderPartners()
+  ]);
 });
