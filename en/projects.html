@@ -45,7 +45,7 @@
   <nav class="main-nav">
     <div class="container nav-wrap" data-nav></div>
   </nav>
-<button class="theme-toggle" onclick="toggleTheme()">☾</button></header>
+</header>
 <main>
 
 <section class="section">
@@ -99,35 +99,28 @@
   <div class="container footer-bottom">© 2026 BITSTREAM</div>
 </footer>
 <script src="../assets/js/app.js"></script>
-
-
-
 <script>
 (function(){
  const saved=localStorage.getItem('theme');
- if(saved){document.documentElement.setAttribute('data-theme',saved);}
- else if(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches){
-   document.documentElement.setAttribute('data-theme','dark');
- }
+ if(saved==='dark'){document.documentElement.setAttribute('data-theme','dark');}
 })();
 function toggleTheme(){
  const el=document.documentElement;
  const dark=el.getAttribute('data-theme')==='dark';
- const next=dark?'light':'dark';
- el.setAttribute('data-theme',next);
- localStorage.setItem('theme',next);
- const b=document.getElementById('themeFab'); if(b){b.innerHTML=next==='dark'?'☀':'☾';}
+ if(dark){el.removeAttribute('data-theme');localStorage.setItem('theme','light');}
+ else{el.setAttribute('data-theme','dark');localStorage.setItem('theme','dark');}
+ const b=document.getElementById('themeBtn');
+ if(b){b.innerHTML=el.getAttribute('data-theme')==='dark'?'☀':'☾';}
 }
 document.addEventListener('DOMContentLoaded',function(){
- if(!document.getElementById('themeFab')){
+ const lang=document.querySelector('[data-lang-select]');
+ if(lang && !document.getElementById('themeBtn')){
    const b=document.createElement('button');
-   b.id='themeFab'; b.className='theme-fab';
-   const dark=document.documentElement.getAttribute('data-theme')==='dark';
-   b.innerHTML=dark?'☀':'☾';
+   b.id='themeBtn'; b.className='theme-btn';
+   b.innerHTML=document.documentElement.getAttribute('data-theme')==='dark'?'☀':'☾';
    b.onclick=toggleTheme;
-   document.body.appendChild(b);
+   lang.parentNode.insertBefore(b,lang);
  }
 });
-</script>
-</body>
+</script></body>
 </html>
