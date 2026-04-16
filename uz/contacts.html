@@ -71,20 +71,12 @@
       <article class="contact-card panel">
         <strong>So‘rov yuborish</strong>
 
-        <form action="https://formspree.io/f/meevaqgq" method="POST" class="lead-form">
-          
+        <form action="https://formspree.io/f/meevaqgq" method="POST" class="lead-form" id="leadForm">
           <input type="text" name="name" placeholder="Ismingiz" required>
-
           <input type="tel" name="phone" placeholder="Telefon raqam" required>
-
           <input type="text" name="company" placeholder="Kompaniya">
-
           <textarea name="message" placeholder="Vazifa yoki muammo" rows="5" required></textarea>
-
           <input type="hidden" name="_subject" value="Yangi so‘rov - BITSTREAM">
-
-          <input type="hidden" name="_redirect" value="https://bit-stream.uz/rahmat.html">
-
           <button type="submit" class="btn btn-primary">Yuborish</button>
         </form>
       </article>
@@ -156,6 +148,35 @@ document.addEventListener('DOMContentLoaded',function(){
    updateThemeIcon();
  }
 });
+</script>
+<script>
+const leadForm = document.getElementById('leadForm');
+
+if (leadForm) {
+  leadForm.addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(leadForm);
+
+    try {
+      const response = await fetch(leadForm.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        window.location.href = 'uz/rahmat.html';
+      } else {
+        alert('Xabar yuborilmadi. Qayta urinib ko‘ring.');
+      }
+    } catch (error) {
+      alert('Xatolik yuz berdi. Qayta urinib ko‘ring.');
+    }
+  });
+}
 </script>
 </body>
 </html>
