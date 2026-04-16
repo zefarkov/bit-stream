@@ -211,7 +211,7 @@ p{margin:0 0 12px;color:var(--muted)}
   border-top:3px solid var(--brand);
 }
 .case-media{
-  aspect-ratio:16/9;
+  aspect-ratio:16/12;
   overflow:hidden;
   border-bottom:1px solid var(--line);
 }
@@ -723,3 +723,23 @@ html[data-theme="dark"] .btn-primary{background:#274061!important}
 html[data-theme="dark"] .nav-wrap a.active,
 html[data-theme="dark"] .nav-wrap a:hover{background:#213149!important}
 html[data-theme="dark"] .section-line{background:#2a3a52!important}
+.lead-form{
+display:grid;
+gap:12px;
+margin-top:16px;
+}
+
+.lead-form input,
+.lead-form textarea{
+width:100%;
+padding:14px;
+border:1px solid #ccd6e3;
+border-radius:10px;
+font:inherit;
+background:#fff;
+}
+
+.lead-form textarea{
+resize:vertical;
+min-height:150px;
+}

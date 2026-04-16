@@ -27,20 +27,20 @@ function pageLabels(lang){
       sectionPartners:'Bizga ishonch bildirganlar',
       sectionPartnersP:'Turli sohalardagi kompaniyalar va tashkilotlar bilan ishlaganmiz.',
       sectionContact:'Bog‘lanish',
-      sectionContactP:'Vazifangizni yuboring. Biz uni texnik tilga, reja va yechimga aylantiramiz.',
+      sectionContactP:'Vazifangizni ayting. Biz uni texnik yechim va aniq reja ko‘rinishiga keltiramiz.',
       about1t:'Nima uchun BITSTREAM',
       about1p:'Serverlar, tarmoqlar, axborot xavfsizligi, video kuzatuv va IP-telefoniya yo‘nalishlarida professional xizmat ko‘rsatamiz. Biz tizimni shunchaki o‘rnatmaymiz — uni xavfsiz, tartibli va uzoq muddat ishlaydigan holatga keltiramiz.',
       about2t:'Qanday ishlaymiz',
       about2p:'Tahlil → ehtiyojni aniqlash → reja → joriy etish → sinov → hujjatlashtirish → keyingi xizmat. Asosiy maqsad — mijoz ishonchi, tizim barqarorligi va tezkor yordam.',
-      contactCard1:'Asosiy aloqa',
-      contactCard2:'Birinchi xabarda nimalarni yozish kerak',
-      contactHint:'Obyekt turi, foydalanuvchilar soni, filiallar bor-yo‘qligi, hozirgi muammo yoki kerakli yechim turini yozing.',
+      contactCard1:'Ma’lumotlar',
+      contactCard2:'So‘rov yuborish',
+      contactHint:'Obyekt turi, foydalanuvchilar soni, filiallar mavjudligi, hozirgi muammo yoki kerakli xizmat turini yozing.',
       footerNote:'BITSTREAM — tijorat tashkilotlari uchun IT infratuzilma bo‘yicha texnik hamkor.',
       utility:'NEXT GENERATION NETWORK',
       sectionLink:'Sahifaga o‘tish',
       strictNote:'',
       serviceNotice:'Biz texnologiya emas, natija yetkazamiz.',
-      contactNotice:'Keyingi iteratsiyada forma, Telegram CTA, real logotiplar, aniq SEO va kuchliroq keyvisual qo‘shish mumkin.',
+      contactNotice:'',
       ctaText:'Serverlar, tarmoqlar, xavfsizlik va support biznes uchun bitta boshqariladigan kontur bo‘lishi kerak.'
     },
     ru:{
@@ -218,12 +218,12 @@ async function renderTeam(lang){
   const node = document.querySelector('[data-team]');
   if(!node) return;
   const imgs = [
-    '../assets/img/team/nurmurod.webp',
-    '../assets/img/team/sobitxon.webp',
-    '../assets/img/team/dilshod.webp',
+    '../assets/img/team/abdulaziz.webp',
+    '../assets/img/team/farrux.png',
+/** '../assets/img/team/nurmurod.webp',*/ 
     '../assets/img/team/bahrom.webp',
-    '../assets/img/team/farrux.webp',
-    '../assets/img/team/abdulaziz.webp'
+/**    '../assets/img/team/sobitxon.webp', */
+/**    '../assets/img/team/dilshod.webp' */
   ];
   node.innerHTML = data.map((x,idx)=>`<article class="team-card panel">
       <div class="case-media"><img src="${imgs[idx % imgs.length]}" alt="${x.name}"></div>
