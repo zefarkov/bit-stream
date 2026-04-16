@@ -41,7 +41,7 @@ function pageLabels(lang){
       strictNote:'',
       serviceNotice:'Biz texnologiya emas, natija yetkazamiz.',
       contactNotice:'',
-      ctaText:'Serverlar, tarmoqlar, xavfsizlik va support biznes uchun bitta boshqariladigan kontur bo‘lishi kerak.'
+      ctaText:'Biznes o‘sishi uchun IT tizim barqaror va nazorat ostida bo‘lishi kerak.'
     },
     ru:{
       home:'Главная', services:'Услуги', projects:'Проекты', about:'О компании', contacts:'Контакты', ctcbtn:"Связаться",
@@ -235,7 +235,12 @@ async function renderPartners(){
   const data = await readJSON('../assets/data/partners.json');
   const node = document.querySelector('[data-partners]');
   if(!node) return;
-  node.innerHTML = data.map(x=>`<article class="partner-card">${x}</article>`).join('');
+
+  node.innerHTML = data.map(item => `
+    <article class="partner-card">
+      <img src="${item.logo}" alt="${item.name}" loading="lazy">
+    </article>
+  `).join('');
 }
 
 async function renderSite(lang){

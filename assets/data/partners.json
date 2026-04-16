@@ -1,7 +1,22 @@
 [
-  "AZURE RESORT",
-  "ZUMA PHARMA",
-  "ATECA HOTEL SUITES",
-  "CORE ENERGY",
-  "GRID"
+  {
+    "name": "AZURE RESORT",
+    "logo": "../assets/img/partners/azure-resort.png"
+  },
+  {
+    "name": "ZUMA PHARMA",
+    "logo": "../assets/img/partners/zuma-pharma.png"
+  },
+  {
+    "name": "ATECA HOTEL SUITES",
+    "logo": "../assets/img/partners/ateca-hotel-suites.png"
+  },
+  {
+    "name": "CORE ENERGY",
+    "logo": "../assets/img/partners/core-energy.png"
+  },
+  {
+    "name": "GRID",
+    "logo": "../assets/img/partners/grid.png"
+  }
 ]
