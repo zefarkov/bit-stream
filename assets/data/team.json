@@ -8,8 +8,8 @@
     },
     "bio": {
       "uz": "Serverlar, foydalanuvchi muhiti va kundalik IT jarayonlarining barqaror ishlashini ta’minlaydi.",
-      "ru": "Ведёт серверы, пользовательские среды, backup и повседневную поддержку.",
-      "en": "Maintains servers, user environments, backup, and day-to-day support."
+      "ru": "Отвечает за серверы, пользовательскую среду и стабильную повседневную работу IT.",
+      "en": "Responsible for servers, user environments, and stable day-to-day IT operations."
     }
   },
   {
@@ -21,8 +21,8 @@
     },
     "bio": {
       "uz": "Tarmoq himoyasi, kirish nazorati va xavfsizlik arxitekturasini yo‘lga qo‘yadi.",
-      "ru": "Собирает firewall, сегментацию, контроль доступа и контуры безопасности.",
-      "en": "Builds firewall, segmentation, access control, and security layers."
+      "ru": "Выстраивает сетевую защиту, контроль доступа и архитектуру безопасности.",
+      "en": "Builds network protection, access control, and security architecture."
     }
   },
   {
@@ -34,8 +34,8 @@
     },
     "bio": {
       "uz": "Brend ko‘rinishi, tashqi kommunikatsiya va mijoz oqimini kuchaytirish bilan shug‘ullanadi.",
-      "ru": "Занимается внешними коммуникациями и презентационными материалами компании.",
-      "en": "Works on external communications and company presentation materials."
+      "ru": "Отвечает за присутствие бренда, внешние коммуникации и подачу компании.",
+      "en": "Handles brand presence, external communications, and company presentation."
     }
   }
 ]

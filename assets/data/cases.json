@@ -2,13 +2,13 @@
   {
     "title": {
       "uz": "Server infratuzilmalari",
-      "ru": "Серверные инфраструктуры",
-      "en": "Server infrastructures"
+      "ru": "Серверная и IT-инфраструктура",
+      "en": "Server and IT infrastructure"
     },
     "summary": {
       "uz": "Windows va Linux serverlari, AD, DNS, DHCP va WEB xizmatlari joriy qilindi. Tizim hujjatlashtirildi va barqaror ishlashga tayyorlandi.",
-      "ru": "Внедрены Windows и Linux серверы, AD, DNS, DHCP и WEB сервисы. Системы документированы и приведены к рабочему порядку.",
-      "en": "Windows and Linux servers, AD, DNS, DHCP, and WEB services were deployed, documented, and brought into an operational support model."
+      "ru": "Внедрены Windows и Linux серверы, AD, DNS, DHCP и WEB-сервисы. Система задокументирована и приведена к стабильной работе.",
+      "en": "Windows and Linux servers, AD, DNS, DHCP, and WEB services were deployed. The system was documented and prepared for stable operation."
     },
     "stack": [
       "Windows Server",
@@ -21,13 +21,13 @@
   {
     "title": {
       "uz": "Video kuzatuv tizimlari",
-      "ru": "Системы видеонаблюдения",
-      "en": "Video surveillance systems"
+      "ru": "Видеонаблюдение и контроль доступа",
+      "en": "Video surveillance and access control"
     },
     "summary": {
       "uz": "Kameralar nazorati tizimlari o‘rnatildi va sozlandi. Obyekt xavfsizligi kuchaytirildi.",
-      "ru": "Установлены и настроены системы камеры. Усилена безопасность объекта и управление доступом.",
-      "en": "Cameras systems were installed and configured to strengthen site security and access management."
+      "ru": "Установлены и настроены камеры, Face ID и системы контроля доступа. Безопасность объекта усилена.",
+      "en": "Cameras, Face ID, and access control systems were installed and configured to strengthen site security."
     },
     "stack": [
       "CCTV",
@@ -44,8 +44,8 @@
     },
     "summary": {
       "uz": "NAS va avtomatik backup orqali ma’lumotlar himoyalandi, tiklash ssenariylari yo‘lga qo‘yildi.",
-      "ru": "Обеспечена сохранность данных с помощью NAS и автоматических backup, подготовлены сценарии восстановления.",
-      "en": "Data protection was strengthened with NAS and automated backups, along with clear recovery scenarios."
+      "ru": "С помощью NAS и автоматического backup выстроена защита данных и сценарии восстановления.",
+      "en": "Data protection and recovery scenarios were built with NAS and automated backup."
     },
     "stack": [
       "NAS",
@@ -57,13 +57,13 @@
   {
     "title": {
       "uz": "Tarmoq va xavfsizlik",
-      "ru": "Сеть и безопасность",
-      "en": "Network and security"
+      "ru": "Сети и безопасность",
+      "en": "Networking and security"
     },
     "summary": {
       "uz": "Firewall, pfSense, MikroTik va Fortinet asosida himoya sozlandi. Tarmoq segmentatsiyasi va tashqi kirishlar nazoratga olindi.",
-      "ru": "Настроена защита на базе Firewall, pfSense, MikroTik и Fortinet. Сегментация сети и внешний доступ взяты под контроль.",
-      "en": "Protection was configured with firewall, pfSense, MikroTik, and Fortinet, with network segmentation and external access under control."
+      "ru": "Настроены firewall, сегментация, удалённый доступ и контуры безопасности для стабильной работы сети.",
+      "en": "Firewall, segmentation, remote access, and security controls were implemented for reliable network operations."
     },
     "stack": [
       "Firewall",
@@ -75,13 +75,13 @@
   {
     "title": {
       "uz": "Korporativ telefoniya",
-      "ru": "Инфраструктура корпоративной телефонии",
-      "en": "Corporate telephony infrastructure"
+      "ru": "Корпоративная телефония",
+      "en": "Corporate telephony"
     },
     "summary": {
       "uz": "IP-telefoniya va ichki aloqa tizimi joriy qilindi. Filiallar va bo‘limlar uchun boshqariladigan aloqa muhiti yaratildi.",
-      "ru": "Внедрена IP-телефония и внутренняя связь. Построен управляемый контур коммуникации для филиалов и отделов.",
-      "en": "IP telephony and internal communication were deployed as a managed voice layer for branches and teams."
+      "ru": "Внедрены IP-телефония и внутренняя связь для офисов и филиалов.",
+      "en": "IP telephony and internal communication systems were deployed for offices and branches."
     },
     "stack": [
       "FreePBX",
@@ -93,13 +93,13 @@
   {
     "title": {
       "uz": "Kirish nazorati tizimi",
-      "ru": "Контроль доступа на объект",
-      "en": "Site access control"
+      "ru": "Система контроля доступа",
+      "en": "Access control system"
     },
     "summary": {
       "uz": "Xodim va tashrif buyuruvchilar oqimi uchun kirish boshqaruvi joriy qilindi, xavfsizlik jarayonlari kuchaytirildi.",
-      "ru": "Внедрена схема контроля доступа для сотрудников и посетителей, усилены процессы физической безопасности.",
-      "en": "A controlled access model was introduced for staff and visitors, strengthening physical security operations."
+      "ru": "Организовано управление доступом и входом на объект для сотрудников и посетителей.",
+      "en": "Controlled access and site entry management were implemented for staff and visitors."
     },
     "stack": [
       "Kirish nazorati",

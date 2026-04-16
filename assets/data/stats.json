@@ -4,13 +4,13 @@
     "suffix": "",
     "label": {
       "uz": "2018-yildan beri IT yechimlar",
-      "ru": "с 2018 года надёжные IT-решения",
-      "en": "reliable IT solutions since 2018"
+      "ru": "Надёжные IT-решения с 2018 года",
+      "en": "Reliable IT solutions since 2018"
     },
     "note": {
       "uz": "Ko‘p yillik amaliy tajriba",
-      "ru": "сформированный опыт компании",
-      "en": "established company experience"
+      "ru": "Многолетний практический опыт",
+      "en": "Years of practical experience"
     }
   },
   {
@@ -18,13 +18,13 @@
     "suffix": "+",
     "label": {
       "uz": "Asosiy xizmat yo‘nalishi",
-      "ru": "ключевых IT-направлений услуг",
-      "en": "core IT service areas"
+      "ru": "Ключевых направлений услуг",
+      "en": "Core service areas"
     },
     "note": {
       "uz": "Serverlar, tarmoqlar, backup, xavfsizlik, IP-telefoniya",
-      "ru": "серверы, сети, виртуализация, backup, видеонаблюдение и IP-телефония",
-      "en": "servers, networking, virtualization, backup, surveillance, and IP telephony"
+      "ru": "Серверы, сети, backup, безопасность и IP-телефония",
+      "en": "Servers, networking, backup, security, and IP telephony"
     }
   },
   {
@@ -32,13 +32,13 @@
     "suffix": " min",
     "label": {
       "uz": "Tezkor javob va yordam",
-      "ru": "модель быстрого реагирования",
-      "en": "rapid response model"
+      "ru": "Модель быстрого реагирования",
+      "en": "Rapid response model"
     },
     "note": {
       "uz": "Kelishilgan SLA asosida",
-      "ru": "на основе согласованного SLA и удалённой техподдержки",
-      "en": "based on agreed SLA and remote technical support"
+      "ru": "По согласованному SLA и удалённой поддержке",
+      "en": "Based on agreed SLA and remote support"
     }
   },
   {
@@ -46,13 +46,13 @@
     "suffix": "",
     "label": {
       "uz": "Doimiy monitoring va nazorat",
-      "ru": "мониторинг и контроль критичных зон",
-      "en": "monitoring and critical control"
+      "ru": "Мониторинг и контроль",
+      "en": "Monitoring and control"
     },
     "note": {
       "uz": "Kuzatuv, ogohlantirish va profilaktika",
-      "ru": "наблюдение, оповещения и профилактический контроль",
-      "en": "monitoring, alerting, and preventive control"
+      "ru": "Наблюдение, оповещения и профилактический контроль",
+      "en": "Monitoring, alerting, and preventive control"
     }
   }
 ]
