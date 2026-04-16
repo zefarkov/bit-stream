@@ -1,12 +1,12 @@
 [
   {
     "title": {
-      "uz": "Server va IT infratuzilma",
+      "uz": "Serverlar va IT tizimlar",
       "ru": "Серверная и IT-инфраструктура",
       "en": "Server and IT infrastructure"
     },
     "text": {
-      "uz": "Windows va Linux serverlarini o‘rnatish, sozlash va optimizatsiya qilish. AD, DNS, DHCP, WEB, FTP, NTP va Print server xizmatlarini ishga tushirish.",
+      "uz": "Windows va Linux serverlarini o‘rnatish, sozlash va barqaror ishlashini ta’minlash. AD, DNS, DHCP, WEB, FTP, NTP va Print Server.",
       "ru": "Развёртывание, настройка и оптимизация Windows и Linux серверов. Запуск AD, DNS, DHCP, WEB, FTP, NTP и Print server сервисов.",
       "en": "Deployment, configuration, and optimization of Windows and Linux servers, including AD, DNS, DHCP, WEB, FTP, NTP, and Print server services."
     }
@@ -18,31 +18,31 @@
       "en": "Networking and security"
     },
     "text": {
-      "uz": "Ichki va tashqi tarmoq infratuzilmasini loyihalash, sozlash va himoyalash. MikroTik, pfSense, Kerio Control va Fortinet asosida segmentatsiya, VPN va kirish nazorati.",
+      "uz": "Ichki va tashqi tarmoqlarni loyihalash, himoyalash va boshqarish. MikroTik, pfSense, Kerio, Fortinet, VPN va kirish nazorati.",
       "ru": "Проектирование, настройка и защита внутренней и внешней сети. Сегментация, VPN и контроль доступа на базе MikroTik, pfSense, Kerio Control и Fortinet.",
       "en": "Design, deployment, and protection of internal and external networks using MikroTik, pfSense, Kerio Control, and Fortinet for segmentation, VPN, and access control."
     }
   },
   {
     "title": {
-      "uz": "Virtualizatsiya va monitoring",
+      "uz": "Virtual serverlar va monitoring",
       "ru": "Виртуализация и мониторинг",
       "en": "Virtualization and monitoring"
     },
     "text": {
-      "uz": "Proxmox va VMware asosida virtual muhit, resurs taqsimlash, snapshot va host optimizatsiyasi. Zabbix va Grafana orqali real vaqt nazorati.",
+      "uz": "Proxmox va VMware asosida virtual muhit. Resurs boshqaruvi, snapshot, host optimizatsiyasi, Zabbix va Grafana nazorati.",
       "ru": "Виртуальная среда на Proxmox и VMware, распределение ресурсов, snapshot и оптимизация хостов. Контроль в реальном времени через Zabbix и Grafana.",
       "en": "Virtual environments on Proxmox and VMware, resource allocation, snapshots, and host optimization with real-time visibility through Zabbix and Grafana."
     }
   },
   {
     "title": {
-      "uz": "Backup va avariya tiklash",
+      "uz": "Backup va tezkor tiklash",
       "ru": "Резервное копирование и аварийное восстановление",
       "en": "Backup and disaster recovery"
     },
     "text": {
-      "uz": "NAS, avtomatik backup, zaxira siyosati va avariya tiklash ssenariylari. Ma’lumotlar xavfsizligi va tiklanish tezligiga urg‘u.",
+      "uz": "NAS, avtomatik backup, zaxira siyosati va avariya tiklash rejasi. Ma’lumotlarni saqlash va tez tiklash.",
       "ru": "NAS, автоматические backup, политика резервирования и сценарии аварийного восстановления. Фокус на сохранности данных и скорости восстановления.",
       "en": "NAS, automated backup, backup policy, and disaster recovery scenarios focused on data safety and recovery speed."
     }
@@ -54,7 +54,7 @@
       "en": "Video surveillance and access control"
     },
     "text": {
-      "uz": "Kamera, Face ID, turniket va kirishni boshqarish tizimlarini loyihalash, o‘rnatish va sozlash. Obyekt xavfsizligi va nazoratini kuchaytirish.",
+      "uz": "Kamera, Face ID, turniket va kirishni boshqarish tizimlari. Obyekt xavfsizligi va nazoratini kuchaytirish.",
       "ru": "Проектирование, монтаж и настройка камер, Face ID, турникетов и систем контроля доступа. Усиление безопасности объекта и контроля процессов.",
       "en": "Design, installation, and configuration of cameras, Face ID, turnstiles, and access control systems to strengthen physical security and process control."
     }
@@ -66,7 +66,7 @@
       "en": "IP telephony"
     },
     "text": {
-      "uz": "FreePBX, IP-PBX, shlyuzlar va analogdan IP telefoniya yechimlariga o‘tish. Filiallar va ichki aloqa uchun boshqariladigan telefon konturi.",
+      "uz": "FreePBX, IP-PBX, gateway va IP telefoniya yechimlari. Filiallar va ichki aloqa uchun qulay telefon tizimi.",
       "ru": "FreePBX, IP-PBX, шлюзы и переход с аналога на IP-телефонию. Управляемый телефонный контур для офисов и филиалов.",
       "en": "FreePBX, IP-PBX, gateways, and migration from analog to IP telephony for manageable office and branch communication."
     }

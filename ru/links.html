@@ -4,8 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>BITSTREAM | Ссылки</title>
-<link rel="icon" href="../assets/icons/favicon.ico" sizes="any">
-
+<link rel="icon" href="../assets/icons/favicon.svg" sizes="any">
 <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body class="links-body">
@@ -69,46 +68,14 @@
 
 <script>
 (function(){
-  var saved = localStorage.getItem('theme');
+  const saved = localStorage.getItem('theme');
   if(saved === 'dark'){
     document.documentElement.setAttribute('data-theme','dark');
   }else if(!saved){
-    var h = new Date().getHours();
-    if(h >= 21 || h < 6) document.documentElement.setAttribute('data-theme','dark');
+    const h = new Date().getHours();
+    if(h >= 22 || h < 6) document.documentElement.setAttribute('data-theme','dark');
   }
 })();
-</script>
-
-<script>
-(function(){
- const saved=localStorage.getItem('theme');
- if(saved==='dark'){document.documentElement.setAttribute('data-theme','dark');}
-})();
-function iconPath(name){return '../assets/icons/'+name+'.svg';}
-function updateThemeIcon(){
- const btn=document.getElementById('themeBtn');
- if(!btn)return;
- const dark=document.documentElement.getAttribute('data-theme')==='dark';
- btn.innerHTML='<img src="'+(dark?iconPath('sun'):iconPath('moon'))+'" alt="">';
-}
-function toggleTheme(){
- const el=document.documentElement;
- const dark=el.getAttribute('data-theme')==='dark';
- if(dark){el.removeAttribute('data-theme');localStorage.setItem('theme','light');}
- else{el.setAttribute('data-theme','dark');localStorage.setItem('theme','dark');}
- updateThemeIcon();
-}
-document.addEventListener('DOMContentLoaded',function(){
- const lang=document.querySelector('[data-lang-select]');
- if(lang && !document.getElementById('themeBtn')){
-   const b=document.createElement('button');
-   b.id='themeBtn'; b.className='theme-btn'; b.type='button';
-   b.setAttribute('aria-label','Theme');
-   b.onclick=toggleTheme;
-   lang.parentNode.insertBefore(b,lang);
-   updateThemeIcon();
- }
-});
 </script>
 </body>
 </html>

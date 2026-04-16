@@ -1,8 +1,8 @@
 <!doctype html>
 <html lang="uz">
 <head>
-<div id="farrux">
-<div id="abdulaziz">
+<section id="farrux"></section>
+<section id="abdulaziz"></section>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
@@ -11,9 +11,9 @@
 <script>
 (function(){
   var l=(navigator.language||navigator.userLanguage||'uz').toLowerCase();
-  var target='uz/links.html';
-  if(l.startsWith('ru')) target='ru/links.html';
-  else if(l.startsWith('en')) target='en/links.html';
+  var target='../uz/links.html';
+  if(l.startsWith('ru')) target='../ru/links.html';
+  else if(l.startsWith('en')) target='../en/links.html';
   location.replace(target);
 })();
 </script>

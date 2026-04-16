@@ -9,33 +9,29 @@ function initLang(){
 function pageLabels(lang){
   const m = {
     uz:{
-      home:'Bosh sahifa', services:'Xizmatlar', projects:'Loyihalar', about:'Biz haqimizda', contacts:'Bog‘lanish',
-      hero1:'Biznes uchun barqaror va boshqariladigan IT infratuzilma',
-      hero2:'BITSTREAM server, tarmoq, xavfsizlik, monitoring, virtualizatsiya va support bloklarini bitta ishlaydigan tizim sifatida yig‘adi.',
-      heroP1:'Bir martalik “usta chaqirish” emas — texnik hamkor modeli.',
-      heroP2:'Audit, joriy etish, hujjatlashtirish va keyingi support bir konturda.',
-      heroP3:'Server • Tarmoq • Xavfsizlik • Monitoring • Backup',
+      home:'Bosh sahifa', services:'Xizmatlar', projects:'Loyihalar', about:'Biz haqimizda', contacts:'Aloqa', ctcbtn:"Bog'lanish",
+      hero1:'Biznes uchun ishonchli va barqaror IT infratuzilma',
+      hero2:'BITSTREAM serverlar, tarmoqlar, xavfsizlik, monitoring, virtualizatsiya va texnik xizmat yo‘nalishlarini yagona boshqariladigan tizimga aylantiradi',
+      heroP1:'Muammo chiqqanda chaqirish emas, muammo chiqmaydigan IT tizim kerak.',
+      heroP2:'Tahlil, joriy etish, hujjatlashtirish va keyingi xizmat bitta mas’uliyat asosida olib boriladi.',
+      heroP3:'Server • Tarmoq • Xavfsizlik • Backup • Monitoring • IP-telefoniya',
       ctaMain:'Maslahat oling', ctaSecond:'Xizmatlar',
-      sectionStats:'Kompaniya jiddiyligini ko‘rsatadigan faktlar',
-      sectionStatsP:'Eski sayt mazmuni, xizmat yo‘nalishlari va pozitsion asoslar yangi saytga ko‘chirildi.',
+      sectionStats:'BITSTREAM haqida asosiy faktlar',
+      sectionStatsP:'Tajriba, xizmat yo‘nalishlari va ish yondashuvi asosiy ko‘rsatkichlarda jamlangan.',
       sectionServices:'Biz nima taklif qilamiz',
-      sectionServicesP:'Infratuzilma bo‘yicha alohida bo‘laklar emas, boshqariladigan yagona tizim.',
-      sectionProjects:'Bajarilgan va tipik loyiha formatlari',
-      sectionProjectsP:'Mijoz nomlarini ochmasdan ham texnik daraja ko‘rinib turishi kerak.',
+      sectionServicesP:'Alohida xizmatlar emas, yagona boshqariladigan IT tizimi.',
+      sectionProjects:'Amaliy tajriba va bajarilgan loyihalar',
+      sectionProjectsP:'Turli obyektlar uchun joriy etilgan yechimlar va real ishlar namunalari.',
       sectionAbout:'Biz haqimizda',
-      sectionAboutP:'Bitstream — barqarorlik, nazorat va texnik tartibga urg‘u beradigan IT kompaniya.',
-      sectionPartners:'Texnologik tayanch',
-      sectionPartnersP:'Ishlaydigan stack va amaliy ekotizimlar.',
+      sectionAboutP:'BITSTREAM — biznes uchun tartibli, ishonchli va barqaror IT hamkor.',
+      sectionPartners:'Bizga ishonch bildirganlar',
+      sectionPartnersP:'Turli sohalardagi kompaniyalar va tashkilotlar bilan ishlaganmiz.',
       sectionContact:'Bog‘lanish',
       sectionContactP:'Vazifangizni yuboring. Biz uni texnik tilga, reja va yechimga aylantiramiz.',
-      about1t:'Bitstream qanday pozitsiyada turadi',
-      about1p:'BIT STREAM server infratuzilma, tarmoq, axborot xavfsizligi, video kuzatuv va IP-telefoniya yo‘nalishlarida professional xizmat ko‘rsatadi. Biz tizimni shunchaki o‘rnatib ketmaymiz, balki uni xavfsiz, hujjatlashtirilgan va uzoq muddat barqaror ishlaydigan holatga keltiramiz.',
+      about1t:'Nima uchun BITSTREAM',
+      about1p:'Serverlar, tarmoqlar, axborot xavfsizligi, video kuzatuv va IP-telefoniya yo‘nalishlarida professional xizmat ko‘rsatamiz. Biz tizimni shunchaki o‘rnatmaymiz — uni xavfsiz, tartibli va uzoq muddat ishlaydigan holatga keltiramiz.',
       about2t:'Qanday ishlaymiz',
-      about2p:'Tizimni tekshirish → ehtiyojni aniqlash → taklif va reja → o‘rnatish va sozlash → sinov → hujjat topshirish → doimiy qo‘llab-quvvatlash. Biz uchun muhim narsa — mijoz ishonchi, tizimning barqarorligi va tezkor texnik yordam.',
-      facts1:'Windows / Linux serverlar: AD, DNS, DHCP, WEB, FTP, NTP, Print server',
-      facts2:'Virtualizatsiya: ESXi / Proxmox, resurs taqsimlash, snapshot, host optimizatsiya',
-      facts3:'Monitoring va backup: Zabbix, Grafana, NAS, avtomatik backup, DR',
-      facts4:'Xavfsizlik va access: pfSense, Kerio, MikroTik, Fortinet, CCTV, Face ID, turniket',
+      about2p:'Tahlil → ehtiyojni aniqlash → reja → joriy etish → sinov → hujjatlashtirish → keyingi xizmat. Asosiy maqsad — mijoz ishonchi, tizim barqarorligi va tezkor yordam.',
       contactCard1:'Asosiy aloqa',
       contactCard2:'Birinchi xabarda nimalarni yozish kerak',
       contactHint:'Obyekt turi, foydalanuvchilar soni, filiallar bor-yo‘qligi, hozirgi muammo yoki kerakli yechim turini yozing.',
@@ -43,12 +39,12 @@ function pageLabels(lang){
       utility:'NEXT GENERATION NETWORK',
       sectionLink:'Sahifaga o‘tish',
       strictNote:'',
-      serviceNotice:'Ustuvor vazifa ko‘proq uskuna sotish emas. Ustuvor vazifa — barqaror ish, nazorat qilinadigan kirish, backup tayyorligi va aniq support tartibi.',
+      serviceNotice:'Biz texnologiya emas, natija yetkazamiz.',
       contactNotice:'Keyingi iteratsiyada forma, Telegram CTA, real logotiplar, aniq SEO va kuchliroq keyvisual qo‘shish mumkin.',
       ctaText:'Serverlar, tarmoqlar, xavfsizlik va support biznes uchun bitta boshqariladigan kontur bo‘lishi kerak.'
     },
     ru:{
-      home:'Главная', services:'Услуги', projects:'Проекты', about:'О компании', contacts:'Контакты',
+      home:'Главная', services:'Услуги', projects:'Проекты', about:'О компании', contacts:'Контакты', ctcbtn:"Связаться",
       hero1:'Стабильная и управляемая IT-инфраструктура для бизнеса',
       hero2:'BITSTREAM собирает серверы, сети, безопасность, monitoring, виртуализацию и поддержку как одну рабочую систему.',
       heroP1:'Не разовый “вызов мастера”, а модель технического партнёра.',
@@ -87,7 +83,7 @@ function pageLabels(lang){
       ctaText:'Серверы, сети, безопасность и support должны работать как один управляемый контур для бизнеса.'
     },
     en:{
-      home:'Home', services:'Services', projects:'Projects', about:'About', contacts:'Contacts',
+      home:'Home', services:'Services', projects:'Projects', about:'About', contacts:'Contacts', ctcbtn:"Contact",
       hero1:'Stable and controlled IT infrastructure for business',
       hero2:'BITSTREAM combines servers, networking, security, monitoring, virtualization, and support into one working system.',
       heroP1:'Not a one-off fixer model, but a technical partner model.',
@@ -295,7 +291,7 @@ function renderStatic(lang,page){
   fill('[data-service-notice]', L.serviceNotice);
   fill('[data-contact-notice]', L.contactNotice);
   fill('[data-cta-text]', L.ctaText);
-  document.querySelectorAll('[data-contact-btn]').forEach(el=>el.textContent=L.contacts);
+  document.querySelectorAll('[data-contact-btn]').forEach(el=>el.textContent=L.ctcbtn);
 }
 
 document.addEventListener('DOMContentLoaded', async ()=>{

@@ -86,6 +86,7 @@ button,input,select,textarea{font:inherit}
 }
 .main-nav{
   border-top:1px solid var(--line);
+
   background:#fff;
 }
 .nav-wrap{
@@ -94,6 +95,7 @@ button,input,select,textarea{font:inherit}
   align-items:center;
   gap:8px 14px;
   flex-wrap:wrap;
+
 }
 .nav-wrap a{
   padding:10px 12px;
@@ -650,3 +652,74 @@ padding:0;margin-right:8px;border-radius:8px;
 background:#fff;border:1px solid #d7e0ea;cursor:pointer;
 }
 .theme-btn img{width:18px;height:18px;display:block}
+
+
+/* === audit-clean final overrides === */
+.theme-btn{
+  width:42px;
+  min-width:42px;
+  height:42px;
+  padding:0;
+  margin-right:8px;
+  border-radius:8px;
+  border:1px solid #d7e0ea;
+  background:#fff;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+}
+.theme-btn img{width:18px;height:18px;display:block}
+html[data-theme="dark"] body{background:#0f1724!important;color:#eef4ff!important}
+html[data-theme="dark"] .utility-bar{background:#101925!important}
+html[data-theme="dark"] .site-header,
+html[data-theme="dark"] .main-nav,
+html[data-theme="dark"] .section,
+html[data-theme="dark"] .section.alt,
+html[data-theme="dark"] .hero,
+html[data-theme="dark"] .panel,
+html[data-theme="dark"] .card,
+html[data-theme="dark"] .service-card,
+html[data-theme="dark"] .case-card,
+html[data-theme="dark"] .team-card,
+html[data-theme="dark"] .stat-card,
+html[data-theme="dark"] .partner-card,
+html[data-theme="dark"] .notice,
+html[data-theme="dark"] .fact-card,
+html[data-theme="dark"] .about-block,
+html[data-theme="dark"] .cta-strip,
+html[data-theme="dark"] .site-footer,
+html[data-theme="dark"] .footer-bottom,
+html[data-theme="dark"] .links-wrap{
+  background:#162133!important;
+  color:#eef4ff!important;
+  border-color:#2a3a52!important;
+}
+html[data-theme="dark"] .hero,
+html[data-theme="dark"] .cta-strip{background:#1b2840!important}
+html[data-theme="dark"] p,
+html[data-theme="dark"] span,
+html[data-theme="dark"] li,
+html[data-theme="dark"] small,
+html[data-theme="dark"] .links-sub,
+html[data-theme="dark"] .links-footer{color:#b4c0d4!important}
+html[data-theme="dark"] h1,
+html[data-theme="dark"] h2,
+html[data-theme="dark"] h3,
+html[data-theme="dark"] h4,
+html[data-theme="dark"] strong,
+html[data-theme="dark"] a{color:#eef4ff!important}
+html[data-theme="dark"] .btn,
+html[data-theme="dark"] .lang-switch,
+html[data-theme="dark"] select,
+html[data-theme="dark"] button,
+html[data-theme="dark"] .theme-btn,
+html[data-theme="dark"] .links-item{
+  background:#1d2b42!important;
+  color:#eef4ff!important;
+  border-color:#2a3a52!important;
+}
+html[data-theme="dark"] .btn-primary{background:#274061!important}
+html[data-theme="dark"] .nav-wrap a.active,
+html[data-theme="dark"] .nav-wrap a:hover{background:#213149!important}
+html[data-theme="dark"] .section-line{background:#2a3a52!important}

@@ -3,56 +3,56 @@
     "value": "2018",
     "suffix": "",
     "label": {
-      "uz": "yildan beri IT yechimlar",
-      "ru": "с 2018 года в IT-решениях",
-      "en": "delivering IT solutions since 2018"
+      "uz": "Yildan beri IT yechimlar",
+      "ru": "с 2018 года надёжные IT-решения",
+      "en": "reliable IT solutions since 2018"
     },
     "note": {
-      "uz": "eski sayt asosidagi kompaniya tarixi",
-      "ru": "период работы по материалам старого сайта",
-      "en": "company timeline based on the legacy site"
+      "uz": "Ko‘p yillik amaliy tajriba",
+      "ru": "сформированный опыт компании",
+      "en": "established company experience"
     }
   },
   {
     "value": "6",
     "suffix": "+",
     "label": {
-      "uz": "asosiy xizmat yo‘nalishi",
-      "ru": "ключевых направлений услуг",
-      "en": "core service directions"
+      "uz": "Asosiy xizmat yo‘nalishi",
+      "ru": "ключевых IT-направлений услуг",
+      "en": "core IT service areas"
     },
     "note": {
-      "uz": "server, network, security, monitoring va boshqalar",
-      "ru": "серверы, сети, безопасность, monitoring и другое",
-      "en": "servers, networks, security, monitoring, and more"
+      "uz": "Serverlar, tarmoqlar, backup, xavfsizlik, IP-telefoniya",
+      "ru": "серверы, сети, виртуализация, backup, видеонаблюдение и IP-телефония",
+      "en": "servers, networking, virtualization, backup, surveillance, and IP telephony"
     }
   },
   {
     "value": "15",
     "suffix": " min",
     "label": {
-      "uz": "tezkor reaksiya modeli",
-      "ru": "модель быстрого старта реакции",
-      "en": "fast response model"
+      "uz": "Tezkor javob va yordam",
+      "ru": "модель быстрого реагирования",
+      "en": "rapid response model"
     },
     "note": {
-      "uz": "kelishilgan SLA va masofaviy yordam formati",
-      "ru": "по согласованному SLA и удалённой помощи",
-      "en": "under agreed SLA and remote support format"
+      "uz": "Kelishilgan SLA asosida",
+      "ru": "на основе согласованного SLA и удалённой техподдержки",
+      "en": "based on agreed SLA and remote technical support"
     }
   },
   {
     "value": "24/7",
     "suffix": "",
     "label": {
-      "uz": "monitoring va kritik nazorat",
+      "uz": "Doimiy monitoring va nazorat",
       "ru": "мониторинг и контроль критичных зон",
       "en": "monitoring and critical control"
     },
     "note": {
-      "uz": "kuzatuv, ogohlantirish va profilaktika",
-      "ru": "наблюдение, оповещения и профилактика",
-      "en": "observability, alerting, and preventive control"
+      "uz": "Kuzatuv, ogohlantirish va profilaktika",
+      "ru": "наблюдение, оповещения и профилактический контроль",
+      "en": "monitoring, alerting, and preventive control"
     }
   }
 ]
