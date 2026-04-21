@@ -150,5 +150,20 @@ if (leadForm) {
 }
 </script>
 <script defer src="/tracker.js"></script>
+<script>
+document.getElementById("contact-form")?.addEventListener("submit", () => {
+  fetch("https://track.bit-stream.uz/", {
+    method: "POST",
+    headers: {"Content-Type":"application/json"},
+    body: JSON.stringify({
+      eventType: "FORM❗",
+      page: location.href,
+      ref: document.referrer || "",
+      ua: navigator.userAgent
+    }),
+    keepalive: true
+  }).catch(() => {});
+});
+</script>
 </body>
 </html>
