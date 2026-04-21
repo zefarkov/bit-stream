@@ -1,13 +1,10 @@
 (() => {
   fetch("https://track.bit-stream.uz/", {
     method: "POST",
-    mode: "cors",
-    headers: {
-      "Content-Type": "application/json"
-    },
+    headers: {"Content-Type":"application/json"},
     body: JSON.stringify({
       eventType: "visit",
-      page: location.href,
+      page: location.hostname,
       ref: document.referrer || "",
       ua: navigator.userAgent
     }),
