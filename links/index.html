@@ -1,24 +1,48 @@
 <!doctype html>
 <html lang="uz">
 <head>
-<section id="farrux"></section>
-<section id="abdulaziz"></section>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-
 <title>BITSTREAM | Links</title>
-<meta http-equiv="refresh" content="0; url=uz/links.html">
+<link rel="icon" href="assets/icons/favicon.svg" sizes="any">
+
 <script>
-(function(){
-  var l=(navigator.language||navigator.userLanguage||'uz').toLowerCase();
-  var target='../uz/links.html';
-  if(l.startsWith('ru')) target='../ru/links.html';
-  else if(l.startsWith('en')) target='../en/links.html';
-  location.replace(target);
+(async function () {
+  const cards = {
+    "#farrukh": "farrukh",
+    "#abdulaziz": "abdulaziz"
+  };
+
+  const hash = location.hash || "";
+  const card = cards[hash] || "";
+
+  if (card) {
+    try {
+      await fetch("https://track.bit-stream.uz/", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          eventType: "card",
+          card,
+          page: location.pathname,
+          ref: document.referrer || "",
+          ua: navigator.userAgent
+        }),
+        keepalive: true
+      });
+    } catch (e) {}
+  }
+
+  let target = "../uz/links.html";
+  const l = (navigator.language || navigator.userLanguage || "uz").toLowerCase();
+
+  if (l.startsWith("ru")) target = "../ru/links.html";
+  else if (l.startsWith("en")) target = "../en/links.html";
+
+  location.replace(target + hash);
 })();
 </script>
-<link rel="icon" href="assets/icons/favicon.svg" sizes="any">
 </head>
-<body><script defer src="/tracker.js"></script>
+<body>
 </body>
 </html>
