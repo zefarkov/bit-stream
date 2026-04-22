@@ -145,7 +145,7 @@ if (leadForm) {
       const response = await fetch(leadForm.action, { method: 'POST', body: formData, headers: { 'Accept':'application/json' } });
       if (response.ok) { window.location.href = 'rahmat.html'; }
       else { alert('Message was not sent. Please try again.'); }
-    } catch (error) { alert('An error occurred. Please try again.'); }
+    } catch (error) { alert('An error occurred. Please try again. '); }
   });
 }
 </script>
