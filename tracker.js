@@ -1,10 +1,16 @@
 (() => {
+  let eventType = "visit";
+
+  if (location.pathname.includes("/links") && location.hash) {
+    eventType = "card";
+  }
+
   fetch("https://track.bit-stream.uz/", {
     method: "POST",
     headers: {"Content-Type":"application/json"},
     body: JSON.stringify({
-      eventType: "visit",
-      page: location.hostname,
+      eventType,
+      page: location.href,
       ref: document.referrer || "",
       ua: navigator.userAgent
     }),
