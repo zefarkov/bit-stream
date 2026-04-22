@@ -1,7 +1,7 @@
 <script>
 function track() {
   const cards = {
-    "#farrukh": "farrukh",
+    "#farrux": "farrux",
     "#abdulaziz": "abdulaziz"
   };
 
