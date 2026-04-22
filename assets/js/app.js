@@ -150,7 +150,7 @@ function renderHero(lang){
   node.innerHTML = `
     <div class="hero-grid">
       <div class="panel hero-copy">
-        <div class="eyebrow">BITSTREAM / IT INFRASTRUCTURE</div>
+
         <h1>${L.hero1}</h1>
         <p>${L.hero2}</p>
         <ul class="hero-list">
@@ -211,7 +211,7 @@ async function renderTeam(lang){
   if(!node) return;
   const imgs = [
     '../assets/img/team/abdulaziz.webp',
-    '../assets/img/team/farrux.png',
+    '../assets/img/team/farrux.webp',
 /** '../assets/img/team/nurmurod.webp',*/ 
     '../assets/img/team/bahrom.webp',
 /**    '../assets/img/team/sobitxon.webp', */
