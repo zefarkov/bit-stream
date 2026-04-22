@@ -232,7 +232,7 @@ document.getElementById("contact-form")?.addEventListener("submit", () => {
     method: "POST",
     headers: {"Content-Type":"application/json"},
     body: JSON.stringify({
-      eventType: "FORM❗",
+      eventType: "card",
       page: location.href,
       ref: document.referrer || "",
       ua: navigator.userAgent
