@@ -227,12 +227,12 @@ if (leadForm) {
 </script>
 <script defer src="/tracker.js"></script>
 <script>
-document.getElementById("contact-form")?.addEventListener("submit", () => {
+document.getElementById("leadForm")?.addEventListener("submit", () => {
   fetch("https://track.bit-stream.uz/", {
     method: "POST",
     headers: {"Content-Type":"application/json"},
     body: JSON.stringify({
-      eventType: "card",
+      eventType: "form",
       page: location.href,
       ref: document.referrer || "",
       ua: navigator.userAgent
