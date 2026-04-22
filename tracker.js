@@ -1,4 +1,5 @@
-(() => {
+<script>
+function track() {
   let eventType = "visit";
 
   if (location.pathname.includes("/links") && location.hash) {
@@ -16,4 +17,8 @@
     }),
     keepalive: true
   }).catch(() => {});
-})();
+}
+
+track();
+window.addEventListener("hashchange", track);
+</script>
