@@ -153,17 +153,16 @@ if (leadForm) {
 <script>
 document.getElementById("leadForm")?.addEventListener("submit", () => {
   const form = document.getElementById("leadForm");
-  const formData = new FormData(form);
 
   fetch("https://track.bit-stream.uz/", {
     method: "POST",
     headers: {"Content-Type":"application/json"},
     body: JSON.stringify({
       eventType: "form",
-      name: formData.get("name") || "",
-      phone: formData.get("phone") || "",
-      company: formData.get("company") || "",
-      message: formData.get("message") || "",
+      name: form.querySelector('[name="name"]')?.value || "",
+      phone: form.querySelector('[name="phone"]')?.value || "",
+      company: form.querySelector('[name="company"]')?.value || "",
+      message: form.querySelector('[name="message"]')?.value || "",
       page: location.href,
       ref: document.referrer || "",
       ua: navigator.userAgent
