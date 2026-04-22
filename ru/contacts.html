@@ -152,11 +152,18 @@ if (leadForm) {
 <script defer src="/tracker.js"></script>
 <script>
 document.getElementById("leadForm")?.addEventListener("submit", () => {
+  const form = document.getElementById("leadForm");
+  const formData = new FormData(form);
+
   fetch("https://track.bit-stream.uz/", {
     method: "POST",
     headers: {"Content-Type":"application/json"},
     body: JSON.stringify({
       eventType: "form",
+      name: formData.get("name") || "",
+      phone: formData.get("phone") || "",
+      company: formData.get("company") || "",
+      message: formData.get("message") || "",
       page: location.href,
       ref: document.referrer || "",
       ua: navigator.userAgent
