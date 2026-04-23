@@ -1,23 +1,20 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BITSTREAM Article Generator</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BITSTREAM Manual Article Builder</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main class="wrap">
+  <main class="app">
     <section class="panel form-panel">
-      <h1>BITSTREAM Article Generator</h1>
-      <p class="lead">
-        Локальный инструмент для генерации готовых HTML-страниц. Ничего не записывает на сайт.
-        Только собирает статью и скачивает файл тебе на устройство.
-      </p>
+      <h1>BITSTREAM Manual Article Builder</h1>
+      <p class="lead">Заполняешь только то, что хочешь. Пустые поля не вставляются. Генератор ничего не сохраняет на сайт — только даёт скачать готовый HTML.</p>
 
       <div class="grid two">
         <label>
-          <span>Язык</span>
+          <span>Язык страницы</span>
           <select id="lang">
             <option value="uz" selected>Uzbek</option>
             <option value="ru">Russian</option>
@@ -26,80 +23,126 @@
         </label>
 
         <label>
-          <span>Тип услуги</span>
-          <select id="serviceType">
-            <option value="camera">Камеры / видеонаблюдение</option>
-            <option value="network">Wi‑Fi / сеть / MikroTik</option>
-            <option value="server">Серверы / 1C / NAS / backup</option>
-            <option value="access">Face ID / доступ / турникет</option>
-            <option value="telephony">Телефония / IP ATS / call center</option>
-            <option value="support">IT support / outsourcing</option>
-            <option value="custom">Свой вариант</option>
-          </select>
-        </label>
-      </div>
-
-      <label>
-        <span>Тема страницы</span>
-        <input id="topic" type="text" value="WiFi sozlash ofis" />
-      </label>
-
-      <div class="grid two">
-        <label>
-          <span>Город</span>
-          <input id="city" type="text" value="Toshkent" />
-        </label>
-
-        <label>
           <span>Slug файла</span>
-          <input id="slug" type="text" value="wifi-sozlash-ofis" />
+          <input id="slug" type="text" placeholder="wifi-sozlash-ofis">
+        </label>
+      </div>
+
+      <div class="grid two">
+        <label>
+          <span>&lt;title&gt;</span>
+          <input id="title" type="text" placeholder="WiFi sozlash ofis | BITSTREAM">
+        </label>
+
+        <label>
+          <span>Meta description</span>
+          <input id="meta" type="text" placeholder="Ofis uchun WiFi sozlash va barqaror tarmoq yechimlari.">
+        </label>
+      </div>
+
+      <div class="grid two">
+        <label>
+          <span>Canonical URL</span>
+          <input id="canonical" type="text" placeholder="https://bit-stream.uz/uz/services/wifi-sozlash-ofis.html">
+        </label>
+
+        <label>
+          <span>H1</span>
+          <input id="h1" type="text" placeholder="WiFi sozlash ofis">
         </label>
       </div>
 
       <label>
-        <span>Краткий контекст</span>
-        <textarea id="extra" rows="4">Офис, стабильность, без лишних сложных слов, практичный стиль.</textarea>
+        <span>Kirish matni / lead</span>
+        <textarea id="lead" placeholder="Sahifaning birinchi asosiy paragrafi."></textarea>
+      </label>
+
+      <label>
+        <span>Muammo</span>
+        <textarea id="problem" placeholder="Mijoz duch keladigan real muammo."></textarea>
+      </label>
+
+      <label>
+        <span>Yechim</span>
+        <textarea id="solution" placeholder="Siz qanday hal qilasiz."></textarea>
+      </label>
+
+      <label>
+        <span>Asosiy punktlar</span>
+        <textarea id="bullets" placeholder="Har bir yangi qatordan bitta punkt."></textarea>
+      </label>
+
+      <label>
+        <span>Kimlar uchun</span>
+        <textarea id="forwho" placeholder="Kimga mosligi."></textarea>
+      </label>
+
+      <label>
+        <span>Nega bu muhim</span>
+        <textarea id="why" placeholder="Nima uchun bunga e'tibor berish kerak."></textarea>
+      </label>
+
+      <label>
+        <span>Ishlash tartibi</span>
+        <textarea id="process" placeholder="Har bir yangi qatordan bitta qadam."></textarea>
       </label>
 
       <div class="grid two">
         <label>
-          <span>Имя компании</span>
-          <input id="company" type="text" value="BITSTREAM" />
+          <span>FAQ 1 — Savol</span>
+          <input id="faq1q" type="text" placeholder="Narx qanday belgilanadi?">
         </label>
-
         <label>
-          <span>Базовый домен</span>
-          <input id="domain" type="text" value="https://bit-stream.uz/services/" />
+          <span>FAQ 1 — Javob</span>
+          <input id="faq1a" type="text" placeholder="Vazifa va obyektga qarab.">
         </label>
       </div>
 
       <div class="grid two">
         <label>
-          <span>Кнопка CTA</span>
-          <input id="cta" type="text" value="Bog‘lanish" />
+          <span>FAQ 2 — Savol</span>
+          <input id="faq2q" type="text" placeholder="Qancha vaqt oladi?">
         </label>
-
         <label>
-          <span>Контакт</span>
-          <input id="contact" type="text" value="+998 90 000 00 00 | @bitstreamuz_bot | info@bit-stream.uz" />
+          <span>FAQ 2 — Javob</span>
+          <input id="faq2a" type="text" placeholder="Hajmga qarab.">
         </label>
       </div>
+
+      <label>
+        <span>Xulosa</span>
+        <textarea id="summary" placeholder="Yakunlovchi asosiy fikr."></textarea>
+      </label>
+
+      <div class="grid two">
+        <label>
+          <span>CTA matni</span>
+          <input id="cta" type="text" placeholder="Bog‘lanish">
+        </label>
+        <label>
+          <span>CTA havolasi</span>
+          <input id="ctaLink" type="text" value="../contacts.html">
+        </label>
+      </div>
+
+      <label>
+        <span>Kontakt / izoh</span>
+        <textarea id="contact" placeholder="+998 ... | @bitstreamuz_bot | info@bit-stream.uz"></textarea>
+      </label>
 
       <div class="grid three">
         <button id="generateBtn" class="primary" type="button">Сгенерировать</button>
-        <button id="downloadBtn" type="button">Скачать HTML</button>
         <button id="copyBtn" type="button">Копировать HTML</button>
+        <button id="downloadBtn" type="button">Скачать HTML</button>
       </div>
 
-      <div class="notice">
-        Генератор не сохраняет файлы в папки сайта. Он только формирует HTML в памяти браузера и скачивает готовый файл.
-      </div>
+      <div class="notice">Генератор не сохраняет файлы в каталоги сайта. Он только собирает HTML в браузере и скачивает файл на устройство.</div>
     </section>
 
     <section class="panel preview-panel">
       <div class="preview-head">
         <h2>Предпросмотр</h2>
-        <p>Сначала проверь текст. Если всё ок — скачивай файл.</p>
+        <p>Пустые блоки автоматически скрываются.</p>
       </div>
       <div id="preview" class="preview"></div>
     </section>
@@ -107,13 +150,11 @@
     <section class="panel code-panel">
       <div class="preview-head">
         <h2>HTML код</h2>
-        <p>Готовый код страницы.</p>
       </div>
       <pre id="code" class="code"></pre>
     </section>
   </main>
 
-  <script src="templates.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
