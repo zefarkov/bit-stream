@@ -33,7 +33,7 @@
 </div>
   <div class="container header-wrap">
     <a class="brand" href="index.html">
-      <img src="../assets/img/brand/logo-bitstream.png" alt="BITSTREAM logo">
+      <img id="siteLogo" src="../assets/img/brand/logo-bitstream.png" alt="BITSTREAM logo">
     </a>
     <div class="header-actions">
       <select class="lang-switch" data-lang-select></select>
@@ -194,6 +194,26 @@ document.addEventListener('DOMContentLoaded',function(){
    updateThemeIcon();
  }
 });
+</script>
+<script>
+function updateLogo(){
+  const logo = document.getElementById('siteLogo');
+  if(!logo) return;
+
+  const dark = document.documentElement.getAttribute('data-theme') === 'dark';
+
+  logo.src = dark
+    ? '../assets/img/brand/logo-bitstream-dark.png'
+    : '../assets/img/brand/logo-bitstream.png';
+}
+
+const oldUpdateThemeIcon = updateThemeIcon;
+updateThemeIcon = function(){
+  oldUpdateThemeIcon();
+  updateLogo();
+};
+
+document.addEventListener('DOMContentLoaded', updateLogo);
 </script>
 <script defer src="/tracker.js"></script>
 </body>
