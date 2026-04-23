@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{PAGE_TITLE}} | BITSTREAM</title>
+<meta name="description" content="{{META_DESCRIPTION}}">
+<link rel="canonical" href="{{CANONICAL_URL}}">
+<link rel="stylesheet" href="../assets/css/style.css">
+<style>
+.article-wrap{max-width:980px;margin:0 auto;padding:24px 0 48px}
+.article-hero,.article-box{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow)}
+.article-hero{margin-bottom:18px}.article-box{margin-top:18px}
+.article-lead{font-size:18px;line-height:1.7;color:var(--ink)}
+.article-box h2{margin-bottom:10px}.article-box ul{padding-left:20px;margin:0}.article-box li{margin:8px 0}
+.quick-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}.muted{color:var(--muted)}
+@media(max-width:720px){.article-hero,.article-box{padding:18px}.article-lead{font-size:16px}}
+</style>
+</head>
+<body data-lang="uz">
+<!-- include your existing header here -->
+<main class="section">
+<div class="container article-wrap">
+
+<section class="article-hero">
+<div class="eyebrow">BITSTREAM</div>
+<h1>{{H1_TITLE}}</h1>
+<p class="article-lead">{{LEAD_PARAGRAPH}}</p>
+<div class="quick-cta">
+<a class="btn btn-primary" href="../contacts.html">Bog‘lanish</a>
+<a class="btn" href="../services.html">Xizmatlar</a>
+</div>
+</section>
+
+<section class="article-box">
+<h2>Muammo nimada?</h2>
+<p>{{PROBLEM_TEXT}}</p>
+</section>
+
+<section class="article-box">
+<h2>Yechim</h2>
+<p>{{SOLUTION_TEXT}}</p>
+<ul>
+<li>{{POINT_1}}</li>
+<li>{{POINT_2}}</li>
+<li>{{POINT_3}}</li>
+</ul>
+</section>
+
+<section class="article-box">
+<h2>Kimlar uchun mos</h2>
+<p>{{WHO_IS_IT_FOR}}</p>
+</section>
+
+<section class="article-box">
+<h2>Nega bu muhim</h2>
+<p>{{WHY_IT_MATTERS}}</p>
+</section>
+
+<section class="article-box">
+<h2>Ko‘p beriladigan savollar</h2>
+<p><strong>{{FAQ_Q1}}</strong><br>{{FAQ_A1}}</p>
+<p><strong>{{FAQ_Q2}}</strong><br>{{FAQ_A2}}</p>
+</section>
+
+<section class="article-box">
+<h2>Xulosa</h2>
+<p>{{CONCLUSION}}</p>
+<div class="quick-cta">
+<a class="btn btn-primary" href="../contacts.html">So‘rov yuborish</a>
+</div>
+</section>
+
+</div>
+</main>
+<!-- include your existing footer here -->
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"Service",
+ "name":"{{H1_TITLE}}",
+ "provider":{"@type":"Organization","name":"BITSTREAM","url":"https://bit-stream.uz"},
+ "url":"{{CANONICAL_URL}}"
+}
+</script>
+</body>
+</html>
