@@ -69,107 +69,107 @@
   <div class="container">
     <div class="section-head">
       <div>
-        <h2>Xizmatlar haqida</h2>
-        <p>Real muammolar, amaliy yechimlar va biznes uchun foydali IT maqolalar. Kamera, audit, tarmoq, server, xavfsizlik va boshqa yo‘nalishlar.</p>
+        <h2>Top 9 foydali xizmat maqolalari</h2>
+        <p>Saytdagi eng kuchli tijoriy va foydali UZ sahifalarni shu yerga chiqardik. Har biri alohida muammo, amaliy tekshiruv va real yechim bilan yozilgan.</p>
       </div>
     </div>
     <div class="service-grid seo-top-grid">
         <article class="service-card seo-list-card">
           <a class="seo-card-link" href="services/it-xizmatlari-toshkent.html">
-            <img class="seo-card-image" src="services/assets/img/articles/it-xizmatlari-toshkent.webp" alt="IT xizmatlari toshkent: IT tartib, foyda va nazorat">
+            <img class="seo-card-image" src="services/assets/img/articles/it-xizmatlari-toshkent.svg" alt="IT xizmatlari toshkent: IT tartib, foyda va nazorat">
             <div class="inner">
               <div class="eyebrow">IT xizmatlar</div>
-              <h3>IT xizmatlari Toshkent — support, audit va tartib</h3>
-              <p>Kundalik IT muammolarni yopish, tizimlarni nazorat qilish va biznes uchun texnik tartib.</p>
-              <span class="section-link">Batafsil</span>
+              <h3>IT xizmatlari toshkent: IT tartib, foyda va nazorat</h3>
+              <p>IT xizmatlari toshkent: IT tartib, audit, inventar va kundalik muammolarni tizimli hal qilish bo&#x27;yicha foydali tavsiyalar Toshkent bo&#x27;yicha xizmat ko&#x27;rsatish yondashuvi ham berilgan.</p>
+              <span class="section-link">Sahifani ochish</span>
             </div>
           </a>
         </article>
         <article class="service-card seo-list-card">
           <a class="seo-card-link" href="services/it-audit.html">
-            <img class="seo-card-image" src="services/assets/img/articles/it-audit.webp" alt="IT audit: IT tartib, foyda va nazorat">
+            <img class="seo-card-image" src="services/assets/img/articles/it-audit.svg" alt="IT audit: IT tartib, foyda va nazorat">
             <div class="inner">
               <div class="eyebrow">Audit</div>
-              <h3>IT audit — tizimni tekshirish va foydali tavsiyalar</h3>
-              <p>IT audit: Kompyuterlar, tarmoq, xavfsizlik va jarayonlarni ko‘rib chiqib, aniq tavsiyalar beramiz.</p>
-              <span class="section-link">Batafsil</span>
+              <h3>IT audit: IT tartib, foyda va nazorat</h3>
+              <p>IT audit: IT tartib, audit, inventar va kundalik muammolarni tizimli hal qilish bo&#x27;yicha foydali tavsiyalar.</p>
+              <span class="section-link">Sahifani ochish</span>
             </div>
           </a>
         </article>
         <article class="service-card seo-list-card">
           <a class="seo-card-link" href="services/kamera-ornatish-toshkent.html">
-            <img class="seo-card-image" src="services/assets/img/articles/kamera-ornatish-toshkent.webp" alt="Kamera ornatish toshkent: kamera joylashuvi, arxiv va ko&#x27;rish sxemasi">
+            <img class="seo-card-image" src="services/assets/img/articles/kamera-ornatish-toshkent.svg" alt="Kamera ornatish toshkent: kamera joylashuvi, arxiv va ko&#x27;rish sxemasi">
             <div class="inner">
               <div class="eyebrow">Kamera</div>
-              <h3>Kamera o‘rnatish Toshkent — loyiha, montaj va sozlash</h3>
-              <p>Kamera joylashuvi, yozuv arxivi, telefon orqali ko‘rish va barqaror ishlashni yo‘lga qo‘yamiz.</p>
-              <span class="section-link">Batafsil</span>
+              <h3>Kamera ornatish toshkent: kamera joylashuvi, arxiv va ko&#x27;rish sxemasi</h3>
+              <p>Kamera ornatish toshkent: kamera tizimida sababni topish, arxivni tiklash va to&#x27;g&#x27;ri sozlash bo&#x27;yicha amaliy maslahatlar Toshkent bo&#x27;yicha xizmat ko&#x27;rsatish yondashuvi ham berilgan.</p>
+              <span class="section-link">Sahifani ochish</span>
             </div>
           </a>
         </article>
         <article class="service-card seo-list-card">
           <a class="seo-card-link" href="services/ofis-uchun-kameralar.html">
-            <img class="seo-card-image" src="services/assets/img/articles/ofis-uchun-kameralar.webp" alt="Ofis uchun kameralar: qaysi joyga, qancha va qanday formatda o&#x27;rnatish">
+            <img class="seo-card-image" src="services/assets/img/articles/ofis-uchun-kameralar.svg" alt="Ofis uchun kameralar: qaysi joyga, qancha va qanday formatda o&#x27;rnatish">
             <div class="inner">
               <div class="eyebrow">Ofis xavfsizligi</div>
-              <h3>Ofis uchun kameralar — to‘g‘ri joylashuv va nazorat</h3>
-              <p>Qayerga qo‘yish, nechta kerakligi, yozuv saqlash va telefon orqali ko‘rish bo‘yicha amaliy yechim.</p>
-              <span class="section-link">Batafsil</span>
+              <h3>Ofis uchun kameralar: qaysi joyga, qancha va qanday formatda o&#x27;rnatish</h3>
+              <p>Ofis uchun kameralar: kamera tizimida sababni topish, arxivni tiklash va to&#x27;g&#x27;ri sozlash bo&#x27;yicha amaliy maslahatlar.</p>
+              <span class="section-link">Sahifani ochish</span>
             </div>
           </a>
         </article>
         <article class="service-card seo-list-card">
           <a class="seo-card-link" href="services/wifi-sozlash-ofis.html">
-            <img class="seo-card-image" src="services/assets/img/articles/wifi-sozlash-ofis.webp" alt="Wi-Fi sozlash ofis: sxema, kabel, VLAN va xavfsizlik">
+            <img class="seo-card-image" src="services/assets/img/articles/wifi-sozlash-ofis.svg" alt="Wi-Fi sozlash ofis: sxema, kabel, VLAN va xavfsizlik">
             <div class="inner">
               <div class="eyebrow">Wi-Fi</div>
               <h3>Wi-Fi sozlash ofis: sxema, kabel, VLAN va xavfsizlik</h3>
-              <p>Kabel, access point, VLAN va xavfsizlikni tartibga keltirib, uzilmaydigan tarmoq qilamiz.</p>
-              <span class="section-link">Batafsil</span>
+              <p>Wi-Fi sozlash ofis: tarmoq, Wi-Fi, VPN va internetdagi muammolarni diagnostika qilish va barqaror qilish bo&#x27;yicha amaliy yo&#x27;l.</p>
+              <span class="section-link">Sahifani ochish</span>
             </div>
           </a>
         </article>
         <article class="service-card seo-list-card">
           <a class="seo-card-link" href="services/backup-kerak.html">
-            <img class="seo-card-image" src="services/assets/img/articles/backup-kerak.webp" alt="Backup kerak: qayerda kerak va qanday to&#x27;g&#x27;ri quriladi">
+            <img class="seo-card-image" src="services/assets/img/articles/backup-kerak.svg" alt="Backup kerak: qayerda kerak va qanday to&#x27;g&#x27;ri quriladi">
             <div class="inner">
               <div class="eyebrow">Backup</div>
-              <h3>Backup — ma’lumotni saqlash va tez tiklash</h3>
-              <p>Server, baza va fayllar uchun zaxira nusxa, avariya holatida tez tiklash rejasi va nazorat.</p>
-              <span class="section-link">Batafsil</span>
+              <h3>Backup kerak: qayerda kerak va qanday to&#x27;g&#x27;ri quriladi</h3>
+              <p>Backup kerak: server, backup, baza va tiklash bo&#x27;yicha amaliy tekshiruvlar va foydali yechimlar.</p>
+              <span class="section-link">Sahifani ochish</span>
             </div>
           </a>
         </article>
         <article class="service-card seo-list-card">
           <a class="seo-card-link" href="services/vpn-filiallararo.html">
-            <img class="seo-card-image" src="services/assets/img/articles/vpn-filiallararo.webp" alt="VPN filiallararo: barqaror internet va boshqariladigan tarmoq">
+            <img class="seo-card-image" src="services/assets/img/articles/vpn-filiallararo.svg" alt="VPN filiallararo: barqaror internet va boshqariladigan tarmoq">
             <div class="inner">
               <div class="eyebrow">VPN</div>
-              <h3>VPN filiallararo — ofislar o‘rtasida xavfsiz aloqa</h3>
-              <p>Filiallar, zavod va ofislarni bitta xavfsiz tarmoqqa ulab, barqaror ishlashni yo‘lga qo‘yamiz.</p>
-              <span class="section-link">Batafsil</span>
+              <h3>VPN filiallararo: barqaror internet va boshqariladigan tarmoq</h3>
+              <p>VPN filiallararo: tarmoq, Wi-Fi, VPN va internetdagi muammolarni diagnostika qilish va barqaror qilish bo&#x27;yicha amaliy yo&#x27;l.</p>
+              <span class="section-link">Sahifani ochish</span>
             </div>
           </a>
         </article>
         <article class="service-card seo-list-card">
           <a class="seo-card-link" href="services/face-id-kirish-nazorati.html">
-            <img class="seo-card-image" src="services/assets/img/articles/face-id-kirish-nazorati.webp" alt="Face ID kirish nazorati: nazorat, log va xavfsizlik tartibi">
+            <img class="seo-card-image" src="services/assets/img/articles/face-id-kirish-nazorati.svg" alt="Face ID kirish nazorati: nazorat, log va xavfsizlik tartibi">
             <div class="inner">
               <div class="eyebrow">Face ID</div>
-              <h3>Face ID kirish nazorati — davomat va xavfsizlik</h3>
-              <p>Kirish-chiqish nazorati, xodim davomatini hisoblash va obyekt xavfsizligini tartibga keltirish.</p>
-              <span class="section-link">Batafsil</span>
+              <h3>Face ID kirish nazorati: nazorat, log va xavfsizlik tartibi</h3>
+              <p>Face ID kirish nazorati: kirish nazorati, Face ID, turniket va loglarni amalda to&#x27;g&#x27;ri qurish bo&#x27;yicha foydali yechimlar.</p>
+              <span class="section-link">Sahifani ochish</span>
             </div>
           </a>
         </article>
         <article class="service-card seo-list-card">
           <a class="seo-card-link" href="services/call-markaz-telefoniya.html">
-            <img class="seo-card-image" src="services/assets/img/articles/call-markaz-telefoniya.webp" alt="Call markaz telefoniya: qo&#x27;ng&#x27;iroq nazorati va operator tartibi">
+            <img class="seo-card-image" src="services/assets/img/articles/call-markaz-telefoniya.svg" alt="Call markaz telefoniya: qo&#x27;ng&#x27;iroq nazorati va operator tartibi">
             <div class="inner">
               <div class="eyebrow">Telefoniya</div>
-              <h3>Call markaz telefoniya — qo‘ng‘iroq tartibi va nazorat</h3>
-              <p>Operatorlar ishlashi, ichki raqamlar, yozib olish va mijoz qo‘ng‘iroqlarini boshqarish tizimi.</p>
-              <span class="section-link">Batafsil</span>
+              <h3>Call markaz telefoniya: qo&#x27;ng&#x27;iroq nazorati va operator tartibi</h3>
+              <p>Call markaz telefoniya: ATS, SIP va qo&#x27;ng&#x27;iroq tartibini foydali va boshqariladigan qilish bo&#x27;yicha aniq tavsiyalar.</p>
+              <span class="section-link">Sahifani ochish</span>
             </div>
           </a>
         </article>
