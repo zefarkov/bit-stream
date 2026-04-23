@@ -6,7 +6,7 @@
 <title>Xizmatlar — BITSTREAM</title>
 <meta name="description" content="Server, tarmoq, xavfsizlik, virtualizatsiya va monitoring xizmatlari.">
 <meta name="theme-color" content="#0b2e59">
-<link rel="canonical" href="https://bit-stream.uz/">
+<link rel="canonical" href="https://bit-stream.uz/uz/services.html">
 <link rel="alternate" hreflang="uz" href="https://bit-stream.uz/services.html">
 <link rel="alternate" hreflang="ru" href="https://bit-stream.uz/ru/services.html">
 <link rel="alternate" hreflang="en" href="https://bit-stream.uz/en/services.html">
@@ -14,7 +14,7 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="Xizmatlar — BITSTREAM">
 <meta property="og:description" content="Server, tarmoq, xavfsizlik, virtualizatsiya va monitoring xizmatlari.">
-<meta property="og:url" content="https://bit-stream.uz/">
+<meta property="og:url" content="https://bit-stream.uz/uz/services.html">
 <meta property="og:site_name" content="BITSTREAM">
 <meta property="og:image" content="https://bit-stream.uz/assets/img/brand/logo-bitstream.png">
 
@@ -34,7 +34,7 @@
 
   <div class="container header-wrap">
     <a class="brand" href="index.html">
-      <img src="../assets/img/brand/logo-bitstream.png" alt="BITSTREAM logo">
+      <img id="siteLogo" src="../assets/img/brand/logo-bitstream.png" alt="BITSTREAM logo">
     </a>
     <div class="header-actions">
       <select class="lang-switch" data-lang-select></select>
@@ -61,6 +61,7 @@
     <div class="notice"><span data-service-notice></span></div>
   </div>
 </section>
+
 
 </main>
 
@@ -126,6 +127,26 @@ document.addEventListener('DOMContentLoaded',function(){
    updateThemeIcon();
  }
 });
+</script>
+<script>
+function updateLogo(){
+  const logo = document.getElementById('siteLogo');
+  if(!logo) return;
+
+  const dark = document.documentElement.getAttribute('data-theme') === 'dark';
+
+  logo.src = dark
+    ? '../assets/img/brand/logo-bitstream-dark.png'
+    : '../assets/img/brand/logo-bitstream.png';
+}
+
+const oldUpdateThemeIcon = updateThemeIcon;
+updateThemeIcon = function(){
+  oldUpdateThemeIcon();
+  updateLogo();
+};
+
+document.addEventListener('DOMContentLoaded', updateLogo);
 </script>
 <script defer src="/tracker.js"></script>
 </body>
