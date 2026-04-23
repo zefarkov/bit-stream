@@ -1,4 +1,3 @@
-
 function esc(s){
   return String(s ?? '')
     .replace(/&/g,'&amp;')
@@ -7,89 +6,62 @@ function esc(s){
     .replace(/"/g,'&quot;');
 }
 
-function nlToBr(s){
-  return esc(s).replace(/\n/g,'<br>');
-}
-
-function listFromTextarea(value){
-  return String(value || '').split('\n').map(x => x.trim()).filter(Boolean);
-}
-
-function sectionHtml(title, bodyHtml){
-  if(!String(bodyHtml || '').trim()) return '';
-  return `<section class="article-box"><h2>${esc(title)}</h2>${bodyHtml}</section>`;
-}
-
-function autoSlug(){
-  const topic = document.getElementById('h1').value.trim() || document.getElementById('title').value.trim();
-  const slug = String(topic || '')
+function slugify(text){
+  return String(text || '')
     .toLowerCase()
     .normalize('NFKD')
     .replace(/[\u0300-\u036f]/g,'')
     .replace(/[^a-z0-9]+/g,'-')
-    .replace(/^-+|-+$/g,'') || 'new-page';
-  document.getElementById('slug').value = slug;
+    .replace(/^-+|-+$/g,'') || 'new-service-page';
 }
 
-function build(){
-  const lang = document.getElementById('lang').value.trim() || 'uz';
-  const slug = document.getElementById('slug').value.trim() || 'new-page';
-  const title = document.getElementById('title').value.trim();
-  const meta = document.getElementById('meta').value.trim();
-  const canonical = document.getElementById('canonical').value.trim();
-  const h1 = document.getElementById('h1').value.trim();
-  const lead = document.getElementById('lead').value.trim();
-  const problem = document.getElementById('problem').value.trim();
-  const solution = document.getElementById('solution').value.trim();
-  const bullets = listFromTextarea(document.getElementById('bullets').value);
-  const forwho = document.getElementById('forwho').value.trim();
-  const why = document.getElementById('why').value.trim();
-  const process = listFromTextarea(document.getElementById('process').value);
-  const faq1q = document.getElementById('faq1q').value.trim();
-  const faq1a = document.getElementById('faq1a').value.trim();
-  const faq2q = document.getElementById('faq2q').value.trim();
-  const faq2a = document.getElementById('faq2a').value.trim();
-  const summary = document.getElementById('summary').value.trim();
-  const cta = document.getElementById('cta').value.trim();
-  const ctaLink = document.getElementById('ctaLink').value.trim() || '../contacts.html';
-  const contact = document.getElementById('contact').value.trim();
+function getPack(lang, type){
+  const langPack = TEMPLATE_BANK[lang] || TEMPLATE_BANK.uz;
+  const typePack = langPack.byType[type] || langPack.byType.custom || TEMPLATE_BANK.en.byType.custom;
+  return { labels: langPack.labels, common: langPack.common, typePack };
+}
 
-  const faqParts = [];
-  if(faq1q || faq1a) faqParts.push(`<p><strong>${esc(faq1q)}</strong><br>${esc(faq1a)}</p>`);
-  if(faq2q || faq2a) faqParts.push(`<p><strong>${esc(faq2q)}</strong><br>${esc(faq2a)}</p>`);
+function buildPage(){
+  const lang = document.getElementById('lang').value;
+  const type = document.getElementById('serviceType').value;
+  const topic = document.getElementById('topic').value.trim() || 'New service page';
+  const city = document.getElementById('city').value.trim() || 'Tashkent';
+  const extra = document.getElementById('extra').value.trim();
+  const company = document.getElementById('company').value.trim() || 'BITSTREAM';
+  const domain = document.getElementById('domain').value.trim() || 'https://bit-stream.uz/services/';
+  const cta = document.getElementById('cta').value.trim() || (lang === 'uz' ? 'Bog‘lanish' : 'Связаться');
+  const contact = document.getElementById('contact').value.trim() || '+998 90 000 00 00';
+  const slugInput = document.getElementById('slug');
+  if(!slugInput.value.trim()) slugInput.value = slugify(topic);
+  const slug = slugInput.value.trim() || slugify(topic);
 
-  const bulletHtml = bullets.length ? `<ul>${bullets.map(x => `<li>${esc(x)}</li>`).join('')}</ul>` : '';
-  const processHtml = process.length ? `<ul>${process.map(x => `<li>${esc(x)}</li>`).join('')}</ul>` : '';
-  const contactHtml = contact ? `<div class="contact-note">${nlToBr(contact)}</div>` : '';
-  const ctaHtml = cta ? `<div class="quick-cta"><a class="btn btn-primary" href="${esc(ctaLink)}">${esc(cta)}</a></div>` : '';
+  const { labels, common, typePack } = getPack(lang, type);
+  const lead = typePack.lead(topic, city, extra);
+  const problem = typePack.problem(topic);
+  const solution = typePack.solution(topic);
+  const [step1, step2, step3] = common.processSteps;
+  const conclusion = lang === 'uz'
+    ? `${topic} bo‘yicha maqsad bitta: tizim ishlasin, odamlar qiynalmasin va biznes o‘z ishiga chalg‘imasdan davom etsin.`
+    : lang === 'ru'
+    ? `${topic} нужен не ради красивой технологии, а ради нормальной, спокойной и управляемой работы бизнеса.`
+    : `${topic} should support calm, reliable, and manageable business operations.`;
 
-  const preview = `
-<div class="article-wrap">
-  ${h1 || lead ? `
-  <section class="article-hero">
-    <div class="eyebrow">BITSTREAM</div>
-    ${h1 ? `<h1>${esc(h1)}</h1>` : ''}
-    ${lead ? `<p class="article-lead">${nlToBr(lead)}</p>` : ''}
-    ${ctaHtml}
-  </section>` : ''}
+  const metaTitle = `${topic} | ${company}`;
+  const metaDescription = lang === 'uz'
+    ? `${topic}. ${company} tomonidan biznes uchun amaliy va ishonchli IT yechim.`
+    : lang === 'ru'
+    ? `${topic}. Практичное и надёжное IT-решение для бизнеса от ${company}.`
+    : `${topic}. Practical and reliable IT solution for business from ${company}.`;
+  const canonical = `${domain.replace(/\/?$/,'/')}${slug}.html`;
 
-  ${sectionHtml(lang === 'ru' ? 'Проблема' : lang === 'en' ? 'Problem' : 'Muammo', problem ? `<p>${nlToBr(problem)}</p>` : '')}
-  ${sectionHtml(lang === 'ru' ? 'Решение' : lang === 'en' ? 'Solution' : 'Yechim', (solution ? `<p>${nlToBr(solution)}</p>` : '') + bulletHtml)}
-  ${sectionHtml(lang === 'ru' ? 'Для кого' : lang === 'en' ? 'Who this is for' : 'Kimlar uchun', forwho ? `<p>${nlToBr(forwho)}</p>` : '')}
-  ${sectionHtml(lang === 'ru' ? 'Почему это важно' : lang === 'en' ? 'Why it matters' : 'Nega bu muhim', why ? `<p>${nlToBr(why)}</p>` : '')}
-  ${sectionHtml(lang === 'ru' ? 'Как работаем' : lang === 'en' ? 'How we work' : 'Qanday ishlaymiz', processHtml)}
-  ${sectionHtml('FAQ', faqParts.join(''))}
-  ${sectionHtml(lang === 'ru' ? 'Итог' : lang === 'en' ? 'Summary' : 'Xulosa', (summary ? `<p>${nlToBr(summary)}</p>` : '') + contactHtml + ctaHtml)}
-</div>`.trim();
-
-  const html = `<!DOCTYPE html>
+  const pageHtml = `<!DOCTYPE html>
 <html lang="${esc(lang)}">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-${title ? `<title>${esc(title)}</title>` : ''}
-${meta ? `<meta name="description" content="${esc(meta)}">` : ''}
-${canonical ? `<link rel="canonical" href="${esc(canonical)}">` : ''}
+<title>${esc(metaTitle)}</title>
+<meta name="description" content="${esc(metaDescription)}">
+<link rel="canonical" href="${esc(canonical)}">
 <link rel="stylesheet" href="../assets/css/style.css">
 <style>
 .article-wrap{max-width:980px;margin:0 auto;padding:24px 0 48px}
@@ -102,24 +74,154 @@ ${canonical ? `<link rel="canonical" href="${esc(canonical)}">` : ''}
 @media(max-width:720px){.article-hero,.article-box{padding:18px}.article-lead{font-size:16px}}
 </style>
 </head>
-<body data-lang="${esc(lang)}" data-page="${esc(slug)}">
+<body data-lang="${esc(lang)}">
 <!-- existing site header -->
 <main class="section">
-${preview}
+<div class="container article-wrap">
+
+<section class="article-hero">
+<div class="eyebrow">${esc(company)}</div>
+<h1>${esc(topic)}</h1>
+<p class="article-lead">${esc(lead)}</p>
+<div class="quick-cta">
+<a class="btn btn-primary" href="../contacts.html">${esc(cta)}</a>
+<a class="btn" href="../services.html">${esc(labels.services)}</a>
+</div>
+</section>
+
+<section class="article-box">
+<h2>${esc(labels.problem)}</h2>
+<p>${esc(problem)}</p>
+</section>
+
+<section class="article-box">
+<h2>${esc(labels.solution)}</h2>
+<p>${esc(solution)}</p>
+<ul>
+<li>${esc(typePack.points[0])}</li>
+<li>${esc(typePack.points[1])}</li>
+<li>${esc(typePack.points[2])}</li>
+</ul>
+</section>
+
+<section class="article-box">
+<h2>${esc(labels.forWho)}</h2>
+<p>${esc(typePack.forWho)}</p>
+</section>
+
+<section class="article-box">
+<h2>${esc(labels.why)}</h2>
+<p>${esc(typePack.why)}</p>
+</section>
+
+<section class="article-box">
+<h2>${esc(labels.process)}</h2>
+<ul>
+<li>${esc(step1)}</li>
+<li>${esc(step2)}</li>
+<li>${esc(step3)}</li>
+</ul>
+</section>
+
+<section class="article-box">
+<h2>${esc(labels.faq)}</h2>
+<p><strong>${esc(typePack.faq1q)}</strong><br>${esc(typePack.faq1a)}</p>
+<p><strong>${esc(typePack.faq2q)}</strong><br>${esc(typePack.faq2a)}</p>
+</section>
+
+<section class="article-box">
+<h2>${esc(labels.summary)}</h2>
+<p>${esc(conclusion)}</p>
+<div class="contact-note">${esc(contact)}</div>
+<div class="quick-cta">
+<a class="btn btn-primary" href="../contacts.html">${esc(labels.request)}</a>
+</div>
+</section>
+
+</div>
 </main>
 <!-- existing site footer -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Service",
+  "name":"${esc(topic)}",
+  "provider":{"@type":"Organization","name":"${esc(company)}","url":"https://bit-stream.uz"},
+  "url":"${esc(canonical)}",
+  "areaServed":"Uzbekistan",
+  "description":"${esc(metaDescription)}"
+}
+</script>
 </body>
 </html>`;
 
-  return {html, preview, slug};
+  const previewHtml = `
+<div class="article-wrap">
+  <section class="article-hero">
+    <div class="eyebrow">${esc(company)}</div>
+    <h1>${esc(topic)}</h1>
+    <p class="article-lead">${esc(lead)}</p>
+    <div class="quick-cta">
+      <a class="btn btn-primary" href="#">${esc(cta)}</a>
+      <a class="btn" href="#">${esc(labels.services)}</a>
+    </div>
+  </section>
+
+  <section class="article-box">
+    <h2>${esc(labels.problem)}</h2>
+    <p>${esc(problem)}</p>
+  </section>
+
+  <section class="article-box">
+    <h2>${esc(labels.solution)}</h2>
+    <p>${esc(solution)}</p>
+    <ul>
+      <li>${esc(typePack.points[0])}</li>
+      <li>${esc(typePack.points[1])}</li>
+      <li>${esc(typePack.points[2])}</li>
+    </ul>
+  </section>
+
+  <section class="article-box">
+    <h2>${esc(labels.forWho)}</h2>
+    <p>${esc(typePack.forWho)}</p>
+  </section>
+
+  <section class="article-box">
+    <h2>${esc(labels.why)}</h2>
+    <p>${esc(typePack.why)}</p>
+  </section>
+
+  <section class="article-box">
+    <h2>${esc(labels.process)}</h2>
+    <ul>
+      <li>${esc(step1)}</li>
+      <li>${esc(step2)}</li>
+      <li>${esc(step3)}</li>
+    </ul>
+  </section>
+
+  <section class="article-box">
+    <h2>${esc(labels.faq)}</h2>
+    <p><strong>${esc(typePack.faq1q)}</strong><br>${esc(typePack.faq1a)}</p>
+    <p><strong>${esc(typePack.faq2q)}</strong><br>${esc(typePack.faq2a)}</p>
+  </section>
+
+  <section class="article-box">
+    <h2>${esc(labels.summary)}</h2>
+    <p>${esc(conclusion)}</p>
+    <div class="contact-note">${esc(contact)}</div>
+  </section>
+</div>`;
+
+  return { html: pageHtml, preview: previewHtml, slug };
 }
 
 function render(){
-  const result = build();
-  window.generatedHtml = result.html;
-  window.generatedSlug = result.slug;
-  document.getElementById('preview').innerHTML = result.preview;
-  document.getElementById('code').textContent = result.html;
+  const { html, preview } = buildPage();
+  document.getElementById('preview').innerHTML = preview;
+  document.getElementById('code').textContent = html;
+  window.generatedHtml = html;
 }
 
 async function copyHtml(){
@@ -134,20 +236,21 @@ async function copyHtml(){
 
 function downloadHtml(){
   if(!window.generatedHtml) render();
-  const filename = (window.generatedSlug || 'new-page') + '.html';
+  const slug = (document.getElementById('slug').value.trim() || 'new-service-page') + '.html';
   const blob = new Blob([window.generatedHtml || ''], {type:'text/html;charset=utf-8'});
   const a = document.createElement('a');
   a.href = URL.createObjectURL(blob);
-  a.download = filename;
+  a.download = slug;
   document.body.appendChild(a);
   a.click();
   a.remove();
-  setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+  setTimeout(()=>URL.revokeObjectURL(a.href), 1000);
 }
 
-document.getElementById('title').addEventListener('input', autoSlug);
-document.getElementById('h1').addEventListener('input', autoSlug);
+document.getElementById('topic').addEventListener('input', (e)=>{
+  document.getElementById('slug').value = slugify(e.target.value);
+});
 document.getElementById('generateBtn').addEventListener('click', render);
-document.getElementById('copyBtn').addEventListener('click', copyHtml);
 document.getElementById('downloadBtn').addEventListener('click', downloadHtml);
+document.getElementById('copyBtn').addEventListener('click', copyHtml);
 render();
