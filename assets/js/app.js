@@ -147,6 +147,11 @@ function renderHero(lang){
   const L = pageLabels(lang);
   const node = document.querySelector('[data-home-hero]');
   if(!node) return;
+  const heroAlt = {
+    uz: "Toshkentdagi biznes uchun server, tarmoq va IT infratuzilma xizmati",
+    ru: "IT-инфраструктура, серверы и сети для бизнеса в Ташкенте",
+    en: "Business IT infrastructure, servers and networking by BITSTREAM"
+  };
   node.innerHTML = `
     <div class="hero-grid">
       <div class="panel hero-copy">
@@ -164,7 +169,7 @@ function renderHero(lang){
         </div>
       </div>
       <div class="panel hero-visual">
-        <img src="../assets/img/brand/hero-infra.webp" alt="IT infrastructure illustration">
+        <img src="../assets/img/brand/hero-infra.webp" alt="${heroAlt[lang]||heroAlt.en}" fetchpriority="high">
       </div>
     </div>`;
 }
@@ -196,7 +201,7 @@ async function renderCases(lang){
     '../assets/img/cases/projects_faceid.webp'
   ];
   node.innerHTML = data.map((x,idx)=>`<article class="case-card panel">
-      <div class="case-media"><img src="${imgs[idx % imgs.length]}" alt="${x.title[lang]||x.title.en}"></div>
+      <div class="case-media"><img src="${imgs[idx % imgs.length]}" alt="${x.title[lang]||x.title.en}" loading="lazy" decoding="async"></div>
       <div class="inner">
         <h3>${x.title[lang]||x.title.en}</h3>
         <p>${x.summary[lang]||x.summary.en}</p>
@@ -218,7 +223,7 @@ async function renderTeam(lang){
 /**    '../assets/img/team/dilshod.webp' */
   ];
   node.innerHTML = data.map((x,idx)=>`<article class="team-card panel">
-      <div class="case-media"><img src="${imgs[idx % imgs.length]}" alt="${x.name}"></div>
+      <div class="case-media"><img src="${imgs[idx % imgs.length]}" alt="${x.name}" loading="lazy" decoding="async"></div>
       <div class="inner"><h3>${x.name}</h3><p><strong>${x.role[lang]||x.role.en}</strong></p><p>${x.bio[lang]||x.bio.en}</p></div>
     </article>`).join('');
 }
@@ -230,7 +235,7 @@ async function renderPartners(){
 
   node.innerHTML = data.map(item => `
     <article class="partner-card">
-      <img src="${item.logo}" alt="${item.name}" loading="lazy">
+      <img src="${item.logo}" alt="${item.name}" loading="lazy" decoding="async">
     </article>
   `).join('');
 }
