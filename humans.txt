@@ -1,0 +1,13 @@
+/* TEAM */
+Brand: BITSTREAM
+Site: https://bit-stream.uz/
+Location: Tashkent, Uzbekistan
+Contact: info@bit-stream.uz
+
+/* SERVICES */
+Business IT infrastructure
+Servers, networking, security, backup, monitoring, IP telephony
+
+/* TECH */
+Static multilingual website
+Dark/light theme enabled

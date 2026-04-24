@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://bit-stream.uz/</loc></url>
   <url><loc>https://bit-stream.uz/uz/index.html</loc></url>
   <url><loc>https://bit-stream.uz/uz/services.html</loc></url>
   <url><loc>https://bit-stream.uz/uz/projects.html</loc></url>
@@ -48,4 +47,36 @@
   <url><loc>https://bit-stream.uz/uz/services/zabbix-monitoring.html</loc></url>
   <url><loc>https://bit-stream.uz/uz/services/proxmox-virtualizatsiya.html</loc></url>
   <url><loc>https://bit-stream.uz/uz/services/windows-domen-sozlash.html</loc></url>
+
+  <url><loc>https://bit-stream.uz/ru/services/index.html</loc></url>
+  <url><loc>https://bit-stream.uz/ru/services/ит-услуги-ташкент.html</loc></url>
+  <url><loc>https://bit-stream.uz/ru/services/ит-аудит.html</loc></url>
+  <url><loc>https://bit-stream.uz/ru/services/установка-камер-ташкент.html</loc></url>
+  <url><loc>https://bit-stream.uz/ru/services/камера-не-работает.html</loc></url>
+  <url><loc>https://bit-stream.uz/ru/services/камеры-для-офиса.html</loc></url>
+  <url><loc>https://bit-stream.uz/ru/services/настройка-wi-fi-офис.html</loc></url>
+  <url><loc>https://bit-stream.uz/ru/services/медленный-wi-fi-в-офисе.html</loc></url>
+  <url><loc>https://bit-stream.uz/ru/services/нужен-backup.html</loc></url>
+  <url><loc>https://bit-stream.uz/ru/services/настройка-backup.html</loc></url>
+  <url><loc>https://bit-stream.uz/ru/services/ремонт-сервера.html</loc></url>
+  <url><loc>https://bit-stream.uz/ru/services/сервер-сильно-тормозит.html</loc></url>
+  <url><loc>https://bit-stream.uz/ru/services/настройка-windows-server.html</loc></url>
+  <url><loc>https://bit-stream.uz/ru/services/настройка-mikrotik.html</loc></url>
+  <url><loc>https://bit-stream.uz/ru/services/установка-firewall.html</loc></url>
+  <url><loc>https://bit-stream.uz/ru/services/vpn-между-филиалами.html</loc></url>
+  <url><loc>https://bit-stream.uz/ru/services/подключение-филиала-по-vpn.html</loc></url>
+  <url><loc>https://bit-stream.uz/ru/services/face-id-контроль-доступа.html</loc></url>
+  <url><loc>https://bit-stream.uz/ru/services/система-учёта-посещаемости.html</loc></url>
+  <url><loc>https://bit-stream.uz/ru/services/установка-турникета.html</loc></url>
+  <url><loc>https://bit-stream.uz/ru/services/телефония-для-call-центра.html</loc></url>
+  <url><loc>https://bit-stream.uz/ru/services/sip-телефония-для-офиса.html</loc></url>
+  <url><loc>https://bit-stream.uz/ru/services/запись-звонков.html</loc></url>
+  <url><loc>https://bit-stream.uz/ru/services/ит-услуги-для-бизнеса.html</loc></url>
+  <url><loc>https://bit-stream.uz/ru/services/ит-услуги-для-офиса.html</loc></url>
+  <url><loc>https://bit-stream.uz/ru/services/ит-специалист-на-аутсорсе.html</loc></url>
+  <url><loc>https://bit-stream.uz/ru/services/подключение-принтеров-в-сеть.html</loc></url>
+  <url><loc>https://bit-stream.uz/ru/services/файловый-сервер.html</loc></url>
+  <url><loc>https://bit-stream.uz/ru/services/zabbix-мониторинг.html</loc></url>
+  <url><loc>https://bit-stream.uz/ru/services/proxmox-виртуализация.html</loc></url>
+  <url><loc>https://bit-stream.uz/ru/services/настройка-домена-windows.html</loc></url>
 </urlset>

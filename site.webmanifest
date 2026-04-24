@@ -1,0 +1,15 @@
+{
+  "name": "BITSTREAM",
+  "short_name": "BITSTREAM",
+  "start_url": "/uz/index.html",
+  "display": "standalone",
+  "background_color": "#f3f6fa",
+  "theme_color": "#0b2e59",
+  "icons": [
+    {
+      "src": "/assets/img/brand/logo-bitstream.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
