@@ -1,50 +1,68 @@
 <!doctype html>
-<html lang="uz">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>BITSTREAM</title>
-  <meta name="description" content="BITSTREAM IT infrastructure website language redirect.">
+  <title>BITSTREAM — IT xizmatlari, server, tarmoq va support</title>
+  <meta name="description" content="Language redirect page for the BITSTREAM website.">
+  <meta name="robots" content="noindex,follow,max-image-preview:large">
+  <link rel="canonical" href="https://bit-stream.uz/">
+  <link rel="alternate" hreflang="uz" href="https://bit-stream.uz/uz/index.html">
+  <link rel="alternate" hreflang="ru" href="https://bit-stream.uz/ru/index.html">
+  <link rel="alternate" hreflang="en" href="https://bit-stream.uz/en/index.html">
+  <link rel="alternate" hreflang="x-default" href="https://bit-stream.uz/index.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="BITSTREAM | Language redirect">
+  <meta property="og:description" content="Language redirect page for the BITSTREAM website.">
+  <meta property="og:url" content="https://bit-stream.uz/">
+  <meta property="og:site_name" content="BITSTREAM">
+  <meta property="og:image" content="https://bit-stream.uz/assets/img/brand/logo-bitstream.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="BITSTREAM | Language redirect">
+  <meta name="twitter:description" content="Language redirect page for the BITSTREAM website.">
+  <meta name="twitter:image" content="https://bit-stream.uz/assets/img/brand/logo-bitstream.png">
   <meta http-equiv="refresh" content="0; url=uz/index.html">
-<style>
+  <link rel="icon" href="assets/icons/favicon.ico" sizes="any">
+  <style>
     body{margin:0;font-family:Arial,sans-serif;background:#eef2f7;color:#10233e;display:grid;place-items:center;min-height:100vh}
     .card{background:#fff;border:1px solid #d8e1eb;border-radius:18px;padding:28px;max-width:560px;box-shadow:0 14px 40px rgba(16,35,62,.08)}
     h1{margin:0 0 10px}
     p{color:#5b6b80;line-height:1.55}
     a{display:inline-block;margin:8px 10px 0 0;color:#0b2e59;text-decoration:none;font-weight:700}
   </style>
-<script>
-(async function () {
-  try {
-    await fetch("https://track.bit-stream.uz/", {
-      method: "POST",
-      headers: {"Content-Type":"application/json"},
-      body: JSON.stringify({
-        eventType: "visit",
-        card: "",
-        page: location.pathname,
-        ref: document.referrer || "",
-        ua: navigator.userAgent
-      }),
-      keepalive: true
-    });
-  } catch(e) {}
+  <script>
+  (async function () {
+    try {
+      await fetch("https://track.bit-stream.uz/", {
+        method: "POST",
+        headers: {"Content-Type":"application/json"},
+        body: JSON.stringify({
+          eventType: "visit",
+          card: "",
+          page: location.pathname,
+          ref: document.referrer || "",
+          ua: navigator.userAgent
+        }),
+        keepalive: true
+      });
+    } catch(e) {}
 
-  var l=(navigator.language||'uz').toLowerCase();
-  var target='uz/index.html';
-  if(l.startsWith('ru')) target='ru/index.html';
-  else if(l.startsWith('en')) target='en/index.html';
+    var l=(navigator.language||'uz').toLowerCase();
+    var target='uz/index.html';
+    if(l.startsWith('ru')) target='ru/index.html';
+    else if(l.startsWith('en')) target='en/index.html';
 
-  location.replace(target);
-})();
-</script>
-<link rel="icon" href="assets/icons/favicon.ico" sizes="any">
+    location.replace(target);
+  })();
+  </script>
+<link rel="manifest" href="/site.webmanifest">
+<meta name="msapplication-config" content="/browserconfig.xml">
 </head>
 <body>
   <div class="card">
     <h1>BITSTREAM</h1>
     <p>Redirecting to the best language version. Default: Uzbek.</p>
-    <a href="uz/index.html">O‘zbekcha</a>
+    <a href="uz/index.html">O'zbekcha</a>
     <a href="ru/index.html">Русский</a>
     <a href="en/index.html">English</a>
   </div>
