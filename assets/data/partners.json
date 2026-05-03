@@ -1,15 +1,19 @@
 [
   {
-    "name": "AZURE RESORT",
-    "logo": "../assets/img/partners/azure-resort.png"
+    "name": "FLO",
+    "logo": "../assets/img/partners/flologo.png"
+  },
+  {
+    "name": "REDTAG",
+    "logo": "../assets/img/partners/redtag.png"
   },
   {
     "name": "ZUMA PHARMA",
     "logo": "../assets/img/partners/zuma-pharma.png"
   },
   {
-    "name": "MORE IT DESIGN",
-    "logo": "../assets/img/partners/moreit.png"
+    "name": "AZURE RESORT",
+    "logo": "../assets/img/partners/azure-resort.png"
   },
   {
     "name": "CORE ENERGY",
