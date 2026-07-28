@@ -1,62 +1,204 @@
 ---
 import { site, type Lang } from '../config/site';
+import { homeCopy } from '../content/home';
+
 const { lang } = Astro.props as { lang: Lang };
-const copy = {
-  en: {
-    title:'IT operations in Uzbekistan. One accountable partner.',
-    lead:'Infrastructure, equipment, on-site support and technical operations for companies that value speed, clarity and reliable execution.',
-    primary:'Request assistance', secondary:'Call now',
-    trust:['English, Russian and Uzbek','On-site and remote support','Invoices and business documentation'],
-    panelTitle:'From request to working result — without vendor chaos.',
-    signals:[['Response','Clear next step'],['Coverage','Tashkent & Uzbekistan'],['Format','One-time or ongoing'],['Responsibility','One point of contact']],
-    solutionsTitle:'What we take off your hands', solutionsLead:'Complete responsibility for the technical outcome.',
-    solutions:[
-      ['01','IT support & operations','Daily employee issues, computers, printers, servers, 1C, email and on-site assistance.',['Remote and on-site support','Incident resolution','Ongoing maintenance']],
-      ['02','Office & infrastructure','Opening or upgrading an office, branch, warehouse or retail location.',['Network and Wi-Fi','Workplaces and servers','Documentation and handover']],
-      ['03','Security systems','Video surveillance, access control and reliable storage with clear responsibility.',['CCTV design and installation','Access control','Maintenance and recovery']],
-      ['04','Equipment & procurement','We source, verify, deliver, install and support compatible equipment locally.',['Local vendor coordination','Compatibility and warranty','One invoice, one result']]
-    ],
-    intlTitle:'For international companies operating in Uzbekistan',
-    intlLead:'We act as your local technical team, remote hands and vendor coordinator — aligned with your head office or regional IT department.',
-    benefits:[['English-speaking coordination','Clear communication with local staff, headquarters and external MSPs.'],['Local procurement','We find compatible equipment, handle suppliers and deliver to the site.'],['Business-ready process','Scopes, invoices, documentation, photo reports and accountable delivery.'],['Nationwide execution','Projects and support in Tashkent and other regions of Uzbekistan.']],
-    processTitle:'Simple from the first message', process:[['1','Describe the task','Use ordinary language. You do not need to diagnose the technical cause.'],['2','Receive a clear next step','We clarify the situation, scope the work and agree the format.'],['3','We own the result','Procurement, installation, configuration, testing and handover.']],
-    contactTitle:'Tell us what needs to work', contactLead:'Leave a phone number, email, Telegram username or any link where we can reach you.',
-    type:'What do you need?', types:['Urgent technical issue','Ongoing IT support','New office or branch','Cameras or access control','Equipment procurement','Network or Wi-Fi','Other request'],
-    details:'Task details', detailsPh:'What happened, where is the site, and what result do you need?', contact:'How should we contact you?', contactPh:'Phone, email, @telegram or another link', send:'Send request', note:'The form opens Telegram with the prepared request. No account is required to call or email us.',
-    footer:'Local IT operations, infrastructure and support for business in Uzbekistan.'
-  },
-  ru: {
-    title:'IT-операции в Узбекистане. Один ответственный подрядчик.',
-    lead:'Инфраструктура, оборудование, выездная поддержка и технические работы для компаний, которым важны скорость, ясность и результат.',
-    primary:'Описать задачу', secondary:'Позвонить', trust:['Русский, английский и узбекский','Выездная и удалённая поддержка','Договоры, счета и документы'],
-    panelTitle:'От запроса до работающего результата — без хаоса подрядчиков.', signals:[['Ответ','Понятный следующий шаг'],['География','Ташкент и Узбекистан'],['Формат','Разово или постоянно'],['Ответственность','Одно контактное лицо']],
-    solutionsTitle:'Что мы берём на себя', solutionsLead:'Полная ответственность за технический результат.',
-    solutions:[['01','IT-поддержка и обслуживание','Проблемы сотрудников, компьютеры, принтеры, серверы, 1С, почта и выезды.',['Удалённая и выездная помощь','Устранение инцидентов','Постоянное обслуживание']],['02','Офис и инфраструктура','Запуск или модернизация офиса, филиала, склада или магазина.',['Сеть и Wi-Fi','Рабочие места и серверы','Документация и сдача']],['03','Системы безопасности','Видеонаблюдение, контроль доступа и надёжное хранение архива.',['Проектирование и монтаж камер','Контроль доступа','Обслуживание и восстановление']],['04','Оборудование и закупки','Подберём, проверим, доставим, установим и возьмём на поддержку.',['Работа с местными поставщиками','Совместимость и гарантия','Один счёт, один результат']]],
-    intlTitle:'Для международных компаний в Узбекистане', intlLead:'Работаем как локальная техническая команда, remote hands и координатор поставщиков — вместе с головным офисом или региональным IT-отделом.',
-    benefits:[['Коммуникация на английском','Понятная связь с локальной командой, головным офисом и внешними MSP.'],['Локальные закупки','Находим совместимое оборудование, работаем с поставщиками и доставляем на объект.'],['Корпоративный процесс','Сметы, счета, документация, фотоотчёты и ответственная сдача.'],['Работа по Узбекистану','Проекты и поддержка в Ташкенте и других регионах страны.']],
-    processTitle:'Просто с первого сообщения', process:[['1','Опишите задачу','Обычными словами. Вам не нужно самостоятельно искать техническую причину.'],['2','Получите понятный следующий шаг','Уточним ситуацию, определим объём и согласуем формат работы.'],['3','Мы отвечаем за результат','Закупка, монтаж, настройка, тестирование и сдача.']],
-    contactTitle:'Расскажите, что должно работать', contactLead:'Оставьте телефон, email, Telegram или любую ссылку, по которой с вами можно связаться.', type:'Что требуется?', types:['Срочная техническая проблема','Постоянная IT-поддержка','Новый офис или филиал','Камеры или контроль доступа','Закупка оборудования','Сеть или Wi-Fi','Другая задача'], details:'Описание задачи', detailsPh:'Что произошло, где находится объект и какой результат нужен?', contact:'Как с вами связаться?', contactPh:'Телефон, email, @telegram или другая ссылка', send:'Отправить заявку', note:'Форма откроет Telegram с готовым текстом заявки. Также можно сразу позвонить или написать на почту.', footer:'Локальные IT-операции, инфраструктура и поддержка бизнеса в Узбекистане.'
-  },
-  uz: {
-    title:'O‘zbekistondagi IT ishlaringiz. Bitta mas’ul hamkor.', lead:'Tezlik, aniqlik va natijani qadrlaydigan kompaniyalar uchun infratuzilma, uskunalar va texnik xizmat.', primary:'Vazifani yozish', secondary:"Qo‘ng‘iroq qilish", trust:['O‘zbek, rus va ingliz tillari','Joyida va masofaviy yordam','Shartnoma, hisob va hujjatlar'], panelTitle:'So‘rovdan ishlaydigan natijagacha — ko‘p pudratchilarsiz.', signals:[['Javob','Aniq keyingi qadam'],['Hudud','Toshkent va O‘zbekiston'],['Format','Bir martalik yoki doimiy'],['Mas’uliyat','Bitta aloqa nuqtasi']], solutionsTitle:'Nimalarni o‘z zimmamizga olamiz', solutionsLead:'Texnik natija uchun to‘liq javobgarlik.', solutions:[['01','IT yordam va xizmat','Xodimlar, kompyuterlar, printerlar, serverlar, 1C, pochta va joyiga chiqish.',['Masofaviy va joyida yordam','Nosozliklarni bartaraf etish','Doimiy xizmat']],['02','Ofis va infratuzilma','Ofis, filial, ombor yoki savdo nuqtasini ishga tushirish va yangilash.',['Tarmoq va Wi-Fi','Ish joylari va serverlar','Hujjatlashtirish va topshirish']],['03','Xavfsizlik tizimlari','Videokuzatuv, kirishni nazorat qilish va ishonchli arxiv.',['Kameralarni loyihalash va o‘rnatish','Kirish nazorati','Xizmat va tiklash']],['04','Uskuna va xaridlar','Mos uskunani topamiz, tekshiramiz, yetkazamiz va o‘rnatamiz.',['Mahalliy yetkazib beruvchilar','Moslik va kafolat','Bitta hisob, bitta natija']]], intlTitle:'O‘zbekistondagi xalqaro kompaniyalar uchun', intlLead:'Bosh ofis yoki hududiy IT bo‘lim bilan birga mahalliy texnik jamoa, remote hands va yetkazib beruvchilar koordinatori sifatida ishlaymiz.', benefits:[['Ingliz tilida aloqa','Mahalliy jamoa, bosh ofis va tashqi MSP bilan aniq muloqot.'],['Mahalliy xaridlar','Mos uskunani topamiz, yetkazib beruvchilar bilan ishlaymiz va obyektga yetkazamiz.'],['Biznes uchun tayyor jarayon','Smeta, hisob, hujjatlar, foto hisobot va mas’ul topshirish.'],['O‘zbekiston bo‘ylab','Toshkent va boshqa hududlarda loyihalar va xizmat.']], processTitle:'Birinchi xabardan boshlab oson', process:[['1','Vazifani yozing','Oddiy so‘zlar bilan. Texnik sababni o‘zingiz aniqlashingiz shart emas.'],['2','Aniq keyingi qadamni oling','Holatni aniqlaymiz, ish hajmini va formatini kelishamiz.'],['3','Natija uchun javob beramiz','Xarid, montaj, sozlash, sinov va topshirish.']], contactTitle:'Nima ishlashi kerakligini yozing', contactLead:'Telefon, email, Telegram yoki siz bilan bog‘lanish mumkin bo‘lgan boshqa havolani qoldiring.', type:'Nima kerak?', types:['Shoshilinch texnik muammo','Doimiy IT yordam','Yangi ofis yoki filial','Kamera yoki kirish nazorati','Uskuna xaridi','Tarmoq yoki Wi-Fi','Boshqa vazifa'], details:'Vazifa tavsifi', detailsPh:'Nima bo‘ldi, obyekt qayerda va qanday natija kerak?', contact:'Siz bilan qanday bog‘lanamiz?', contactPh:'Telefon, email, @telegram yoki boshqa havola', send:'So‘rov yuborish', note:'Forma Telegram’da tayyor so‘rov matnini ochadi. Telefon yoki email orqali ham bog‘lanishingiz mumkin.', footer:'O‘zbekistondagi biznes uchun IT infratuzilma va texnik xizmat.'
-  }
-}[lang];
+const copy = homeCopy[lang];
+const outcomeLabel = lang === 'ru' ? 'Результат' : lang === 'uz' ? 'Natija' : 'Outcome';
+const requestHeading = lang === 'ru' ? 'Заявка с сайта BITSTREAM' : lang === 'uz' ? 'BITSTREAM saytidan so‘rov' : 'BITSTREAM website request';
 ---
+
 <main>
-<section class="hero"><div class="container hero-grid"><div><h1>{copy.title}</h1><p class="lead">{copy.lead}</p><div class="hero-actions"><a class="btn btn-primary" href="#contact">{copy.primary}</a><a class="btn" href={`tel:${site.phone}`}>{copy.secondary}</a></div><div class="trust-row">{copy.trust.map(x=><span>{x}</span>)}</div></div><aside class="hero-card"><h3>{copy.panelTitle}</h3><div class="signal">{copy.signals.map(([a,b])=><div><small>{a}</small><strong>{b}</strong></div>)}</div></aside></div></section>
-<section class="section" id="solutions"><div class="container"><div class="section-head"><div><h2>{copy.solutionsTitle}</h2><p>{copy.solutionsLead}</p></div></div><div class="grid services">{copy.solutions.map(([n,t,p,items])=><article class="card"><span class="number">{n}</span><h3>{t}</h3><p>{p}</p><ul>{(items as string[]).map(i=><li>{i}</li>)}</ul></article>)}</div></div></section>
-<section class="section section-soft" id="international"><div class="container international"><div class="dark-panel"><h2>{copy.intlTitle}</h2><p>{copy.intlLead}</p><a class="btn btn-primary" href="#contact">{copy.primary}</a></div><div class="benefits">{copy.benefits.map(([t,p])=><article class="benefit"><strong>{t}</strong><span>{p}</span></article>)}</div></div></section>
-<section class="section"><div class="container"><div class="section-head"><h2>{copy.processTitle}</h2></div><div class="grid process">{copy.process.map(([n,t,p])=><article class="card"><span class="number">0{n}</span><h3>{t}</h3><p>{p}</p></article>)}</div></div></section>
-<section class="section section-soft" id="contact"><div class="container contact-wrap"><div class="contact-copy"><h2>{copy.contactTitle}</h2><p class="lead">{copy.contactLead}</p><div class="contact-links"><a href={`tel:${site.phone}`}><span>{site.phoneDisplay}</span><span>↗</span></a><a href={`mailto:${site.email}`}><span>{site.email}</span><span>↗</span></a><a href={site.telegram} target="_blank"><span>Telegram</span><span>↗</span></a></div></div><form class="form" id="lead-form"><div class="form-grid"><div class="field full"><label for="type">{copy.type}</label><select id="type" name="type">{copy.types.map(x=><option>{x}</option>)}</select></div><div class="field full"><label for="details">{copy.details}</label><textarea id="details" name="details" required placeholder={copy.detailsPh}></textarea></div><div class="field full"><label for="contact-field">{copy.contact}</label><input id="contact-field" name="contact" required placeholder={copy.contactPh}/></div><div class="field full"><button class="btn btn-primary" type="submit">{copy.send}</button><p class="form-note">{copy.note}</p></div></div></form></div></section>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <h1>{copy.title}</h1>
+        <p class="lead">{copy.lead}</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#contact">{copy.primary}</a>
+          <a class="btn" href={`tel:${site.phone}`}>{copy.secondary}</a>
+        </div>
+        <div class="trust-row">
+          {copy.trust.map((item) => <span>{item}</span>)}
+        </div>
+      </div>
+
+      <aside class="hero-card">
+        <h2>{copy.panelTitle}</h2>
+        <div class="signal">
+          {copy.signals.map(([label, value]) => (
+            <div>
+              <span>{label}</span>
+              <strong>{value}</strong>
+            </div>
+          ))}
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section" id="solutions">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2>{copy.solutionsTitle}</h2>
+          <p>{copy.solutionsLead}</p>
+        </div>
+      </div>
+
+      <div class="grid services">
+        {copy.solutions.map((solution) => (
+          <article class="card service-card">
+            <h3>{solution.title}</h3>
+            <p>{solution.text}</p>
+            <ul>
+              {solution.items.map((item) => <li>{item}</li>)}
+            </ul>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-soft" id="international">
+    <div class="container international">
+      <div class="dark-panel">
+        <h2>{copy.intlTitle}</h2>
+        <p>{copy.intlLead}</p>
+        <a class="btn btn-primary" href="#contact">{copy.primary}</a>
+      </div>
+
+      <div class="benefits">
+        {copy.benefits.map((benefit) => (
+          <article class="benefit">
+            <h3>{benefit.title}</h3>
+            <p>{benefit.text}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="engagement">
+    <div class="container">
+      <div class="section-head split-head">
+        <div>
+          <h2>{copy.engagementTitle}</h2>
+          <p>{copy.engagementLead}</p>
+        </div>
+        <p class="commercial-note">{copy.engagementNote}</p>
+      </div>
+
+      <div class="grid engagement-grid">
+        {copy.engagements.map((engagement) => (
+          <article class="engagement-card">
+            <p class="engagement-mode">{engagement.mode}</p>
+            <h3>{engagement.title}</h3>
+            <p>{engagement.text}</p>
+            <ul>
+              {engagement.items.map((item) => <li>{item}</li>)}
+            </ul>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-soft" id="work">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2>{copy.workTitle}</h2>
+          <p>{copy.workLead}</p>
+        </div>
+      </div>
+
+      <div class="grid case-grid">
+        {copy.cases.map((caseStudy) => (
+          <article class="case-card">
+            <div>
+              <h3>{caseStudy.title}</h3>
+              <p>{caseStudy.text}</p>
+              <ul>
+                {caseStudy.items.map((item) => <li>{item}</li>)}
+              </ul>
+            </div>
+            <div class="case-outcome">
+              <span>{outcomeLabel}</span>
+              <strong>{caseStudy.outcome}</strong>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="container contact-wrap">
+      <div class="contact-copy">
+        <h2>{copy.contactTitle}</h2>
+        <p class="lead">{copy.contactLead}</p>
+        <div class="contact-links">
+          <a href={`tel:${site.phone}`}>
+            <span>{site.phoneDisplay}</span>
+            <span aria-hidden="true">↗</span>
+          </a>
+          <a href={`mailto:${site.email}`}>
+            <span>{site.email}</span>
+            <span aria-hidden="true">↗</span>
+          </a>
+          <a href={site.telegram} target="_blank" rel="noopener noreferrer">
+            <span>Telegram</span>
+            <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+
+      <form class="form" id="lead-form">
+        <div class="form-grid">
+          <div class="field full">
+            <label for="type">{copy.type}</label>
+            <select id="type" name="type">
+              {copy.types.map((item) => <option value={item}>{item}</option>)}
+            </select>
+          </div>
+
+          <div class="field full">
+            <label for="details">{copy.details}</label>
+            <textarea id="details" name="details" required placeholder={copy.detailsPh}></textarea>
+          </div>
+
+          <div class="field full">
+            <label for="contact-field">{copy.contact}</label>
+            <input id="contact-field" name="contact" required placeholder={copy.contactPh} />
+          </div>
+
+          <div class="field full">
+            <button class="btn btn-primary" type="submit">{copy.send}</button>
+            <p class="form-note">{copy.note}</p>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
 </main>
-<footer class="footer"><div class="container footer-inner"><strong>BITSTREAM</strong><span>{copy.footer}</span><span>© 2026</span></div></footer>
-<script define:vars={{ telegram: site.telegram }}>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <strong>BITSTREAM</strong>
+    <span>{copy.footer}</span>
+    <span>© 2026</span>
+  </div>
+</footer>
+
+<script define:vars={{ telegram: site.telegram, requestHeading, typeLabel: copy.type, detailsLabel: copy.details, contactLabel: copy.contact }}>
   document.getElementById('lead-form')?.addEventListener('submit', (event) => {
     event.preventDefault();
     const form = event.currentTarget;
     if (!(form instanceof HTMLFormElement)) return;
+
     const data = new FormData(form);
-    const message = `BITSTREAM website request\n\nType: ${data.get('type')}\nDetails: ${data.get('details')}\nContact: ${data.get('contact')}\nPage: ${location.href}`;
+    const message = `${requestHeading}\n\n${typeLabel}: ${data.get('type')}\n${detailsLabel}: ${data.get('details')}\n${contactLabel}: ${data.get('contact')}\nPage: ${location.href}`;
     const username = new URL(telegram).pathname.replace('/', '');
     window.open(`https://t.me/${username}?text=${encodeURIComponent(message)}`, '_blank', 'noopener');
   });
