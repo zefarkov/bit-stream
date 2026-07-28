@@ -5,5 +5,6 @@ export default defineConfig({
   site: 'https://bit-stream.uz',
   output: 'static',
   integrations: [sitemap()],
-  build: { format: 'directory' }
+  build: { format: 'directory' },
+  devToolbar: { enabled: false }
 });
