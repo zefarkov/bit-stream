@@ -1,0 +1,45 @@
+---
+import '../styles/global.css';
+import { paths, site, type Lang } from '../config/site';
+interface Props { lang: Lang; title: string; description: string }
+const { lang, title, description } = Astro.props;
+---
+<!doctype html>
+<html lang={lang}>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <meta name="description" content={description} />
+  <meta name="theme-color" content="#f5f8fc" />
+  <link rel="canonical" href={new URL(paths[lang], Astro.site)} />
+  <link rel="alternate" hreflang="en" href={new URL(paths.en, Astro.site)} />
+  <link rel="alternate" hreflang="ru" href={new URL(paths.ru, Astro.site)} />
+  <link rel="alternate" hreflang="uz" href={new URL(paths.uz, Astro.site)} />
+  <link rel="alternate" hreflang="x-default" href={new URL(paths.en, Astro.site)} />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={new URL(paths[lang], Astro.site)} />
+  <title>{title}</title>
+</head>
+<body>
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a class="logo" href={paths[lang]}>BIT<span>STREAM</span></a>
+      <div class="nav-links">
+        <a href="#solutions">{lang === 'ru' ? 'Решения' : lang === 'uz' ? 'Yechimlar' : 'Solutions'}</a>
+        <a href="#international">{lang === 'ru' ? 'Для международных компаний' : lang === 'uz' ? 'Xalqaro kompaniyalar' : 'International companies'}</a>
+        <div class="lang">
+          {Object.entries(paths).map(([code, path]) => <a class={code === lang ? 'active' : ''} href={path}>{code.toUpperCase()}</a>)}
+        </div>
+        <a class="btn btn-primary" href="#contact">{lang === 'ru' ? 'Описать задачу' : lang === 'uz' ? 'Vazifani yozish' : 'Request assistance'}</a>
+      </div>
+    </div>
+  </nav>
+  <slot />
+  <div class="mobile-bar">
+    <a class="btn" href={`tel:${site.phone}`}>{lang === 'ru' ? 'Позвонить' : lang === 'uz' ? "Qo‘ng‘iroq" : 'Call'}</a>
+    <a class="btn btn-primary" href="#contact">{lang === 'ru' ? 'Оставить заявку' : lang === 'uz' ? 'So‘rov qoldirish' : 'Request help'}</a>
+  </div>
+</body>
+</html>

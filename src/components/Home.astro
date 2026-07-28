@@ -1,0 +1,205 @@
+---
+import { site, type Lang } from '../config/site';
+import { homeCopy } from '../content/home';
+
+const { lang } = Astro.props as { lang: Lang };
+const copy = homeCopy[lang];
+const outcomeLabel = lang === 'ru' ? 'Результат' : lang === 'uz' ? 'Natija' : 'Outcome';
+const requestHeading = lang === 'ru' ? 'Заявка с сайта BITSTREAM' : lang === 'uz' ? 'BITSTREAM saytidan so‘rov' : 'BITSTREAM website request';
+---
+
+<main>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <h1>{copy.title}</h1>
+        <p class="lead">{copy.lead}</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#contact">{copy.primary}</a>
+          <a class="btn" href={`tel:${site.phone}`}>{copy.secondary}</a>
+        </div>
+        <div class="trust-row">
+          {copy.trust.map((item) => <span>{item}</span>)}
+        </div>
+      </div>
+
+      <aside class="hero-card">
+        <h2>{copy.panelTitle}</h2>
+        <div class="signal">
+          {copy.signals.map(([label, value]) => (
+            <div>
+              <span>{label}</span>
+              <strong>{value}</strong>
+            </div>
+          ))}
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section" id="solutions">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2>{copy.solutionsTitle}</h2>
+          <p>{copy.solutionsLead}</p>
+        </div>
+      </div>
+
+      <div class="grid services">
+        {copy.solutions.map((solution) => (
+          <article class="card service-card">
+            <h3>{solution.title}</h3>
+            <p>{solution.text}</p>
+            <ul>
+              {solution.items.map((item) => <li>{item}</li>)}
+            </ul>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-soft" id="international">
+    <div class="container international">
+      <div class="dark-panel">
+        <h2>{copy.intlTitle}</h2>
+        <p>{copy.intlLead}</p>
+        <a class="btn btn-primary" href="#contact">{copy.primary}</a>
+      </div>
+
+      <div class="benefits">
+        {copy.benefits.map((benefit) => (
+          <article class="benefit">
+            <h3>{benefit.title}</h3>
+            <p>{benefit.text}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="engagement">
+    <div class="container">
+      <div class="section-head split-head">
+        <div>
+          <h2>{copy.engagementTitle}</h2>
+          <p>{copy.engagementLead}</p>
+        </div>
+        <p class="commercial-note">{copy.engagementNote}</p>
+      </div>
+
+      <div class="grid engagement-grid">
+        {copy.engagements.map((engagement) => (
+          <article class="engagement-card">
+            <p class="engagement-mode">{engagement.mode}</p>
+            <h3>{engagement.title}</h3>
+            <p>{engagement.text}</p>
+            <ul>
+              {engagement.items.map((item) => <li>{item}</li>)}
+            </ul>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-soft" id="work">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2>{copy.workTitle}</h2>
+          <p>{copy.workLead}</p>
+        </div>
+      </div>
+
+      <div class="grid case-grid">
+        {copy.cases.map((caseStudy) => (
+          <article class="case-card">
+            <div>
+              <h3>{caseStudy.title}</h3>
+              <p>{caseStudy.text}</p>
+              <ul>
+                {caseStudy.items.map((item) => <li>{item}</li>)}
+              </ul>
+            </div>
+            <div class="case-outcome">
+              <span>{outcomeLabel}</span>
+              <strong>{caseStudy.outcome}</strong>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="container contact-wrap">
+      <div class="contact-copy">
+        <h2>{copy.contactTitle}</h2>
+        <p class="lead">{copy.contactLead}</p>
+        <div class="contact-links">
+          <a href={`tel:${site.phone}`}>
+            <span>{site.phoneDisplay}</span>
+            <span aria-hidden="true">↗</span>
+          </a>
+          <a href={`mailto:${site.email}`}>
+            <span>{site.email}</span>
+            <span aria-hidden="true">↗</span>
+          </a>
+          <a href={site.telegram} target="_blank" rel="noopener noreferrer">
+            <span>Telegram</span>
+            <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+
+      <form class="form" id="lead-form">
+        <div class="form-grid">
+          <div class="field full">
+            <label for="type">{copy.type}</label>
+            <select id="type" name="type">
+              {copy.types.map((item) => <option value={item}>{item}</option>)}
+            </select>
+          </div>
+
+          <div class="field full">
+            <label for="details">{copy.details}</label>
+            <textarea id="details" name="details" required placeholder={copy.detailsPh}></textarea>
+          </div>
+
+          <div class="field full">
+            <label for="contact-field">{copy.contact}</label>
+            <input id="contact-field" name="contact" required placeholder={copy.contactPh} />
+          </div>
+
+          <div class="field full">
+            <button class="btn btn-primary" type="submit">{copy.send}</button>
+            <p class="form-note">{copy.note}</p>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <strong>BITSTREAM</strong>
+    <span>{copy.footer}</span>
+    <span>© 2026</span>
+  </div>
+</footer>
+
+<script define:vars={{ telegram: site.telegram, requestHeading, typeLabel: copy.type, detailsLabel: copy.details, contactLabel: copy.contact }}>
+  document.getElementById('lead-form')?.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const form = event.currentTarget;
+    if (!(form instanceof HTMLFormElement)) return;
+
+    const data = new FormData(form);
+    const message = `${requestHeading}\n\n${typeLabel}: ${data.get('type')}\n${detailsLabel}: ${data.get('details')}\n${contactLabel}: ${data.get('contact')}\nPage: ${location.href}`;
+    const username = new URL(telegram).pathname.replace('/', '');
+    window.open(`https://t.me/${username}?text=${encodeURIComponent(message)}`, '_blank', 'noopener');
+  });
+</script>
