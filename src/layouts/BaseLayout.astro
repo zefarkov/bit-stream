@@ -1,36 +1,74 @@
 ---
 import '../styles/global.css';
 import { paths, site, type Lang } from '../config/site';
-interface Props { lang: Lang; title: string; description: string }
+
+interface Props {
+  lang: Lang;
+  title: string;
+  description: string;
+}
+
 const { lang, title, description } = Astro.props;
+const baseUrl = Astro.site ?? new URL('https://bit-stream.uz');
+const canonical = new URL(paths[lang], baseUrl);
+const locale = lang === 'ru' ? 'ru_RU' : lang === 'uz' ? 'uz_UZ' : 'en_US';
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': ['Organization', 'LocalBusiness'],
+  name: site.name,
+  url: baseUrl.href,
+  email: site.email,
+  telephone: site.phone,
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Tashkent',
+    addressCountry: 'UZ',
+  },
+  areaServed: {
+    '@type': 'Country',
+    name: 'Uzbekistan',
+  },
+  sameAs: [site.telegram, site.instagram],
+};
 ---
 <!doctype html>
 <html lang={lang}>
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content={description} />
-  <meta name="theme-color" content="#f5f8fc" />
-  <link rel="canonical" href={new URL(paths[lang], Astro.site)} />
-  <link rel="alternate" hreflang="en" href={new URL(paths.en, Astro.site)} />
-  <link rel="alternate" hreflang="ru" href={new URL(paths.ru, Astro.site)} />
-  <link rel="alternate" hreflang="uz" href={new URL(paths.uz, Astro.site)} />
-  <link rel="alternate" hreflang="x-default" href={new URL(paths.en, Astro.site)} />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <meta name="theme-color" content="#071c3b" />
+
+  <link rel="canonical" href={canonical} />
+  <link rel="alternate" hreflang="en" href={new URL(paths.en, baseUrl)} />
+  <link rel="alternate" hreflang="ru" href={new URL(paths.ru, baseUrl)} />
+  <link rel="alternate" hreflang="uz" href={new URL(paths.uz, baseUrl)} />
+  <link rel="alternate" hreflang="x-default" href={new URL(paths.en, baseUrl)} />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
   <meta property="og:type" content="website" />
+  <meta property="og:site_name" content={site.name} />
+  <meta property="og:locale" content={locale} />
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
-  <meta property="og:url" content={new URL(paths[lang], Astro.site)} />
+  <meta property="og:url" content={canonical} />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+
+  <script type="application/ld+json" set:html={JSON.stringify(organizationSchema)}></script>
   <title>{title}</title>
 </head>
 <body>
-  <nav class="nav">
+  <nav class="nav" aria-label="Primary navigation">
     <div class="container nav-inner">
-      <a class="logo" href={paths[lang]}>BIT<span>STREAM</span></a>
+      <a class="logo" href={paths[lang]} aria-label="BITSTREAM home">BIT<span>STREAM</span></a>
       <div class="nav-links">
         <a href="#solutions">{lang === 'ru' ? 'Решения' : lang === 'uz' ? 'Yechimlar' : 'Solutions'}</a>
         <a href="#international">{lang === 'ru' ? 'Для международных компаний' : lang === 'uz' ? 'Xalqaro kompaniyalar' : 'International companies'}</a>
-        <div class="lang">
-          {Object.entries(paths).map(([code, path]) => <a class={code === lang ? 'active' : ''} href={path}>{code.toUpperCase()}</a>)}
+        <div class="lang" aria-label="Language selection">
+          {Object.entries(paths).map(([code, path]) => <a class={code === lang ? 'active' : ''} href={path} lang={code}>{code.toUpperCase()}</a>)}
         </div>
         <a class="btn btn-primary" href="#contact">{lang === 'ru' ? 'Описать задачу' : lang === 'uz' ? 'Vazifani yozish' : 'Request assistance'}</a>
       </div>
