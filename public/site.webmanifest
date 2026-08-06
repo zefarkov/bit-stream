@@ -1,0 +1,17 @@
+{
+  "name": "BITSTREAM",
+  "short_name": "BITSTREAM",
+  "description": "IT infrastructure, support and technical operations for business in Uzbekistan.",
+  "start_url": "/en/",
+  "display": "standalone",
+  "background_color": "#f5f8fc",
+  "theme_color": "#071c3b",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
