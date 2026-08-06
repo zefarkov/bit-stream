@@ -1,50 +1,62 @@
 [
   {
     "title": {
-      "uz": "Serverlar va IT tizimlar",
-      "ru": "Серверы и IT-системы",
-      "en": "Server and IT infrastructure"
+      "uz": "Serverlar va IT infratuzilma",
+      "ru": "Серверы и IT-инфраструктура",
+      "en": "Servers and IT infrastructure"
     },
     "text": {
-      "uz": "Windows va Linux serverlarini o‘rnatish, sozlash va barqaror ishlashini ta’minlash. AD, DNS, DHCP, WEB, FTP, NTP va Print Server.",
-      "ru": "Развёртывание, настройка и стабильная работа Windows и Linux серверов. Включая AD, DNS, DHCP, WEB, FTP, NTP и Print Server.",
-      "en": "Windows and Linux server deployment, configuration, and stable operation. Includes AD, DNS, DHCP, WEB, FTP, NTP, and Print Server."
+      "uz": "Windows va Linux serverlarini loyihalash, o‘rnatish, migratsiya qilish va boshqarish. Active Directory, DNS, DHCP, fayl, web, FTP, NTP va print xizmatlari.",
+      "ru": "Проектирование, развёртывание, миграция и администрирование Windows и Linux серверов. Active Directory, DNS, DHCP, файловые, web, FTP, NTP и print-сервисы.",
+      "en": "Design, deployment, migration, and administration of Windows and Linux servers, including Active Directory, DNS, DHCP, file, web, FTP, NTP, and print services."
     }
   },
   {
     "title": {
-      "uz": "Tarmoq va xavfsizlik",
-      "ru": "Сети и безопасность",
-      "en": "Networking and security"
+      "uz": "Tarmoq va kiberxavfsizlik",
+      "ru": "Сети и кибербезопасность",
+      "en": "Networking and cybersecurity"
     },
     "text": {
-      "uz": "Ichki va tashqi tarmoqlarni loyihalash, himoyalash va boshqarish. MikroTik, pfSense, Kerio, Fortinet, VPN va kirish nazorati.",
-      "ru": "Проектирование, защита и управление внутренними и внешними сетями. MikroTik, pfSense, Kerio, Fortinet, VPN и контроль доступа.",
-      "en": "Design, protection, and management of internal and external networks. Includes MikroTik, pfSense, Kerio, Fortinet, VPN, and access control."
+      "uz": "LAN, WAN, Wi‑Fi va filiallararo tarmoqlarni loyihalash, segmentatsiya va himoyalash. MikroTik, pfSense, OPNsense, Kerio, Fortinet, VPN, firewall va xavfsiz masofaviy kirish.",
+      "ru": "Проектирование и защита LAN, WAN, Wi‑Fi и межфилиальных сетей. Сегментация, MikroTik, pfSense, OPNsense, Kerio, Fortinet, VPN, firewall и безопасный удалённый доступ.",
+      "en": "Design and protection of LAN, WAN, Wi‑Fi, and branch networks using segmentation, MikroTik, pfSense, OPNsense, Kerio, Fortinet, VPN, firewalls, and secure remote access."
     }
   },
   {
     "title": {
-      "uz": "Virtual serverlar va monitoring",
-      "ru": "Виртуальные серверы и мониторинг",
-      "en": "Virtual servers and monitoring"
+      "uz": "Virtualizatsiya va resurs boshqaruvi",
+      "ru": "Виртуализация и управление ресурсами",
+      "en": "Virtualization and resource management"
     },
     "text": {
-      "uz": "Proxmox va VMware asosida virtual muhit. Resurs boshqaruvi, snapshot, host optimizatsiyasi, Zabbix va Grafana nazorati.",
-      "ru": "Виртуальная среда на базе Proxmox и VMware, распределение ресурсов, snapshot, оптимизация host и мониторинг через Zabbix и Grafana.",
-      "en": "Virtual environments based on Proxmox and VMware, including resource allocation, snapshots, host optimization, and monitoring through Zabbix and Grafana."
+      "uz": "VMware ESXi va Proxmox asosida virtual muhitlar. VM migratsiyasi, snapshot, resurs taqsimoti, host optimizatsiyasi va yuqori mavjudlikka tayyor arxitektura.",
+      "ru": "Виртуальные среды на базе VMware ESXi и Proxmox. Миграция VM, snapshots, распределение ресурсов, оптимизация хостов и архитектура с готовностью к высокой доступности.",
+      "en": "Virtual environments based on VMware ESXi and Proxmox, including VM migration, snapshots, resource allocation, host optimization, and high-availability-ready architecture."
     }
   },
   {
     "title": {
-      "uz": "Backup va tezkor tiklash",
-      "ru": "Backup и быстрое восстановление",
-      "en": "Backup and fast recovery"
+      "uz": "Monitoring va hodisalarga javob",
+      "ru": "Мониторинг и реагирование на инциденты",
+      "en": "Monitoring and incident response"
     },
     "text": {
-      "uz": "NAS, avtomatik backup, zaxira siyosati va avariya tiklash rejasi. Ma’lumotlarni saqlash va tez tiklash.",
-      "ru": "NAS, автоматический backup, сценарии восстановления и защита данных с акцентом на надёжное хранение и быстрое восстановление.",
-      "en": "NAS, automated backup, recovery scenarios, and data protection processes focused on safe storage and fast recovery."
+      "uz": "Zabbix, Grafana, Wazuh va ntopng orqali server, tarmoq, servis va xavfsizlik hodisalarini markaziy kuzatish. Ogohlantirish, tahlil va profilaktik xizmat.",
+      "ru": "Централизованный мониторинг серверов, сетей, сервисов и событий безопасности через Zabbix, Grafana, Wazuh и ntopng. Оповещения, анализ и профилактика.",
+      "en": "Centralized monitoring of servers, networks, services, and security events through Zabbix, Grafana, Wazuh, and ntopng, with alerting, analysis, and preventive maintenance."
+    }
+  },
+  {
+    "title": {
+      "uz": "Backup va avariyadan tiklash",
+      "ru": "Резервное копирование и аварийное восстановление",
+      "en": "Backup and disaster recovery"
+    },
+    "text": {
+      "uz": "Veeam, NAS va avtomatik zaxiralash asosida backup siyosati. Tiklash sinovlari, versiyalash, offsite nusxa va avariyadan tiklash rejasi.",
+      "ru": "Политика резервного копирования на базе Veeam, NAS и автоматизации. Тесты восстановления, версионирование, offsite-копии и план аварийного восстановления.",
+      "en": "Backup policies based on Veeam, NAS, and automation, including recovery testing, versioning, offsite copies, and disaster recovery planning."
     }
   },
   {
@@ -54,21 +66,33 @@
       "en": "Video surveillance and access control"
     },
     "text": {
-      "uz": "Kamera, Face ID, turniket va kirishni boshqarish tizimlari. Obyekt xavfsizligi va nazoratini kuchaytirish.",
-      "ru": "Камеры, Face ID, турникеты и системы контроля доступа для повышения безопасности и управляемости объекта.",
-      "en": "Cameras, Face ID, turnstiles, and access control systems for stronger site security and visibility."
+      "uz": "IP kameralar, NVR, Face ID, turniket va access control tizimlarini joriy etish. Hududlar, xonalar va kontrollerlar bo‘yicha boshqariladigan nazorat va hisobot.",
+      "ru": "Внедрение IP-камер, NVR, Face ID, турникетов и систем контроля доступа. Управляемый контроль и отчётность по зонам, помещениям и контроллерам.",
+      "en": "Deployment of IP cameras, NVR, Face ID, turnstiles, and access control systems, with managed oversight and reporting by zones, rooms, and controllers."
     }
   },
   {
     "title": {
-      "uz": "IP-telefoniya",
-      "ru": "IP-телефония",
-      "en": "IP telephony"
+      "uz": "IP-telefoniya va korporativ aloqa",
+      "ru": "IP-телефония и корпоративная связь",
+      "en": "IP telephony and corporate communications"
     },
     "text": {
-      "uz": "FreePBX, IP-PBX, gateway va IP telefoniya yechimlari. Filiallar va ichki aloqa uchun qulay telefon tizimi.",
-      "ru": "FreePBX, IP-PBX, шлюзы и решения IP-телефонии для филиалов и внутренней связи.",
-      "en": "FreePBX, IP-PBX, gateways, and business telephony solutions for branches and internal communication."
+      "uz": "FreePBX, IP-PBX, SIP trunk, gateway va IP telefonlarni sozlash. Filiallar, bo‘limlar va masofaviy xodimlar uchun boshqariladigan aloqa muhiti.",
+      "ru": "Настройка FreePBX, IP-PBX, SIP trunk, шлюзов и IP-телефонов. Управляемая связь для филиалов, отделов и удалённых сотрудников.",
+      "en": "Configuration of FreePBX, IP-PBX, SIP trunks, gateways, and IP phones for managed communications across branches, departments, and remote staff."
+    }
+  },
+  {
+    "title": {
+      "uz": "IT autsorsing va avtomatlashtirish",
+      "ru": "IT-аутсорсинг и автоматизация",
+      "en": "IT outsourcing and automation"
+    },
+    "text": {
+      "uz": "IT audit, inventarizatsiya, hujjatlashtirish, foydalanuvchilarni qo‘llab-quvvatlash va takroriy jarayonlarni avtomatlashtirish. Bitta mas’ul jamoa va kelishilgan SLA.",
+      "ru": "IT-аудит, инвентаризация, документация, поддержка пользователей и автоматизация повторяющихся процессов. Единая ответственная команда и согласованный SLA.",
+      "en": "IT audits, inventory, documentation, user support, and automation of repetitive processes, delivered through one accountable team and an agreed SLA."
     }
   }
 ]

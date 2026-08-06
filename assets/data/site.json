@@ -1,11 +1,11 @@
 {
   "company": {
     "name": "BITSTREAM",
-    "full_name": "BITSTREAM IT INFRASTRUCTURE",
+    "full_name": "BITSTREAM IT INFRASTRUCTURE & CYBERSECURITY",
     "tagline": {
-      "uz": "Server, tarmoq, xavfsizlik, virtualizatsiya va IT autsorsing xizmatlari",
-      "ru": "Серверы, сети, безопасность, виртуализация и IT-аутсорсинг",
-      "en": "Servers, networking, security, virtualization, and IT outsourcing"
+      "uz": "Server, tarmoq, kiberxavfsizlik, monitoring, avtomatlashtirish va IT autsorsing xizmatlari",
+      "ru": "Серверы, сети, кибербезопасность, мониторинг, автоматизация и IT-аутсорсинг",
+      "en": "Servers, networking, cybersecurity, monitoring, automation, and IT outsourcing"
     },
     "domain": "bit-stream.uz",
     "email": "info@bit-stream.uz",
