@@ -1,58 +1,58 @@
 [
   {
-    "value": "2018",
-    "suffix": "",
-    "label": {
-      "uz": "2018-yildan beri IT yechimlar",
-      "ru": "Надёжные IT-решения с 2018 года",
-      "en": "Reliable IT solutions since 2018"
-    },
-    "note": {
-      "uz": "Ko‘p yillik amaliy tajriba",
-      "ru": "Многолетний практический опыт",
-      "en": "Years of practical experience"
-    }
-  },
-  {
-    "value": "6",
+    "value": "8",
     "suffix": "+",
     "label": {
-      "uz": "Asosiy xizmat yo‘nalishi",
-      "ru": "Ключевых направлений услуг",
-      "en": "Core service areas"
+      "uz": "Asosiy IT xizmat yo‘nalishi",
+      "ru": "Ключевых направлений IT-услуг",
+      "en": "Core IT service areas"
     },
     "note": {
-      "uz": "Serverlar, tarmoqlar, backup, xavfsizlik, IP-telefoniya",
-      "ru": "Серверы, сети, backup, безопасность и IP-телефония",
-      "en": "Servers, networking, backup, security, and IP telephony"
+      "uz": "Infratuzilmadan kiberxavfsizlik va avtomatlashtirishgacha",
+      "ru": "От инфраструктуры до кибербезопасности и автоматизации",
+      "en": "From infrastructure to cybersecurity and automation"
     }
   },
   {
-    "value": "15",
-    "suffix": " min",
-    "label": {
-      "uz": "Tezkor javob va yordam",
-      "ru": "Модель быстрого реагирования",
-      "en": "Rapid response model"
-    },
-    "note": {
-      "uz": "Kelishilgan SLA asosida",
-      "ru": "По согласованному SLA и удалённой поддержке",
-      "en": "Based on agreed SLA and remote support"
-    }
-  },
-  {
-    "value": "24/7",
+    "value": "3",
     "suffix": "",
     "label": {
-      "uz": "Doimiy monitoring va nazorat",
-      "ru": "Мониторинг и контроль",
-      "en": "Monitoring and control"
+      "uz": "Xizmat ko‘rsatish tili",
+      "ru": "Языка обслуживания",
+      "en": "Service languages"
     },
     "note": {
-      "uz": "Kuzatuv, ogohlantirish va profilaktika",
-      "ru": "Наблюдение, оповещения и профилактический контроль",
-      "en": "Monitoring, alerting, and preventive control"
+      "uz": "O‘zbek, rus va ingliz tillarida",
+      "ru": "Узбекский, русский и английский",
+      "en": "Uzbek, Russian, and English"
+    }
+  },
+  {
+    "value": "1",
+    "suffix": "",
+    "label": {
+      "uz": "Mas’uliyat markazi",
+      "ru": "Единый центр ответственности",
+      "en": "Single point of accountability"
+    },
+    "note": {
+      "uz": "Audit, joriy etish, hujjatlashtirish va support bitta jamoada",
+      "ru": "Аудит, внедрение, документация и поддержка одной командой",
+      "en": "Audit, implementation, documentation, and support by one team"
+    }
+  },
+  {
+    "value": "SLA",
+    "suffix": "",
+    "label": {
+      "uz": "Kelishilgan xizmat darajasi",
+      "ru": "Согласованный уровень сервиса",
+      "en": "Agreed service level"
+    },
+    "note": {
+      "uz": "Javob va tiklash ustuvorligi shartnoma asosida belgilanadi",
+      "ru": "Приоритет ответа и восстановления фиксируется договором",
+      "en": "Response and recovery priorities are defined contractually"
     }
   }
 ]
