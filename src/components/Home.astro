@@ -6,6 +6,16 @@ const { lang } = Astro.props as { lang: Lang };
 const copy = homeCopy[lang];
 const outcomeLabel = lang === 'ru' ? 'Результат' : lang === 'uz' ? 'Natija' : 'Outcome';
 const requestHeading = lang === 'ru' ? 'Заявка с сайта BITSTREAM' : lang === 'uz' ? 'BITSTREAM saytidan so‘rov' : 'BITSTREAM website request';
+const statusCopied = lang === 'ru'
+  ? 'Текст заявки скопирован. Вставьте его в открывшийся чат Telegram и отправьте.'
+  : lang === 'uz'
+    ? 'So‘rov matni nusxalandi. Uni ochilgan Telegram chatiga joylab yuboring.'
+    : 'The request text was copied. Paste it into the opened Telegram chat and send it.';
+const statusEmailFallback = lang === 'ru'
+  ? 'Telegram или буфер обмена недоступны. Открываем заявку через email.'
+  : lang === 'uz'
+    ? 'Telegram yoki nusxalash ishlamadi. So‘rov email orqali ochilmoqda.'
+    : 'Telegram or clipboard access was unavailable. Opening the request by email.';
 ---
 
 <main>
@@ -170,12 +180,13 @@ const requestHeading = lang === 'ru' ? 'Заявка с сайта BITSTREAM' : 
 
           <div class="field full">
             <label for="contact-field">{copy.contact}</label>
-            <input id="contact-field" name="contact" required placeholder={copy.contactPh} />
+            <input id="contact-field" name="contact" required autocomplete="email" placeholder={copy.contactPh} />
           </div>
 
           <div class="field full">
             <button class="btn btn-primary" type="submit">{copy.send}</button>
             <p class="form-note">{copy.note}</p>
+            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
           </div>
         </div>
       </form>
@@ -191,15 +202,48 @@ const requestHeading = lang === 'ru' ? 'Заявка с сайта BITSTREAM' : 
   </div>
 </footer>
 
-<script define:vars={{ telegram: site.telegram, requestHeading, typeLabel: copy.type, detailsLabel: copy.details, contactLabel: copy.contact }}>
-  document.getElementById('lead-form')?.addEventListener('submit', (event) => {
+<script define:vars={{ telegram: site.telegram, email: site.email, requestHeading, typeLabel: copy.type, detailsLabel: copy.details, contactLabel: copy.contact, statusCopied, statusEmailFallback }}>
+  async function copyRequest(text) {
+    try {
+      if (navigator.clipboard && window.isSecureContext) {
+        await navigator.clipboard.writeText(text);
+        return true;
+      }
+
+      const textarea = document.createElement('textarea');
+      textarea.value = text;
+      textarea.setAttribute('readonly', '');
+      textarea.style.position = 'fixed';
+      textarea.style.opacity = '0';
+      document.body.appendChild(textarea);
+      textarea.select();
+      const copied = document.execCommand('copy');
+      textarea.remove();
+      return copied;
+    } catch {
+      return false;
+    }
+  }
+
+  document.getElementById('lead-form')?.addEventListener('submit', async (event) => {
     event.preventDefault();
     const form = event.currentTarget;
-    if (!(form instanceof HTMLFormElement)) return;
+    if (!(form instanceof HTMLFormElement) || !form.reportValidity()) return;
 
     const data = new FormData(form);
     const message = `${requestHeading}\n\n${typeLabel}: ${data.get('type')}\n${detailsLabel}: ${data.get('details')}\n${contactLabel}: ${data.get('contact')}\nPage: ${location.href}`;
-    const username = new URL(telegram).pathname.replace('/', '');
-    window.open(`https://t.me/${username}?text=${encodeURIComponent(message)}`, '_blank', 'noopener');
+    const status = document.getElementById('form-status');
+    const telegramWindow = window.open(telegram, '_blank', 'noopener,noreferrer');
+    const copied = await copyRequest(message);
+
+    if (copied && telegramWindow) {
+      if (status) status.textContent = statusCopied;
+      return;
+    }
+
+    if (status) status.textContent = statusEmailFallback;
+    const subject = encodeURIComponent(requestHeading);
+    const body = encodeURIComponent(message);
+    window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
   });
 </script>
