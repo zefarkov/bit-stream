@@ -180,7 +180,7 @@ const statusEmailFallback = lang === 'ru'
 
           <div class="field full">
             <label for="contact-field">{copy.contact}</label>
-            <input id="contact-field" name="contact" required autocomplete="email" placeholder={copy.contactPh} />
+            <input id="contact-field" name="contact" required placeholder={copy.contactPh} />
           </div>
 
           <div class="field full">
@@ -202,24 +202,13 @@ const statusEmailFallback = lang === 'ru'
   </div>
 </footer>
 
-<script define:vars={{ telegram: site.telegram, email: site.email, requestHeading, typeLabel: copy.type, detailsLabel: copy.details, contactLabel: copy.contact, statusCopied, statusEmailFallback }}>
+<script is:inline define:vars={{ telegram: site.telegram, email: site.email, requestHeading, typeLabel: copy.type, detailsLabel: copy.details, contactLabel: copy.contact, statusCopied, statusEmailFallback }}>
   async function copyRequest(text) {
-    try {
-      if (navigator.clipboard && window.isSecureContext) {
-        await navigator.clipboard.writeText(text);
-        return true;
-      }
+    if (!navigator.clipboard || !window.isSecureContext) return false;
 
-      const textarea = document.createElement('textarea');
-      textarea.value = text;
-      textarea.setAttribute('readonly', '');
-      textarea.style.position = 'fixed';
-      textarea.style.opacity = '0';
-      document.body.appendChild(textarea);
-      textarea.select();
-      const copied = document.execCommand('copy');
-      textarea.remove();
-      return copied;
+    try {
+      await navigator.clipboard.writeText(text);
+      return true;
     } catch {
       return false;
     }
