@@ -3,24 +3,24 @@
   "langName": "UZ",
   "meta": {
     "home": {
-      "title": "BITSTREAM — biznes uchun serverlar, tarmoq va IT-yordam",
-      "description": "Server, ofis tarmog‘i, zaxira nusxa, telefoniya va kirish tizimlarini sozlash va qo‘llab-quvvatlash. Toshkentda va masofadan."
+      "title": "BITSTREAM — serverlar, tarmoqlar va IT-yordam",
+      "description": "Server, Wi-Fi, kamera va telefoniyani sozlaymiz, texnik yordam ko‘rsatamiz. Toshkentda va masofadan."
     },
     "services": {
-      "title": "IT xizmatlari — BITSTREAM",
-      "description": "Xodimlarga IT-yordam, serverlar, Wi-Fi, ma’lumotlarning zaxira nusxasi, videokuzatuv va telefoniya. Muammoni tushunib, aniq ish rejasini taklif qilamiz."
+      "title": "Biznes uchun IT-xizmatlar — BITSTREAM",
+      "description": "Serverlar, tarmoqlar, Wi-Fi, zaxira nusxalar, kameralar va telefoniya."
     },
     "projects": {
-      "title": "Qanday IT vazifalarni bajaramiz — BITSTREAM",
-      "description": "Server, tarmoq, zaxira nusxa, kamera, telefoniya va kirish nazorati bo‘yicha odatiy vazifalar. Bu tasdiqlangan mijoz loyihalari emas."
+      "title": "IT-vazifalarga misollar — BITSTREAM",
+      "description": "Serverlar, tarmoqlar, kameralar, telefoniya va zaxira nusxalar bo‘yicha vazifalar."
     },
     "contacts": {
-      "title": "Bog‘lanish — BITSTREAM",
-      "description": "BITSTREAM bilan Telegram, telefon yoki email orqali bog‘laning. Muammoni qisqacha yozsangiz, vaziyatni aniqlaymiz."
+      "title": "BITSTREAM bilan bog‘lanish",
+      "description": "Telegram, telefon yoki email orqali bog‘laning. Qanday yordam kerakligini yozing."
     },
     "about": {
-      "title": "BITSTREAM haqida — IT muhandislar jamoasi",
-      "description": "Biznes uchun serverlar, tarmoqlar, zaxira nusxa va boshqa IT tizimlarni sozlash hamda qo‘llab-quvvatlash."
+      "title": "BITSTREAM haqida",
+      "description": "Biznes uchun serverlar, tarmoqlar va boshqa IT-tizimlarni sozlaymiz."
     }
   },
   "nav": [
@@ -41,7 +41,7 @@
   "home": {
     "hero": {
       "eyebrow": "IT integrator · Toshkent",
-      "title": "ITingiz shunchaki ishlaydi.",
+      "title": "IT-ingiz ishonchli ishlaydi.",
       "lead": "Serverlar, tarmoqlar, videokuzatuv, telefoniya — loyihalaymiz, joriy qilamiz, qo‘llab-quvvatlaymiz.",
       "primary": "Telegramda yozish",
       "secondary": "Xizmatlarni ko‘rish",
@@ -108,102 +108,95 @@
   },
   "servicesPage": {
     "title": "Xizmatlar",
-    "lead": "Alohida nosozlikni hal qilish yoki barcha IT tizimlariga xizmat ko‘rsatishni muhokama qilish mumkin.",
+    "lead": "Bir martalik yordam ham, doimiy IT-xizmat ham ko‘rsatamiz.",
     "items": [
       {
-        "title": "Xodimlarga IT-yordam va autsorsing",
-        "text": "Kompyuter, dastur, kirish huquqi va kundalik nosozliklarni hal qilishda yordam beramiz.",
+        "title": "Xodimlarga IT-yordam",
+        "text": "Kompyuter, dastur yoki kirish bilan muammo bo‘lsa, yordam beramiz.",
         "bullets": [
-          "Xodimlar murojaatlarini ko‘rib chiqish",
-          "Ish joylari va tizimlarga xizmat ko‘rsatish",
-          "Yangilanish va zaxira nusxalarni sozlash",
-          "Xizmat shartlarini alohida kelishish"
+          "Xodimlarga texnik yordam",
+          "Kompyuter va dasturlarni sozlash",
+          "Kelishuv asosida qo‘llab-quvvatlash"
         ]
       },
       {
         "title": "Serverlar va umumiy fayllar",
-        "text": "Windows va Linux serverlarida kirish huquqlari, umumiy papkalar, domen va zarur xizmatlarni sozlaymiz.",
+        "text": "Server, umumiy papkalar va xodimlar uchun kirishni sozlaymiz.",
         "bullets": [
-          "Server o‘rnatish va sozlash",
-          "Foydalanuvchi va guruh huquqlari",
-          "Umumiy papkalar, printer va ichki xizmatlar",
-          "Sozlamalarni tekshirish va hujjat topshirish"
+          "Windows va Linux",
+          "Foydalanuvchilar va ruxsatlar",
+          "Umumiy papkalar va ichki xizmatlar"
         ]
       },
       {
         "title": "Tarmoq va Wi-Fi",
-        "text": "Internet va ichki tarmoqdagi uzilishlarni tekshiramiz, ofis tarmog‘i va filiallar orasidagi xavfsiz ulanishni sozlaymiz.",
+        "text": "Internetdagi uzilishlarni tekshirib, ofis tarmog‘ini sozlaymiz.",
         "bullets": [
           "Router, kommutator va Wi-Fi",
-          "Filiallar va masofaviy ish uchun VPN",
-          "Mehmon va ishchi tarmog‘ini ajratish",
-          "Kirish qoidalari va tarmoq himoyasi"
+          "Xodimlar va filiallar uchun VPN",
+          "Mehmon tarmog‘i va kirish himoyasi"
         ]
       },
       {
-        "title": "Virtual serverlar va monitoring",
-        "text": "Bir nechta tizimni serverda joylashtirish va ularning holatini kuzatishga yordam beramiz.",
+        "title": "Virtual serverlar",
+        "text": "Bir serverda bir nechta tizimni ishga tushirib, yuklamani kuzatamiz.",
         "bullets": [
-          "Vazifaga qarab Proxmox yoki VMware",
-          "Xotira, protsessor va disk resurslari",
-          "Nosozlik va resurs yetishmasligi haqida xabar",
-          "Zaxira nusxalarini tekshirish"
+          "Proxmox yoki VMware",
+          "Server resurslarini sozlash",
+          "Nosozlik haqida bildirishnomalar"
         ]
       },
       {
         "title": "Zaxira nusxa va tiklash",
-        "text": "Muhim ma’lumotlarni nusxalashni sozlaymiz va nosozlikdan keyin ularni qanday tiklashni aniqlaymiz.",
+        "text": "Muhim ma’lumotlarni saqlab, tiklash mumkinligini tekshiramiz.",
         "bullets": [
           "Nimani va qachon nusxalash",
-          "Nusxalarni alohida joyda saqlash",
-          "Nusxalarga kirishni cheklash",
-          "Ma’lumotni sinov tariqasida tiklash"
+          "Nusxalarni qayerda saqlash",
+          "Tiklashni tekshirish"
         ]
       },
       {
-        "title": "Kameralar va kirish nazorati",
-        "text": "Obyektga mos videokuzatuv, turniket va xodimlar kirishini boshqarish tizimini sozlaymiz.",
+        "title": "Kamera va kirish nazorati",
+        "text": "Kamera, turniket va kirish tizimlarini o‘rnatib, sozlaymiz.",
         "bullets": [
-          "IP-kameralar va videoregistratorlar",
-          "Turniket va xodimni aniqlash",
-          "Kirish huquqlarini ajratish",
-          "Tarmoqqa ulash va ishini tekshirish"
+          "IP-kamera va yozib olish",
+          "Turniket va xodimlar kirishi",
+          "Tizimni tekshirish"
         ]
       },
       {
         "title": "Ofis telefoniyasi",
-        "text": "Ichki raqamlar, kiruvchi qo‘ng‘iroqlar taqsimoti va xodimlar o‘rtasidagi aloqani sozlaymiz.",
+        "text": "Ichki raqamlar va kiruvchi qo‘ng‘iroqlarni sozlaymiz.",
         "bullets": [
           "IP-telefoniya va FreePBX",
-          "Ichki raqam va yo‘naltirish",
-          "Qo‘ng‘iroqlar navbati va yo‘nalishi",
-          "Zarur bo‘lsa, suhbat yozuvi"
+          "Yo‘naltirish va navbatlar",
+          "Kerak bo‘lsa, qo‘ng‘iroqlarni yozish"
         ]
       }
     ],
     "cta": {
-      "title": "Qaysi xizmat kerakligini bilmayapsizmi?",
-      "text": "Muammoni oddiy so‘z bilan yozing. Nimadan boshlashni aytamiz.",
+      "title": "Muammo nimadaligini bilmaysizmi?",
+      "text": "Boricha yozing, birga aniqlaymiz.",
       "button": "Telegramda yozish"
     },
     "topicsLink": {
-      "title": "Ko‘p uchraydigan IT muammolar",
-      "text": "Kamera ishlamasa, zaxira nusxani tekshirish yoki tarmoq sozlash kerak bo‘lsa, nimadan boshlash haqida qisqa ma’lumotlar.",
-      "button": "Barcha mavzularni ko‘rish"
+      "title": "Ko‘p uchraydigan IT-muammolar",
+      "text": "Sozlash va nosozliklar haqida qisqa ma’lumotlar.",
+      "button": "Mavzularni ko‘rish"
     }
   },
   "projectsPage": {
-    "title": "Odatdagi IT vazifalar",
-    "lead": "Quyidagilar ish yo‘nalishlariga misollar. Bular muayyan mijoz bilan bajarilgan loyihalar yoki tasdiqlangan natijalar emas.",
+    "title": "Vazifalarga misollar",
+    "lead": "Nimalarni qila olishimiz haqida misollar. Bular mijozlar tarixi emas.",
     "cta": {
-      "title": "Tizimingizni muhokama qilamiz",
-      "text": "Qurilmalar va muammo haqida qisqacha yozing. Avval nimani tekshirish kerakligini aniqlaymiz.",
+      "title": "Sizda ham shunday vazifa bormi?",
+      "text": "Nima kerakligini yozing.",
       "button": "Bog‘lanish"
     }
   },
   "contactsPage": {
     "title": "Aloqa",
-    "lead": "Telegramga yozishingiz, email yuborishingiz yoki qo‘ng‘iroq qilishingiz mumkin. Avval muammoni qisqacha tushuntirish kifoya.",
+    "lead": "Telegramda yozing, qo‘ng‘iroq qiling yoki email yuboring.",
     "blocks": {
       "telegram": "Telegram",
       "email": "Email",
@@ -211,28 +204,28 @@
       "instagram": "Instagram",
       "address": "Ofis"
     },
-    "promise": "Masala shoshilinch bo‘lsa, xabarda ayting. Javob va tashrif vaqti bandlik hamda kelishilgan shartlarga bog‘liq."
+    "promise": "Shoshilinch bo‘lsa, xabarda ayting. Javob vaqtini aniqlashtiramiz."
   },
   "aboutPage": {
-    "title": "BITSTREAM haqida",
-    "lead": "Biznesning IT tizimlarini sozlaymiz va qo‘llab-quvvatlaymiz: ofis kompyuterlari, serverlar va tarmoqlar.",
+    "title": "Biz haqimizda",
+    "lead": "BITSTREAM kompaniyalar uchun kompyuter, tarmoq va serverlarni sozlaydi hamda qo‘llab-quvvatlaydi.",
     "blocks": [
       {
-        "title": "Avval sababini aniqlaymiz",
-        "text": "Muammo nimadan kelib chiqqani va qanday yechimlar borligi aniqlanmaguncha uskunani almashtirishni taklif qilmaymiz."
+        "title": "Avval tekshiramiz",
+        "text": "Uskunani almashtirishdan oldin muammo sababini aniqlaymiz."
       },
       {
-        "title": "Ish tushunarli bo‘lishi kerak",
-        "text": "Nimani va nima sababdan o‘zgartirishimizni tushuntiramiz. Muhim sozlamalar va ruxsatlarni kelishilgan tartibda topshiramiz."
+        "title": "Oddiy tilda tushuntiramiz",
+        "text": "Nima qilamiz va nima uchunligini aytamiz. Kerakli kirish ma’lumotlarini topshiramiz."
       },
       {
         "title": "Masofadan yoki joyida",
-        "text": "Dasturiy muammolar ko‘pincha masofadan hal qilinadi. Uskuna yoki kabel uchun joyiga borish kerak bo‘lishi mumkin."
+        "text": "Ba’zi ishlarni masofadan qilamiz, kerak bo‘lsa boramiz."
       }
     ]
   },
   "footer": {
-    "tagline": "Biznes uchun serverlar, ofis tarmoqlari, zaxira nusxalar va IT-yordam.",
+    "tagline": "Biznes uchun serverlar, tarmoqlar va IT-yordam.",
     "servicesTitle": "Xizmatlar",
     "services": [
       "Xodimlarga IT-yordam",
@@ -260,9 +253,9 @@
   },
   "landing": {
     "relatedTitle": "O‘xshash xizmatlar",
-    "ctaTitle": "Shu masalada yordam kerakmi?",
-    "ctaText": "Hozirgi vaziyatni yozing. Tafsilotlarni aniqlab, ish tartibini taklif qilamiz.",
-    "ctaButton": "Vazifani muhokama qilish",
+    "ctaTitle": "Yordam kerakmi?",
+    "ctaText": "Nima ishlamayotganini yoki nima kerakligini yozing.",
+    "ctaButton": "Bizga yozing",
     "backToServices": "Barcha mavzular",
     "labels": {
       "breadcrumbHome": "Bosh sahifa",

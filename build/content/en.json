@@ -4,23 +4,23 @@
   "meta": {
     "home": {
       "title": "BITSTREAM — servers, networks and IT support",
-      "description": "We help businesses configure and maintain servers, office networks, backups, phone systems and access control. Based in Tashkent; remote assistance available."
+      "description": "Setup and support for servers, office networks, Wi-Fi, cameras and phone systems. Tashkent and remote."
     },
     "services": {
       "title": "Business IT services — BITSTREAM",
-      "description": "Employee IT support, servers, Wi-Fi, backups, security cameras and office telephony. We assess the issue before recommending a solution."
+      "description": "Servers, networks, Wi-Fi, backups, cameras and office phone systems."
     },
     "projects": {
-      "title": "Common IT tasks — BITSTREAM",
-      "description": "Examples of typical IT work involving servers, networks, backups, cameras, telephony and access control. Not verified client case studies."
+      "title": "IT tasks we handle — BITSTREAM",
+      "description": "Examples of server, network, camera, phone and backup work."
     },
     "contacts": {
       "title": "Contact BITSTREAM",
-      "description": "Contact BITSTREAM on Telegram, by phone or email. Describe the problem so we can clarify the details."
+      "description": "Get in touch on Telegram, by phone or email. Tell us what you need fixed or set up."
     },
     "about": {
-      "title": "About BITSTREAM — IT engineering",
-      "description": "Server, network and IT system configuration and support for businesses."
+      "title": "About BITSTREAM",
+      "description": "We set up and support servers, networks and other business IT systems."
     }
   },
   "nav": [
@@ -108,97 +108,90 @@
   },
   "servicesPage": {
     "title": "Services",
-    "lead": "Contact us about a single fault or discuss support for your wider IT environment.",
+    "lead": "One-off fixes or ongoing IT support. Whatever you need.",
     "items": [
       {
-        "title": "Employee IT support and outsourcing",
-        "text": "Help with workstations, software, access and everyday IT issues.",
+        "title": "IT support for staff",
+        "text": "Help when a computer, app or account stops working.",
         "bullets": [
-          "Handle staff support requests",
-          "Maintain devices and services",
-          "Configure updates and backups",
-          "Agree support terms separately"
+          "Staff IT help",
+          "Computer and software setup",
+          "Ongoing support by agreement"
         ]
       },
       {
         "title": "Servers and shared files",
-        "text": "Set up Windows and Linux systems, access permissions, shared folders, domains and essential services.",
+        "text": "We set up servers, shared folders and staff access.",
         "bullets": [
-          "Server installation and configuration",
-          "Users, groups and permissions",
-          "Shared folders, printing and internal services",
-          "Configuration checks and documentation"
+          "Windows and Linux",
+          "User accounts and permissions",
+          "Shared folders and internal services"
         ]
       },
       {
         "title": "Networks and Wi-Fi",
-        "text": "Investigate slow or unstable connections and configure office networks and secure links between sites.",
+        "text": "We fix connection issues and set up office networks.",
         "bullets": [
           "Routers, switches and Wi-Fi",
-          "VPN for remote teams and branches",
-          "Separate guest and business traffic",
-          "Network access and security rules"
+          "VPN for staff and branches",
+          "Guest networks and access security"
         ]
       },
       {
-        "title": "Virtual servers and monitoring",
-        "text": "Help consolidate systems on server hardware and monitor their health.",
+        "title": "Virtual servers",
+        "text": "Run several systems on one server and monitor usage.",
         "bullets": [
-          "Proxmox or VMware where appropriate",
-          "CPU, memory and storage allocation",
-          "Alerts for faults and low resources",
-          "Backup checks"
+          "Proxmox or VMware",
+          "Resource allocation",
+          "Alerts when something goes wrong"
         ]
       },
       {
         "title": "Backups and recovery",
-        "text": "Configure backups of critical data and decide how to restore it after a failure.",
+        "text": "We set up backups and check that files can be restored.",
         "bullets": [
-          "Choose what and when to back up",
-          "Keep independent copies",
-          "Control access to backups",
-          "Perform test restores"
+          "What to back up and when",
+          "Where to keep copies",
+          "Test restores"
         ]
       },
       {
         "title": "Cameras and access control",
-        "text": "Configure surveillance, turnstiles and employee entry systems to fit your site and security needs.",
+        "text": "We install and set up cameras, turnstiles and entry systems.",
         "bullets": [
-          "IP cameras and recorders",
-          "Turnstiles and identity checks",
-          "Access permissions",
-          "Network integration and testing"
+          "IP cameras and recording",
+          "Turnstiles and staff access",
+          "System testing"
         ]
       },
       {
-        "title": "Office telephony",
-        "text": "Set up internal extensions, incoming call routing and team communications.",
+        "title": "Office phones",
+        "text": "We set up extensions and incoming call handling.",
         "bullets": [
           "IP telephony and FreePBX",
-          "Extensions and forwarding",
-          "Inbound queues and call routing",
-          "Call recording where needed"
+          "Forwarding and call queues",
+          "Recording if needed"
         ]
       }
     ],
     "cta": {
-      "title": "Not sure which service you need?",
-      "text": "Describe the issue in your own words. We will help identify where to start.",
+      "title": "Not sure what is wrong?",
+      "text": "Tell us what you see. We’ll help work it out.",
       "button": "Message us"
     }
   },
   "projectsPage": {
-    "title": "Typical IT tasks",
-    "lead": "These examples describe our areas of work. They are not project reports or proof of results for specific clients.",
+    "title": "Examples of work",
+    "lead": "The sort of work we can do. These are examples, not client case studies.",
     "cta": {
-      "title": "Discuss your environment",
-      "text": "Share your current setup and the problems you face. We will identify what to check first.",
+      "title": "Have a similar task?",
+      "text": "Tell us what you need.",
       "button": "Get in touch"
     }
   },
   "contactsPage": {
     "title": "Contact",
-    "lead": "Reach us on Telegram, by email or phone. A short description of the problem is enough to begin.",
+    "lead": "Message us on Telegram, call or send an email.",
     "blocks": {
       "telegram": "Telegram",
       "email": "Email",
@@ -206,28 +199,28 @@
       "instagram": "Instagram",
       "address": "Office"
     },
-    "promise": "Mention if the issue is urgent. Response and on-site times depend on availability and agreed terms."
+    "promise": "If it’s urgent, say so in your message. We’ll confirm when we can respond."
   },
   "aboutPage": {
-    "title": "About BITSTREAM",
-    "lead": "We configure and support business IT systems, from office computers to servers and networks.",
+    "title": "About us",
+    "lead": "BITSTREAM sets up and supports business computers, networks and servers.",
     "blocks": [
       {
-        "title": "Diagnose before replacing",
-        "text": "We do not recommend new hardware before understanding the cause of the problem and the available options."
+        "title": "Check before replacing",
+        "text": "We find the cause before suggesting new equipment."
       },
       {
-        "title": "Keep work understandable",
-        "text": "We explain what we change and why, and hand over relevant settings and access as agreed."
+        "title": "Keep it clear",
+        "text": "We explain what we’ll do and why, and hand over the relevant access details."
       },
       {
-        "title": "Remote or on site",
-        "text": "Software issues can often be handled remotely. Hardware and cabling may require an on-site visit."
+        "title": "Remote or on-site",
+        "text": "Some issues can be fixed remotely. Others need a visit."
       }
     ]
   },
   "footer": {
-    "tagline": "Business IT support for servers, office networks and backups.",
+    "tagline": "Servers, networks and IT support for businesses.",
     "servicesTitle": "Services",
     "services": [
       "Employee IT support",
@@ -255,9 +248,9 @@
   },
   "landing": {
     "relatedTitle": "Related services",
-    "ctaTitle": "Need help with this?",
-    "ctaText": "Tell us about your current setup. We will clarify the details and suggest a practical approach.",
-    "ctaButton": "Discuss the task",
+    "ctaTitle": "Need a hand?",
+    "ctaText": "Tell us what is not working or what you need set up.",
+    "ctaButton": "Message us",
     "backToServices": "All topics",
     "labels": {
       "breadcrumbHome": "Home",
