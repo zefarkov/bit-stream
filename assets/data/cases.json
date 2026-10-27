@@ -1,111 +1,80 @@
 [
   {
     "title": {
-      "uz": "Server infratuzilmalari",
-      "ru": "Серверная и IT-инфраструктура",
-      "en": "Server and IT infrastructure"
+      "ru": "Серверы и общие папки",
+      "uz": "Serverlar va umumiy papkalar",
+      "en": "Servers and shared folders"
     },
     "summary": {
-      "uz": "Windows va Linux serverlari, AD, DNS, DHCP va WEB xizmatlari joriy qilindi. Tizim hujjatlashtirildi va barqaror ishlashga tayyorlandi.",
-      "ru": "Внедрены Windows и Linux серверы, AD, DNS, DHCP и WEB-сервисы. Система задокументирована и приведена к стабильной работе.",
-      "en": "Windows and Linux servers, AD, DNS, DHCP, and WEB services were deployed. The system was documented and prepared for stable operation."
+      "ru": "Настройка учётных записей, доступа к файлам и нужных служб Windows или Linux.",
+      "uz": "Windows yoki Linux xizmatlari, foydalanuvchilar va umumiy fayllarga kirishni sozlash.",
+      "en": "Configure users, file access and the Windows or Linux services a team needs."
     },
-    "stack": [
-      "Windows Server",
-      "Linux",
-      "AD",
-      "DNS/DHCP",
-      "WEB"
-    ]
+    "image": "assets/img/cases/task_servers.webp"
   },
   {
     "title": {
-      "uz": "Video kuzatuv tizimlari",
-      "ru": "Видеонаблюдение и контроль доступа",
-      "en": "Video surveillance and access control"
+      "ru": "Видеонаблюдение",
+      "uz": "Videokuzatuv",
+      "en": "Video surveillance"
     },
     "summary": {
-      "uz": "Kameralar nazorati tizimlari o‘rnatildi va sozlandi. Obyekt xavfsizligi kuchaytirildi.",
-      "ru": "Установлены и настроены камеры, Face ID и системы контроля доступа. Безопасность объекта усилена.",
-      "en": "Cameras, Face ID, and access control systems were installed and configured to strengthen site security."
+      "ru": "Подбор расположения камер, настройка записи и прав просмотра.",
+      "uz": "Kameralar joylashuvi, yozib olish va ko‘rish huquqlarini sozlash.",
+      "en": "Plan camera placement and configure recording and viewing permissions."
     },
-    "stack": [
-      "CCTV",
-      "Face ID",
-      "Dahua",
-      "Access Control"
-    ]
+    "image": "assets/img/cases/task_cctv.jpg"
   },
   {
     "title": {
-      "uz": "Backup va ma’lumotlarni himoyalash",
-      "ru": "Backup и защита данных",
-      "en": "Backup and data protection"
+      "ru": "Резервные копии",
+      "uz": "Zaxira nusxalar",
+      "en": "Data backups"
     },
     "summary": {
-      "uz": "NAS va avtomatik backup orqali ma’lumotlar himoyalandi, tiklash ssenariylari yo‘lga qo‘yildi.",
-      "ru": "С помощью NAS и автоматического backup выстроена защита данных и сценарии восстановления.",
-      "en": "Data protection and recovery scenarios were built with NAS and automated backup."
+      "ru": "Выбор данных для копирования, хранение отдельных копий и проверка восстановления.",
+      "uz": "Qaysi ma’lumot nusxalanishini, nusxalar saqlanishini va tiklashni tekshirish.",
+      "en": "Choose what to back up, keep separate copies and test restores."
     },
-    "stack": [
-      "NAS",
-      "Backup",
-      "Restore",
-      "DR"
-    ]
+    "image": "assets/img/cases/task_backup.png"
   },
   {
     "title": {
-      "uz": "Tarmoq va xavfsizlik",
-      "ru": "Сети и безопасность",
-      "en": "Networking and security"
+      "ru": "Офисные сети",
+      "uz": "Ofis tarmoqlari",
+      "en": "Office networks"
     },
     "summary": {
-      "uz": "Firewall, pfSense, MikroTik va Fortinet asosida himoya sozlandi. Tarmoq segmentatsiyasi va tashqi kirishlar nazoratga olindi.",
-      "ru": "Настроены firewall, сегментация, удалённый доступ и контуры безопасности для стабильной работы сети.",
-      "en": "Firewall, segmentation, remote access, and security controls were implemented for reliable network operations."
+      "ru": "Проверка сети, настройка Wi-Fi, VPN и доступа к внутренним ресурсам.",
+      "uz": "Tarmoqni tekshirish, Wi-Fi, VPN va ichki resurslarga kirishni sozlash.",
+      "en": "Check connectivity and configure Wi-Fi, VPN and access to internal services."
     },
-    "stack": [
-      "Firewall",
-      "pfSense",
-      "MikroTik",
-      "Fortinet"
-    ]
+    "image": "assets/img/cases/task_network.webp"
   },
   {
     "title": {
-      "uz": "Korporativ telefoniya",
-      "ru": "Корпоративная телефония",
-      "en": "Corporate telephony"
+      "ru": "Телефония",
+      "uz": "Telefoniya",
+      "en": "Telephony"
     },
     "summary": {
-      "uz": "IP-telefoniya va ichki aloqa tizimi joriy qilindi. Filiallar va bo‘limlar uchun boshqariladigan aloqa muhiti yaratildi.",
-      "ru": "Внедрены IP-телефония и внутренняя связь для офисов и филиалов.",
-      "en": "IP telephony and internal communication systems were deployed for offices and branches."
+      "ru": "Внутренние номера, входящие звонки, очереди и связь между кабинетами или филиалами.",
+      "uz": "Ichki raqamlar, kiruvchi qo‘ng‘iroqlar va ofis hamda filiallar orasida aloqa.",
+      "en": "Extensions, inbound call queues and communication between teams or sites."
     },
-    "stack": [
-      "FreePBX",
-      "IP-PBX",
-      "VoIP",
-      "Gateway"
-    ]
+    "image": "assets/img/cases/task_voip.jpg"
   },
   {
     "title": {
-      "uz": "Kirish nazorati tizimi",
-      "ru": "Система контроля доступа",
-      "en": "Access control system"
+      "ru": "Контроль входа",
+      "uz": "Kirish nazorati",
+      "en": "Access control"
     },
     "summary": {
-      "uz": "Xodim va tashrif buyuruvchilar oqimi uchun kirish boshqaruvi joriy qilindi, xavfsizlik jarayonlari kuchaytirildi.",
-      "ru": "Организовано управление доступом и входом на объект для сотрудников и посетителей.",
-      "en": "Controlled access and site entry management were implemented for staff and visitors."
+      "ru": "Настройка турникетов, распознавания и правил доступа сотрудников с учётом требований объекта.",
+      "uz": "Turniket, xodimlarni aniqlash va kirish huquqlarini obyekt talabiga mos sozlash.",
+      "en": "Configure turnstiles, identification and staff entry rules for the site."
     },
-    "stack": [
-      "Kirish nazorati",
-      "Turniket",
-      "Face ID",
-      "Security"
-    ]
+    "image": "assets/img/cases/task_access.webp"
   }
 ]

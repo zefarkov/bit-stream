@@ -1,20 +1,28 @@
-BITSTREAM static site base
-==========================
+BITSTREAM — статический сайт
 
-What is included:
-- strict multi-page site (UZ / RU / EN)
-- GitHub Pages friendly relative paths
-- adapted visual direction inspired by formal/government portal structure
-- editable content through assets/data/*.json
-- custom local SVG placeholders so the site works without missing assets
+РЕДАКТИРОВАНИЕ ТЕКСТОВ
+  build/content/ru.json — русский интерфейс
+  build/content/uz.json — узбекский интерфейс
+  build/content/en.json — английский интерфейс
+  build/content/landings/ru/*.json — 30 русских тематических страниц
+  build/content/landings/uz/*.json — 30 узбекских тематических страниц
+  assets/data/services.json — общие карточки услуг с 3 языками
+  assets/data/cases.json — типовые задачи с 3 языками, НЕ подтверждённые кейсы
+  assets/data/site.json — контактная информация и основные реквизиты
 
-What to edit first:
-1) assets/data/site.json
-2) assets/data/stats.json
-3) assets/data/services.json
-4) assets/data/cases.json
+СБОРКА
+  В корневой папке выполните: node build.mjs
+  Готовые HTML-файлы и sitemap.xml создаются в этом же каталоге.
+  Сайт можно разместить на обычном статическом хостинге / GitHub Pages.
 
-Important:
-- Contact links use starter values and should be replaced with your final real contacts.
-- Root index.html redirects to /uz/index.html.
-- You can host the folder as-is on GitHub Pages.
+РЕДАКЦИОННЫЕ ПРИНЦИПЫ
+  Без неподтверждённых цифр, гарантий времени реакции и отзывов.
+  Клиентские логотипы не показываются без подтверждения права на публикацию.
+  Реальные кейсы нужно добавлять только после проверки фактов и согласования.
+  RU/UZ имеют по 30 тематических страниц; для EN этих материалов в исходном архиве нет.
+
+ПРОВЕРЬТЕ ПЕРЕД ПУБЛИКАЦИЕЙ
+  Актуальность телефонов, почты, Telegram и других ссылок.
+  Состав услуг, сроки, регионы работы и условия оказания услуг.
+  Адаптацию 404 под особенности конкретного хостинга.
+
